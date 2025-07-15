@@ -15,25 +15,39 @@ module.exports = {
 		// Extend the default Tailwind theme.
 		extend: {
 			colors: {
-				primary: '#3b3663',
+				primary: '#224393',
 				secondary: '#f47514',
-				
 			},
 			fontFamily: {
-				body: ['SVN-Poppins', 'sans-serif'],
+				body: ['Questrial'],
+				content: ['Helvetica'],
 			},
-
+			backgroundImage: {
+				'home-gradient':
+					'linear-gradient(to bottom, #ffffff 0%, #DCECFD 30%, #DCECFD 80%, #ffffff 100%)',
+			},
 		},
 		container: {
 			center: true,
-			padding: '1rem',
+			padding: '20px',
 			screens: {
-				sm: '600px',
-				md: '728px',
-				lg: '984px',
-				xl: '1240px',
-				'2xl': '1460px',
-			  },
+				xs: '393px',
+				sm: '640px',
+				md: '768px',
+				lg: '1025px',
+				xl: '1280px',
+				'2xl': '1476px',
+				'3xl': '1676px',
+			},
+		},
+		screens: {
+			sm: '640px',
+			md: '768px',
+			lg: '1025px',
+			xl: '1280px',
+			'1.5xl': '1476px',
+			'2xl': '1537px',
+			'3xl': '1920px',
 		},
 	},
 	corePlugins: {
