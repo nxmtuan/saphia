@@ -5,6 +5,7 @@
 			$(document).ready(function () {
 				backToTop();
 				handleSwiper();
+				toggleContent();
 				handleMansoryLayout();
 			});
 		};
@@ -105,6 +106,26 @@
 				itemSelector: '.grid-item',
 				percentPosition: true,
 				gutter: 8,
+			});
+		}
+
+		function toggleContent() {
+			$(document).on('click', '[data-open]', function (e) {
+				e.preventDefault();
+				var $btn = $(this);
+				var target = $btn.data('open');
+				if (!target) return;
+				$btn.toggleClass('active');
+				$(target).toggleClass('active');
+			});
+
+			// Click ra ngoài: đóng hết
+			$(document).on('click', function (e) {
+				// Nếu không phải click vào bất cứ nút hoặc box nào đang mở
+				if ($(e.target).closest('[data-open], .active').length === 0) {
+					$('[data-open]').removeClass('active');
+					$('[id].active').removeClass('active');
+				}
 			});
 		}
 
