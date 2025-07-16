@@ -29,10 +29,10 @@ body {
 }
 
 .main-menu > li {
-  @apply text-white text-lg !leading-[32px] capitalize;
+  @apply text-white 1.5xl:text-lg leading-[32px] capitalize;
 }
 .main-menu > li > a {
-  @apply block py-6 px-[15px];
+  @apply block 1.5xl:py-6 py-4 px-[15px];
 }
 .main-menu > li.menu-item-has-children {
   @apply pr-8 bg-no-repeat bg-contain relative;

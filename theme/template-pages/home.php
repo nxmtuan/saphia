@@ -224,7 +224,8 @@ get_header();
                         <div class="block_slider-item group relative xl:pt-12 lg:pt-8 pt-6 px-6 lg:rounded-[35px] rounded-[20px] overflow-hidden aspect-[814/640] md:w-full w-[83%] bg-no-repeat bg-cover bg-center"
                             style="background-image: url('<?php echo get_stylesheet_directory_uri() ?>/assets/images/home6.png;')">
                             <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/home5.png" alt=""
-                                loading="lazy" class="absolute inset-0 size-full lg:opacity-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300">
+                                loading="lazy"
+                                class="absolute inset-0 size-full lg:opacity-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300">
                             <div class="relative z-[1] flex flex-col items-center">
                                 <div
                                     class="max-w-[332px] xl:text-[40px] lg:text-2xl text-xl lg:leading-[1] tracking-[-1px] text-[#000000E0] text-center">
@@ -274,7 +275,7 @@ get_header();
         </div>
     </section>
 
-    <section class="lg:mt-[180px] mt-[60px] mb-5">
+    <section class="lg:mt-[180px] mt-[60px]">
         <div class="container">
             <div class="lg:space-y-9 space-y-4 text-[#292929]">
                 <div class="lg:text-[25px] text-base lg:leading-[22.565px] tracking-[-0.242px] uppercase">
@@ -316,14 +317,17 @@ get_header();
                     </div>
                 <?php endfor ?>
             </div>
-            <div class="lg:mt-[47px] py-16 md:w-full block_slider loop center_items has_autoplay md:mx-0 -mx-5">
-                <?php for ($i = 0; $i < 10; $i++): ?>
-                    <div class="block_slider-item lg:mx-0 mx-5 lg:w-[20%] w-[30%] flex justify-center">
-                        <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/svg/logo-1.svg" alt="" loading="lazy"
-                            class="object-contain">
-                    </div>
-                <?php endfor ?>
-            </div>
+        </div>
+    </section>
+
+    <section class="lg:mt-[47px] mb-5">
+        <div class="py-16 md:w-full block_slider loop center_items has_autoplay md:mx-0 -mx-5">
+            <?php for ($i = 0; $i < 10; $i++): ?>
+                <div class="block_slider-item lg:mx-0 mx-5 lg:w-[20%] w-[30%] flex justify-center">
+                    <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/svg/logo-1.svg" alt="" loading="lazy"
+                        class="object-contain">
+                </div>
+            <?php endfor ?>
         </div>
     </section>
 

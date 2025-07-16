@@ -48,7 +48,7 @@
 					?>
 
 					<div class="flex items-center gap-[5px]">
-						<ul class="1.5xl:flex hidden items-center gap-[5px] main-menu">
+						<ul class="xl:flex hidden items-center gap-[5px] main-menu">
 							<li class="menu-item menu-item-has-children">
 								<a href="#">Về chúng tôi</a>
 								<ul class="sub-menu">
@@ -115,7 +115,7 @@
 								class="toggle-btn lg:size-14 size-10 rounded-full border border-[#ffffff2b] [&:not(.active)]:bg-[#ffffff12] bg-[#ffffff85] backdrop-blur-[10px] flex items-center justify-center cursor-pointer transition-all duration-300">
 								<?php echo svg('search', '18', '18', 'text-white shrink-0') ?>
 							</div>
-							<div class="size-10 1.5xl:hidden flex items-center justify-end cursor-pointer"
+							<div class="size-10 xl:hidden flex items-center justify-end cursor-pointer"
 								data-open="#menuMobile">
 								<?php echo svg('mobile-menu', '20', '20', 'shrink-0 text-white') ?>
 							</div>
@@ -137,7 +137,7 @@
 						$current_lang_name = isset($languages[$current_lang]['name']) ? $languages[$current_lang]['name'] : $current_lang;
 						$current_lang_data = isset($languages[$current_lang]) ? $languages[$current_lang] : null;
 						?>
-						<div class="hidden relative group 1.5xl:flex cursor-default">
+						<div class="hidden relative group xl:flex cursor-default">
 							<a class="text-lg text-white whitespace-nowrap font-medium inline-flex items-center gap-1">
 								<?php echo esc_html($current_lang_name); ?>
 								<?php echo svg('chevron-down', '', '', 'icon-svg text-white'); ?>
@@ -154,7 +154,7 @@
 	</header>
 
 	<div id="menuMobile"
-		class="1.5xl:hidden px-5 py-8 fixed top-0 right-0 w-[100dvw] h-[100dvh] bg-primary z-[51] [&:not(.active)]:translate-x-full translate-x-0 transition-transform duration-300">
+		class="xl:hidden px-5 py-8 fixed top-0 right-0 md:w-[400px] w-[100dvw] h-[100dvh] bg-primary z-[51] [&:not(.active)]:translate-x-full translate-x-0 transition-transform duration-300">
 		<div class="relative h-full flex flex-col">
 			<?php echo svg('close', '20', '20', 'close-icon absolute top-0 right-0 text-white') ?>
 			<?php

@@ -7,7 +7,7 @@
 				handleSwiper();
 				toggleContent();
 				toggleMenuMobile();
-				handleMansoryLayout();
+				//handleMansoryLayout();
 			});
 		};
 
@@ -102,13 +102,13 @@
 			});
 		}
 
-		function handleMansoryLayout() {
-			new Masonry('#masonry', {
-				itemSelector: '.grid-item',
-				percentPosition: true,
-				gutter: 8,
-			});
-		}
+		// function handleMansoryLayout() {
+		// 	new Masonry('#masonry', {
+		// 		itemSelector: '.grid-item',
+		// 		percentPosition: true,
+		// 		gutter: 8,
+		// 	});
+		// }
 
 		function toggleContent() {
 			// Toggle từng cặp nút/box
