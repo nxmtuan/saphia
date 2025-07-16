@@ -6,6 +6,7 @@
 				backToTop();
 				handleSwiper();
 				toggleContent();
+				toggleMenuMobile();
 				handleMansoryLayout();
 			});
 		};
@@ -110,21 +111,80 @@
 		}
 
 		function toggleContent() {
+			// Toggle từng cặp nút/box
 			$(document).on('click', '[data-open]', function (e) {
 				e.preventDefault();
 				var $btn = $(this);
 				var target = $btn.data('open');
 				if (!target) return;
+
 				$btn.toggleClass('active');
-				$(target).toggleClass('active');
+				var $box = $(target);
+				$box.toggleClass('active');
+
+				// Nếu box có .close-icon thì thêm no-scroll cho body khi mở
+				if (
+					$box.find('.close-icon').length &&
+					$box.hasClass('active')
+				) {
+					$('body').addClass('no-scroll');
+				}
+				// Nếu tất cả box đều đã đóng thì bỏ no-scroll
+				if ($('[id].active').length === 0) {
+					$('body').removeClass('no-scroll');
+				}
 			});
 
 			// Click ra ngoài: đóng hết
 			$(document).on('click', function (e) {
-				// Nếu không phải click vào bất cứ nút hoặc box nào đang mở
 				if ($(e.target).closest('[data-open], .active').length === 0) {
 					$('[data-open]').removeClass('active');
 					$('[id].active').removeClass('active');
+					$('body').removeClass('no-scroll');
+				}
+			});
+
+			// Click vào nút .close-icon bên trong box
+			$(document).on('click', '.close-icon', function (e) {
+				e.stopPropagation();
+				var $box = $(this).closest('[id]');
+				var boxId = '#' + $box.attr('id');
+				var $btn = $('[data-open="' + boxId + '"]');
+				$btn.removeClass('active');
+				$box.removeClass('active');
+				// Kiểm tra nếu không còn box nào mở thì bỏ no-scroll
+				if ($('[id].active').length === 0) {
+					$('body').removeClass('no-scroll');
+				}
+			});
+		}
+
+		function toggleMenuMobile() {
+			var $menuItems = $('.main-menu-mobile > li.menu-item-has-children');
+			var $allSubMenus = $menuItems.find('ul.sub-menu');
+			var $allLinks = $menuItems.children('a');
+
+			// Đảm bảo tất cả submenu đóng khi vừa load
+			$allSubMenus.hide();
+
+			// Sự kiện click
+			$allLinks.on('click', function (e) {
+				e.preventDefault();
+				var $link = $(this);
+				var $submenu = $link.next('ul.sub-menu');
+
+				if ($submenu.is(':visible')) {
+					// Đang mở thì đóng lại
+					$submenu.stop(true, true).slideUp(250);
+					$link.removeClass('rotated');
+				} else {
+					// Đóng tất cả submenu khác và gỡ xoay icon
+					$allSubMenus.not($submenu).stop(true, true).slideUp(250);
+					$allLinks.not($link).removeClass('rotated');
+
+					// Mở submenu này và xoay icon
+					$submenu.stop(true, true).slideDown(250);
+					$link.addClass('rotated');
 				}
 			});
 		}
