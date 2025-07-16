@@ -11,8 +11,15 @@
  * `theme.json` file and is applied both to the frontend and in the block
  * editor.
 */
+.nojq {
+	display: none
+}
 body {
 	@apply bg-background text-foreground font-sans;
+}
+
+.no-scroll {
+	@apply overflow-y-hidden;
 }
 
 :root {
@@ -55,6 +62,34 @@ body {
 			> .sub-menu {
 				@apply  scale-y-100 visible opacity-100 z-10 pointer-events-auto;
 			}
+		}
+	}
+}
+
+.main-menu-mobile {
+	> li {
+		> a {
+			@apply flex justify-between items-center w-full py-2.5 text-white text-xl capitalize;
+		}
+	}
+
+	> li.menu-item-has-children {
+		> a {
+			@apply after:size-6 after:bg-no-repeat after:bg-center after:transition-transform duration-300;
+
+			&:after {
+				background-image: url("data:image/svg+xml,%3Csvg width='17' height='16' viewBox='0 0 17 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.5 6L8.5 10L12.5 6' stroke='%23fff' stroke-width='1.3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+				background-size: 24px 24px;
+				background-position: center center;
+			}
+		}
+
+		> a.rotated::after {
+			@apply rotate-180;
+		}
+
+		> ul.sub-menu {
+			@apply pb-5 space-y-2.5 pl-5 text-white;
 		}
 	}
 }
