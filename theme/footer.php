@@ -10,13 +10,13 @@
  */
 
 ?>
-<footer class="pt-[93px] pb-[30px] bg-primary">
+<footer class="lg:pt-[93px] pt-[30px] pb-[30px] bg-primary">
 	<div class="container">
-		<div class="flex justify-between gap-[84px] text-white">
+		<div class="flex lg:flex-row flex-col justify-between lg:gap-[84px] gap-10 text-white">
 			<div class="max-w-[334px]">
 				<img src="<?php echo get_stylesheet_directory_uri() ?>/assets/svg/logo.svg" alt="" loading="lazy"
 					class="aspect-[281/105] shrink-0 object-contain w-[281px]">
-				<div class="mt-[66px]  text-lg !leading-[30px]">
+				<div class="lg:mt-[66px] mt-5  text-lg !leading-[30px]">
 					SAPHIA ALKALINE., JSC <br>
 					Đưa cuộc sống KIỀM đến mọi gia đình trên thế giới!
 				</div>
@@ -36,7 +36,7 @@
 					</a>
 				</div>
 			</div>
-			<div class="flex-1 flex justify-between">
+			<div class="flex-1 flex xl:flex-row flex-col xl:justify-between xl:gap-0 gap-10">
 				<div class="space-y-[14px] max-w-[413px]">
 					<?php for ($i = 0; $i < 4; $i++): ?>
 						<div class="space-y-2.5">
@@ -51,39 +51,41 @@
 					<?php endfor ?>
 				</div>
 
-				<ul class="text-xl !leading-[50px] tracking-[-0.72px]">
-					<li>
-						<a href="">Điểm bán</a>
-					</li>
-					<li>
-						<a href="">Hỗ trợ khách hàng</a>
-					</li>
-					<li>
-						<a href="">Tin tức</a>
-					</li>
-					<li>
-						<a href="">Liên hệ</a>
-					</li>
-				</ul>
-
-				<ul class="text-xl !leading-[50px] tracking-[-0.72px]">
-					<li>
-						<a href="">Cơ hội nghề nghiệp</a>
-					</li>
-					<li>
-						<a href="">Sống Kiềm</a>
-					</li>
-					<li>
-						<a href="">Saphia Challenge</a>
-					</li>
-					<li>
-						<a href="">Go Global</a>
-					</li>
-				</ul>
+				<div class="flex flex-1 xl:justify-evenly xl:gap-0 md:gap-20 gap-10">
+					<ul class="md:text-xl text-base tracking-[-0.72px] space-y-3">
+						<li>
+							<a href="">Điểm bán</a>
+						</li>
+						<li>
+							<a href="">Hỗ trợ khách hàng</a>
+						</li>
+						<li>
+							<a href="">Tin tức</a>
+						</li>
+						<li>
+							<a href="">Liên hệ</a>
+						</li>
+					</ul>
+	
+					<ul class="md:text-xl text-base tracking-[-0.72px] space-y-3">
+						<li>
+							<a href="">Cơ hội nghề nghiệp</a>
+						</li>
+						<li>
+							<a href="">Sống Kiềm</a>
+						</li>
+						<li>
+							<a href="">Saphia Challenge</a>
+						</li>
+						<li>
+							<a href="">Go Global</a>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</div>
 
-		<div class="mt-[103px] text-center text-[#ffffff99] text-lg !leading-[30px]">
+		<div class="lg:mt-[103px] mt-8 text-center text-[#ffffff99] lg:text-lg text-[10px] !leading-[30px]">
 			Copyright © 2025 Saphia Alkaline. All Rights Reserved.
 		</div>
 	</div>

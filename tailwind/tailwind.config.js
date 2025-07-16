@@ -25,6 +25,7 @@ module.exports = {
 			backgroundImage: {
 				'home-gradient':
 					'linear-gradient(to bottom, #ffffff 0%, #DCECFD 30%, #DCECFD 80%, #ffffff 100%)',
+				'card-gradient': 'linear-gradient(to top, #0000007A 0%, #00000000 100%)'
 			},
 		},
 		container: {
