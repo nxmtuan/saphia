@@ -197,10 +197,11 @@ get_header();
             <div class="mt-10 flex md:flex-row flex-col md:gap-[6px] gap-4 md:mx-0 -mx-5">
                 <div class="md:w-1/2 w-full md:space-y-[6px] block_slider watch_css center_items">
                     <?php for ($i = 0; $i < 2; $i++): ?>
-                        <div
-                            class="block_slider-item relative xl:pt-9 lg:pt-8 pt-6 xl:pl-16 lg:pl-8 pl-6 lg:rounded-[35px] rounded-[20px] overflow-hidden aspect-[814/640] md:w-full w-[83%]">
-                            <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/home5.png" alt=""
-                                loading="lazy" class="absolute inset-0">
+                        <div class="block_slider-item group relative xl:pt-9 lg:pt-8 pt-6 xl:pl-16 lg:pl-8 pl-6 lg:rounded-[35px] rounded-[20px] overflow-hidden aspect-[814/640] md:w-full w-[83%] bg-no-repeat bg-cover bg-center"
+                            style="background-image: url('<?php echo get_stylesheet_directory_uri() ?>/assets/images/home5.png;')">
+                            <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/home6.png" alt=""
+                                loading="lazy"
+                                class="absolute inset-0 size-full lg:opacity-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300">
                             <div class="relative z-[1]">
                                 <div
                                     class="max-w-[250px] xl:text-[40px] lg:text-2xl text-xl lg:leading-[1] tracking-[-1px] text-[#000000E0]">
@@ -220,10 +221,10 @@ get_header();
                 </div>
                 <div class="md:mt-[151px] md:w-1/2 w-full md:space-y-[6px] block_slider watch_css center_items">
                     <?php for ($i = 0; $i < 2; $i++): ?>
-                        <div
-                            class="block_slider-item relative xl:pt-12 lg:pt-8 pt-6 px-6 lg:rounded-[35px] rounded-[20px] overflow-hidden aspect-[814/640] md:w-full w-[83%]">
-                            <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/home6.png" alt=""
-                                loading="lazy" class="absolute inset-0">
+                        <div class="block_slider-item group relative xl:pt-12 lg:pt-8 pt-6 px-6 lg:rounded-[35px] rounded-[20px] overflow-hidden aspect-[814/640] md:w-full w-[83%] bg-no-repeat bg-cover bg-center"
+                            style="background-image: url('<?php echo get_stylesheet_directory_uri() ?>/assets/images/home6.png;')">
+                            <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/home5.png" alt=""
+                                loading="lazy" class="absolute inset-0 size-full lg:opacity-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300">
                             <div class="relative z-[1] flex flex-col items-center">
                                 <div
                                     class="max-w-[332px] xl:text-[40px] lg:text-2xl text-xl lg:leading-[1] tracking-[-1px] text-[#000000E0] text-center">
@@ -355,14 +356,19 @@ get_header();
 
     <section class="lg:my-[150px] my-[60px]">
         <div class="container">
-            <div class="lg:text-[64px] text-4xl lg:leading-[77px] tracking-[-0.96px] highlight text-black max-w-[1011px]">
+            <div
+                class="lg:text-[64px] text-4xl lg:leading-[77px] tracking-[-0.96px] highlight text-black max-w-[1011px]">
                 4 điểm mạnh chỉ có tại hệ thống kinh doanh <span>Kiềm thảo dược Saphia</span>
             </div>
-            <div class="lg:mt-[68px] mt-10 md:grid xl:grid-cols-4 grid-cols-2 xl:gap-[54px] gap-4 md:h-[496px] h-[400px] block_slider watch_css center_items md:mx-0 -mx-5">
+            <div
+                class="lg:mt-[68px] mt-10 md:grid xl:grid-cols-4 grid-cols-2 xl:gap-[54px] gap-4 md:h-[496px] h-[400px] block_slider watch_css center_items md:mx-0 -mx-5">
                 <?php for ($i = 0; $i < 4; $i++): ?>
-                    <div class="block_slider-item md:w-full w-[83%] h-full relative lg:rounded-[35px] rounded-[20px] overflow-hidden flex items-end">
-                        <img src="<?php echo get_stylesheet_directory_uri()?>/assets/images/home2.png" alt="" loading="lazy" class="absolute inset-0 size-full object-cover">
-                        <div class="relative px-3 py-[23px] lg:text-[42.5px] text-[30px] leading-[1] bg-card-gradient text-white z-[1]">
+                    <div
+                        class="block_slider-item md:w-full w-[83%] h-full relative lg:rounded-[35px] rounded-[20px] overflow-hidden flex items-end">
+                        <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/home2.png" alt=""
+                            loading="lazy" class="absolute inset-0 size-full object-cover">
+                        <div
+                            class="relative px-3 py-[23px] lg:text-[42.5px] text-[30px] leading-[1] bg-card-gradient text-white z-[1]">
                             Phù hợp với nhiều đối tượng
                         </div>
                         <a href=""
@@ -381,7 +387,8 @@ get_header();
                 class="ml-auto lg:text-[64px] text-4xl lg:leading-[77px] tracking-[-0.96px] highlight text-black max-w-[1139px] text-end">
                 5 lợi ích khác biệt khi chọn đồng hành kinh doanh cùng <span>Kiềm thảo dược Saphia</span>
             </div>
-            <div class="mt-7 md:grid grid-cols-10 grid-rows-7 gap-2 xl:h-[896px] lg:h-[740px] md:h-[600px] h-[400px] text-white block_slider watch_css center_items md:mx-0 -mx-5">
+            <div
+                class="mt-7 md:grid grid-cols-10 grid-rows-7 gap-2 xl:h-[896px] lg:h-[740px] md:h-[600px] h-[400px] text-white block_slider watch_css center_items has_autoplay md:mx-0 -mx-5">
                 <div
                     class="block_slider-item max-md:w-[83%] row-start-1 row-end-4 col-start-1 col-end-5 relative lg:pt-[43px] pt-6 lg:pl-[43px] pl-6 lg:rounded-[35px] rounded-[20px] overflow-hidden">
                     <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/home3.png" alt=""
@@ -465,7 +472,8 @@ get_header();
                 <div class="flex-1 flex xl:gap-7 gap-2.5">
                     <div class="w-1/2 xl:space-y-7 space-y-2.5">
                         <?php for ($i = 0; $i < 3; $i++): ?>
-                            <div class="xl:px-11 xl:pt-10 xl:pb-8 p-5 bg-[#FFF3E7] lg:rounded-[30px] rounded-[20px] overflow-hidden">
+                            <div
+                                class="xl:px-11 xl:pt-10 xl:pb-8 p-5 bg-[#FFF3E7] lg:rounded-[30px] rounded-[20px] overflow-hidden">
                                 <div class="xl:text-[28px] text-xl xl:leading-[36.4px] tracking-[-0.42px]">
                                     Ăn kiềm
                                 </div>
@@ -484,7 +492,8 @@ get_header();
                     </div>
                     <div class="mt-[95px] w-1/2 xl:space-y-7 space-y-2.5">
                         <?php for ($i = 0; $i < 2; $i++): ?>
-                            <div class="xl:px-11 xl:pt-10 xl:pb-8 p-5 bg-[#FFF3E7] lg:rounded-[30px] rounded-[20px] overflow-hidden">
+                            <div
+                                class="xl:px-11 xl:pt-10 xl:pb-8 p-5 bg-[#FFF3E7] lg:rounded-[30px] rounded-[20px] overflow-hidden">
                                 <div class="xl:text-[28px] text-xl xl:leading-[36.4px] tracking-[-0.42px]">
                                     Ăn kiềm
                                 </div>
