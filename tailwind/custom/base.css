@@ -29,10 +29,10 @@ body {
 }
 
 .main-menu > li {
-  @apply text-white text-lg !leading-[32px] capitalize;
+  @apply text-white 1.5xl:text-lg leading-[32px] capitalize;
 }
 .main-menu > li > a {
-  @apply block py-6 px-[15px];
+  @apply block 1.5xl:py-6 py-4 px-[15px];
 }
 .main-menu > li.menu-item-has-children {
   @apply pr-8 bg-no-repeat bg-contain relative;
@@ -89,6 +89,15 @@ body {
 }
 .form-nhan-tu-van-mien-phi .wpcf7-spinner {
   @apply absolute bottom-0 left-0;
+}
+
+.mission-slider .swiper-button-next,
+.mission-slider .swiper-button-prev {
+  @apply size-[66px] shrink-0 bg-none bg-[#0000006b] rounded-full;
+}
+.mission-slider .swiper-button-next::after,
+.mission-slider .swiper-button-prev::after {
+  @apply text-white;
 }
 
 /*# sourceMappingURL=base.css.map */

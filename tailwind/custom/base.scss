@@ -29,10 +29,10 @@ body {
 
 .main-menu {
 	> li {
-		@apply text-white text-lg !leading-[32px] capitalize;
+		@apply text-white 1.5xl:text-lg leading-[32px] capitalize;
 
 		> a {
-			@apply block py-6 px-[15px];
+			@apply block 1.5xl:py-6 py-4 px-[15px];
 		}
 	}
 
@@ -115,5 +115,16 @@ body {
 
 	.wpcf7-spinner {
 		@apply absolute bottom-0 left-0;
+	}
+}
+
+.mission-slider {
+	.swiper-button-next,
+	.swiper-button-prev {
+		@apply size-[66px] shrink-0 bg-none bg-[#0000006b] rounded-full;
+
+		&::after {
+			@apply text-white;
+		}
 	}
 }

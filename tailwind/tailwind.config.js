@@ -17,6 +17,7 @@ module.exports = {
 			colors: {
 				primary: '#224393',
 				secondary: '#f47514',
+				content: '#292929',
 			},
 			fontFamily: {
 				body: ['Questrial'],
@@ -25,8 +26,12 @@ module.exports = {
 			backgroundImage: {
 				'home-gradient':
 					'linear-gradient(to bottom, #ffffff 0%, #DCECFD 30%, #DCECFD 80%, #ffffff 100%)',
-				'card-gradient': 'linear-gradient(to top, #0000007A 0%, #00000000 100%)'
+				'card-gradient': 'linear-gradient(to top, #0000007A 0%, #00000000 100%)',
+				'text-gradient': 'linear-gradient(90deg, #124B96 0%, #26AAE1 100%)',
 			},
+			boxShadow: {
+				'card': '0px 6.34px 38.041px 0px rgba(0, 0, 0, 0.16)',
+			}
 		},
 		container: {
 			center: true,

@@ -55,7 +55,7 @@ get_header();
                                 style="background-image: url('<?php echo get_stylesheet_directory_uri() ?>/assets/images/home2.png');">
                                 <a href=""
                                     class="absolute lg:top-2 top-4 lg:right-2 right-4 lg:size-16 size-8 flex justify-center items-center rounded-full overflow-hidden bg-white shrink-0">
-                                    <?php echo svg('up-right', '27', '30', 'shrink-0 text-[#292929]') ?>
+                                    <?php echo svg('up-right', '27', '30', 'shrink-0 text-content') ?>
                                 </a>
                             </div>
                         <?php endfor ?>
@@ -108,7 +108,7 @@ get_header();
                                         Khởi nguồn từ sa mạc đầy nắng và gió
                                     </div>
                                     <a href=""
-                                        class="font-content mt-auto ml-auto py-[14px] px-[26px] rounded-full overflow-hidden bg-[#ffffff2b] text-white backdrop-blur-[10px]">
+                                        class="font-content mt-auto ml-auto py-[14px] px-[26px] rounded-full overflow-hidden bg-[#ffffff2b] hover:bg-white text-white hover:text-[#3A566A] backdrop-blur-[10px] transition-colors duration-300">
                                         Xem thêm
                                     </a>
                                 </div>
@@ -120,7 +120,7 @@ get_header();
                                         Tầm nhìn ra <strong>100 quốc gia</strong>
                                     </div>
                                     <a href=""
-                                        class="font-content mt-auto ml-auto py-[14px] px-[26px] rounded-full overflow-hidden bg-white text-[#3A566A] backdrop-blur-[10px]">
+                                        class="font-content mt-auto ml-auto py-[14px] px-[26px] rounded-full overflow-hidden bg-[#ffffff2b] hover:bg-white text-white hover:text-[#3A566A] backdrop-blur-[10px] transition-colors duration-300">
                                         Xem thêm
                                     </a>
                                 </div>
@@ -132,7 +132,7 @@ get_header();
                                         Cái bắt tay triệu đô mở ra cơ hội lớn
                                     </div>
                                     <a href=""
-                                        class="font-content mt-auto ml-auto py-[14px] px-[26px] rounded-full overflow-hidden bg-[#ffffff2b] text-white backdrop-blur-[10px]">
+                                        class="font-content mt-auto ml-auto py-[14px] px-[26px] rounded-full overflow-hidden bg-[#ffffff2b] hover:bg-white text-white hover:text-[#3A566A] backdrop-blur-[10px] transition-colors duration-300">
                                         Xem thêm
                                     </a>
                                 </div>
@@ -224,7 +224,8 @@ get_header();
                         <div class="block_slider-item group relative xl:pt-12 lg:pt-8 pt-6 px-6 lg:rounded-[35px] rounded-[20px] overflow-hidden aspect-[814/640] md:w-full w-[83%] bg-no-repeat bg-cover bg-center"
                             style="background-image: url('<?php echo get_stylesheet_directory_uri() ?>/assets/images/home6.png;')">
                             <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/home5.png" alt=""
-                                loading="lazy" class="absolute inset-0 size-full lg:opacity-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300">
+                                loading="lazy"
+                                class="absolute inset-0 size-full lg:opacity-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300">
                             <div class="relative z-[1] flex flex-col items-center">
                                 <div
                                     class="max-w-[332px] xl:text-[40px] lg:text-2xl text-xl lg:leading-[1] tracking-[-1px] text-[#000000E0] text-center">
@@ -266,7 +267,7 @@ get_header();
                         style="background-image: url('<?php echo get_stylesheet_directory_uri() ?>/assets/images/home2.png');">
                         <a href=""
                             class="absolute lg:top-2 top-4 lg:right-2 right-4 lg:size-16 size-8 flex justify-center items-center rounded-full overflow-hidden bg-white shrink-0">
-                            <?php echo svg('up-right', '27', '30', 'shrink-0 text-[#292929]') ?>
+                            <?php echo svg('up-right', '27', '30', 'shrink-0 text-content') ?>
                         </a>
                     </div>
                 <?php endfor ?>
@@ -274,9 +275,9 @@ get_header();
         </div>
     </section>
 
-    <section class="lg:mt-[180px] mt-[60px] mb-5">
+    <section class="lg:mt-[180px] mt-[60px]">
         <div class="container">
-            <div class="lg:space-y-9 space-y-4 text-[#292929]">
+            <div class="lg:space-y-9 space-y-4 text-content">
                 <div class="lg:text-[25px] text-base lg:leading-[22.565px] tracking-[-0.242px] uppercase">
                     Bản tin kiềm hoá
                 </div>
@@ -300,7 +301,7 @@ get_header();
                             </div>
                             <p class="lg:mt-[49px] mt-4 line-clamp-3">
                                 <a href=""
-                                    class="block text-[#292929] text-[28.206px] leading-[36.265px] tracking-[-0.423px]">
+                                    class="block text-content text-[28.206px] leading-[36.265px] tracking-[-0.423px]">
                                     Bằng độc quyền sáng chế kiềm thảo dược. Niềm tự hào của trí tuệ Việt
                                 </a>
                             </p>
@@ -316,16 +317,10 @@ get_header();
                     </div>
                 <?php endfor ?>
             </div>
-            <div class="lg:mt-[47px] py-16 md:w-full block_slider loop center_items has_autoplay md:mx-0 -mx-5">
-                <?php for ($i = 0; $i < 10; $i++): ?>
-                    <div class="block_slider-item lg:mx-0 mx-5 lg:w-[20%] w-[30%] flex justify-center">
-                        <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/svg/logo-1.svg" alt="" loading="lazy"
-                            class="object-contain">
-                    </div>
-                <?php endfor ?>
-            </div>
         </div>
     </section>
+
+    <?php echo get_template_part('/components/block_partner-slider') ?>
 
     <section class="lg:my-[120px] my-[60px]">
         <div class="container">
@@ -373,7 +368,7 @@ get_header();
                         </div>
                         <a href=""
                             class="absolute lg:top-2 top-4 lg:right-2 right-4 lg:size-16 size-8 flex justify-center items-center rounded-full overflow-hidden bg-white shrink-0 z-[1]">
-                            <?php echo svg('up-right', '27', '30', 'shrink-0 text-[#292929]') ?>
+                            <?php echo svg('up-right', '27', '30', 'shrink-0 text-content') ?>
                         </a>
                     </div>
                 <?php endfor ?>
@@ -398,7 +393,7 @@ get_header();
                     </div>
                     <a href=""
                         class="absolute bottom-2.5 right-2.5 lg:size-16 size-8 flex justify-center items-center rounded-full overflow-hidden bg-white shrink-0">
-                        <?php echo svg('up-right', '27', '30', 'shrink-0 text-[#292929]') ?>
+                        <?php echo svg('up-right', '27', '30', 'shrink-0 text-content') ?>
                     </a>
                 </div>
 
@@ -411,7 +406,7 @@ get_header();
                     </div>
                     <a href=""
                         class="absolute bottom-2.5 right-2.5 lg:size-16 size-8 flex justify-center items-center rounded-full overflow-hidden bg-white shrink-0">
-                        <?php echo svg('up-right', '27', '30', 'shrink-0 text-[#292929]') ?>
+                        <?php echo svg('up-right', '27', '30', 'shrink-0 text-content') ?>
                     </a>
                 </div>
 
@@ -424,7 +419,7 @@ get_header();
                     </div>
                     <a href=""
                         class="absolute bottom-2.5 right-2.5 lg:size-16 size-8 flex justify-center items-center rounded-full overflow-hidden bg-white shrink-0">
-                        <?php echo svg('up-right', '27', '30', 'shrink-0 text-[#292929]') ?>
+                        <?php echo svg('up-right', '27', '30', 'shrink-0 text-content') ?>
                     </a>
                 </div>
 
@@ -437,7 +432,7 @@ get_header();
                     </div>
                     <a href=""
                         class="absolute bottom-2.5 right-2.5 lg:size-16 size-8 flex justify-center items-center rounded-full overflow-hidden bg-white shrink-0">
-                        <?php echo svg('up-right', '27', '30', 'shrink-0 text-[#292929]') ?>
+                        <?php echo svg('up-right', '27', '30', 'shrink-0 text-content') ?>
                     </a>
                 </div>
 
@@ -450,70 +445,14 @@ get_header();
                     </div>
                     <a href=""
                         class="absolute bottom-2.5 right-2.5 lg:size-16 size-8 flex justify-center items-center rounded-full overflow-hidden bg-white shrink-0">
-                        <?php echo svg('up-right', '27', '30', 'shrink-0 text-[#292929]') ?>
+                        <?php echo svg('up-right', '27', '30', 'shrink-0 text-content') ?>
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="lg:my-[150px] my-[60px]">
-        <div class="container">
-            <div class="flex lg:flex-row flex-col xl:items-start lg:items-end 1.5xl:gap-[110px] xl:gap-[60px] gap-5">
-                <div class="1.5xl:w-[694px] md:w-1/2 w-full">
-                    <div class="xl:text-[64px] text-4xl xl:leading-[77px] tracking-[-0.96px]">
-                        Tận hưởng giá trị cốt lõi của Kiềm thảo dược Saphia
-                    </div>
-                    <div class="lg:mt-[50px] mt-10 rounded-[35px] overflow-hidden">
-                        <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/home3.png" alt=""
-                            loading="lazy" class="aspect-[694/751] w-full">
-                    </div>
-                </div>
-                <div class="flex-1 flex xl:gap-7 gap-2.5">
-                    <div class="w-1/2 xl:space-y-7 space-y-2.5">
-                        <?php for ($i = 0; $i < 3; $i++): ?>
-                            <div
-                                class="xl:px-11 xl:pt-10 xl:pb-8 p-5 bg-[#FFF3E7] lg:rounded-[30px] rounded-[20px] overflow-hidden">
-                                <div class="xl:text-[28px] text-xl xl:leading-[36.4px] tracking-[-0.42px]">
-                                    Ăn kiềm
-                                </div>
-                                <div class="xl:mt-8 mt-2.5 xl:text-lg text-xs xl:leading-[32px] text-[#525256]">
-                                    Consequat mauris nunc congue nisi vitae suscipit tellus. Quis eleifend quam adipiscing
-                                    vitae
-                                    proin sagittis
-                                </div>
-                                <a href=""
-                                    class="ml-auto xl:mt-12 mt-4 w-fit xl:text-xl text-sm lg:leading-[34px] text-[#292929] flex items-center gap-1">
-                                    Xem thêm
-                                    <?php echo svg('up-right', '21', '21', 'text-[#292929] shrink-0') ?>
-                                </a>
-                            </div>
-                        <?php endfor ?>
-                    </div>
-                    <div class="mt-[95px] w-1/2 xl:space-y-7 space-y-2.5">
-                        <?php for ($i = 0; $i < 2; $i++): ?>
-                            <div
-                                class="xl:px-11 xl:pt-10 xl:pb-8 p-5 bg-[#FFF3E7] lg:rounded-[30px] rounded-[20px] overflow-hidden">
-                                <div class="xl:text-[28px] text-xl xl:leading-[36.4px] tracking-[-0.42px]">
-                                    Ăn kiềm
-                                </div>
-                                <div class="xl:mt-8 mt-2.5 xl:text-lg text-xs xl:leading-[32px] text-[#525256]">
-                                    Consequat mauris nunc congue nisi vitae suscipit tellus. Quis eleifend quam adipiscing
-                                    vitae
-                                    proin sagittis
-                                </div>
-                                <a href=""
-                                    class="ml-auto xl:mt-12 mt-4 w-fit xl:text-xl text-sm xl:leading-[34px] text-[#292929] flex items-center gap-1">
-                                    Xem thêm
-                                    <?php echo svg('up-right', '21', '21', 'text-[#292929] shrink-0') ?>
-                                </a>
-                            </div>
-                        <?php endfor ?>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <?php echo get_template_part('/components/block_core-values') ?>
 </main>
 
 <?php
