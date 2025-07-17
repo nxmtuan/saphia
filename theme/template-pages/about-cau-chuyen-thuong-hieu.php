@@ -8,70 +8,9 @@ get_header();
 ?>
 
 <main>
-    <section class="lg:my-[192px] my-[60px]">
-        <div class="container">
-            <div class="relative flex items-end lg:p-[60px] p-5 w-full lg:rounded-[35px] rounded-[20px] overflow-hidden aspect-[1632/600] bg-cover bg-center bg-no-repeat"
-                style="background-image: url('<?php echo get_stylesheet_directory_uri() ?>/assets/images/about1.png');">
-                <div class="absolute inset-0 bg-[#5B79A480]"></div>
-                <div
-                    class="xl:text-[64px] lg:text-4xl md:text-2xl xl:leading-[76px] leading-[1] tracking-[-0.96px] text-white xl:max-w-[1225px] lg:max-w-[80%] max-w-[65%] z-[1]">
-                    Không chỉ dừng lại ở câu chuyện kinh doanh hay chiếm lĩnh thị trường Kiềm toàn cầu
-                </div>
-                <a href=""
-                    class="font-content absolute lg:bottom-10 md:bottom-5 bottom-2 lg:right-10 md:right-5 right-2 lg:py-[14px] md:py-2.5 py-1 lg:px-[26px] md:px-5 px-4 rounded-full overflow-hidden bg-[#ffffff2b] hover:bg-white text-white hover:text-[#3A566A] lg:text-base text-sm backdrop-blur-[10px] z-[1] transition-colors duration-300">
-                    Xem thêm
-                </a>
-            </div>
-        </div>
-    </section>
+    <?php echo get_template_part('/components/block_brand-intro') ?>
 
-    <section class="lg:my-[192px] my-[60px]">
-        <div class="container">
-            <div class="flex lg:flex-row flex-col xl:gap-[112px] lg:gap-5">
-                <div class="lg:w-1/2 w-full flex lg:gap-[30px] gap-2.5">
-                    <?php echo svg('tric', '30', '23', 'shrink-0 text-primary') ?>
-                    <div class="the_content">
-                        <p>
-                            Kiềm Thảo Dược Saphia là công ty nghiên cứu, sản xuất thực phẩm bảo vệ sức khoẻ và các hợp
-                            chất thiên nhiên đi từ công nghệ sinh học hoạt hoá 5.0. Bên cạnh lĩnh vực dược phẩm, Kiềm
-                            Thảo Dược Saphia còn có ứng dụng cho ngành sản xuất mỹ phẩm, chất diệt khuẩn sinh học, bảo
-                            quản thực phẩm, nuôi trồng…
-                        </p>
-                        <p>
-                            Là một doanh nghiệp Startup nhưng đạt tốc độ tăng trưởng đầy ngoạn mục, Kiềm Thảo Dược
-                            Saphia dù mới chỉ xuất hiện trên thị trường từ 2021, nhưng sau 4 năm, doanh thu đã đạt con
-                            số mà mọi doanh nghiệp startup mơ ước - 150 tỷ/năm tại thị trường Việt Nam, được người tiêu
-                            dùng đón nhận như một món quà sức khỏe không thể thiếu.
-                        </p>
-                        <p>
-                            Mang khát vọng đưa thảo dược Việt ra thế giới
-                        </p>
-                        <p>
-
-                            Bắt nguồn từ kho tàng y học cổ truyền dân tộc, kết hợp với khoa học hiện đại và sự thấu hiểu
-                            sâu sắc về giá trị của thảo dược quê hương, Kiềm Thảo Dược Saphia ra đời như một giải pháp
-                            đột phá, mang trong mình sứ mệnh chăm sóc và bảo vệ sức khỏe con người một cách tự nhiên và
-                            bền vững. Mỗi giọt Kiềm thảo dược là kết tinh của niềm đam mê nghiên cứu, sự trân trọng Mẹ
-                            Thiên Nhiên và trên hết là tình yêu dành cho sức khỏe cộng đồng.
-                        </p>
-                        <p>
-                            Không chỉ dừng lại ở câu chuyện kinh doanh hay chiếm lĩnh thị trường Kiềm toàn cầu, Kiềm
-                            Saphia gửi gắm vào đó những khát vọng của người Việt - mang TRÍ TUỆ & TRÁI TIM của người
-                            Việt cùng niềm tự tôn dân tộc sánh vai cùng năm châu, để người Việt làm giàu trên chính mảnh
-                            đất quê hương, để thảo dược Việt không chỉ là bài thuốc quý lưu truyền trong dân gian mà bất
-                            cứ ai trên thế giới cũng có cơ hội được tiếp cận với phương pháp chăm sóc sức khỏe chủ động
-                            hoàn toàn từ thiên nhiên.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="lg:w-1/2 w-full h-fit lg:rounded-[35px] rounded-[20px] overflow-hidden">
-                    <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/home3.png" alt=""
-                        loading="lazy" class="w-full">
-                </div>
-            </div>
-        </div>
-    </section>
+    <?php echo get_template_part('/components/block_mission-statement') ?>
 
     <section class="lg:my-[192px] my-[60px]">
         <div class="container">

@@ -20,7 +20,7 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class('font-body font-normal'); ?>>
+<body <?php body_class('font-body font-normal overflow-x-hidden'); ?>>
 
 	<?php wp_body_open(); ?>
 

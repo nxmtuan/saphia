@@ -91,4 +91,13 @@ body {
   @apply absolute bottom-0 left-0;
 }
 
+.mission-slider .swiper-button-next,
+.mission-slider .swiper-button-prev {
+  @apply size-[66px] shrink-0 bg-none bg-[#0000006b] rounded-full;
+}
+.mission-slider .swiper-button-next::after,
+.mission-slider .swiper-button-prev::after {
+  @apply text-white;
+}
+
 /*# sourceMappingURL=base.css.map */

@@ -117,3 +117,14 @@ body {
 		@apply absolute bottom-0 left-0;
 	}
 }
+
+.mission-slider {
+	.swiper-button-next,
+	.swiper-button-prev {
+		@apply size-[66px] shrink-0 bg-none bg-[#0000006b] rounded-full;
+
+		&::after {
+			@apply text-white;
+		}
+	}
+}

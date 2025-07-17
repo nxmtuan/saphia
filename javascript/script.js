@@ -1,15 +1,14 @@
 (() => {
 	// javascript/script.js
 	(function ($) {
-		window.onload = function () {
-			$(document).ready(function () {
-				backToTop();
-				handleSwiper();
-				toggleContent();
-				toggleMenuMobile();
-				//handleMansoryLayout();
-			});
-		};
+		$(document).ready(function () {
+			backToTop();
+			handleSwiper();
+			cardSlider();
+			toggleContent();
+			toggleMenuMobile();
+			//handleMansoryLayout();
+		});
 
 		let swiperInstances = [];
 
@@ -19,30 +18,51 @@
 			$('.block_slider').each(function (index) {
 				const $slider = $(this);
 				const swiperId = 'swiper-' + index;
+				const $slides = $slider.find('.block_slider-item');
+				const slideQty = $slides.length;
 
-				// Nếu là TH2: chỉ muốn slider ở mobile
 				const isMobileOnly = $slider.hasClass('watch_css');
 
-				// Nếu đang là desktop và slider chỉ dành cho mobile → hủy slider nếu có
+				/* ----- TH1: slider chỉ chạy trên mobile, đang ở desktop → huỷ ----- */
 				if (!isMobile && isMobileOnly) {
-					const existingInstance = swiperInstances[index];
-					if (existingInstance) {
-						existingInstance.destroy(true, true);
+					if (swiperInstances[index]) {
+						swiperInstances[index].destroy(true, true);
 						swiperInstances[index] = null;
 					}
 					return;
 				}
 
-				// Nếu đã khởi tạo rồi thì bỏ qua
+				/* ----- TH2: có 0‑1 slide → KHÔNG khởi tạo, ẩn nav/dot, tắt drag ----- */
+				if (slideQty <= 1) {
+					// Hủy instance cũ (nếu có)
+					if (swiperInstances[index]) {
+						swiperInstances[index].destroy(true, true);
+						swiperInstances[index] = null;
+					}
+					// Dọn DOM dư thừa từ lần khởi tạo trước (nếu có)
+					$slider
+						.removeClass(function (_, cls) {
+							// gỡ mọi class bắt đầu bằng “swiper”
+							return (cls.match(/(^|\s)swiper\S+/g) || []).join(
+								' '
+							);
+						})
+						.find(
+							'.swiper-button-next, .swiper-button-prev, .swiper-pagination'
+						)
+						.remove();
+					$slides.removeClass('swiper-slide');
+					return; // kết thúc xử lý block này
+				}
+
+				/* ----- Đã có instance hợp lệ → bỏ qua ----- */
 				if (swiperInstances[index]) return;
 
-				// Gán class Swiper và chuẩn bị DOM
-				$slider.addClass('swiper ' + swiperId);
-
-				const $slides = $slider.find('.block_slider-item');
+				/* ----- Khởi tạo Swiper cho block có ≥ 2 slide ----- */
+				$slider.addClass(`swiper ${swiperId}`);
 				$slides.addClass('swiper-slide');
 
-				// Chỉ wrap nếu chưa wrap (tránh bị lồng nhiều lần)
+				// Chỉ wrap 1 lần
 				if ($slider.find('.swiper-wrapper').length === 0) {
 					$slides.wrapAll('<div class="swiper-wrapper"></div>');
 				}
@@ -52,22 +72,19 @@
 					prevBtn = null;
 				if ($slider.hasClass('has_nav')) {
 					$slider.append(`
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-      `);
+				<div class="swiper-button-next"></div>
+				<div class="swiper-button-prev"></div>
+			`);
 					nextBtn = $slider.find('.swiper-button-next')[0];
 					prevBtn = $slider.find('.swiper-button-prev')[0];
 				}
 
 				// Autoplay
 				const autoplayConfig = $slider.hasClass('has_autoplay')
-					? {
-							delay: 3000,
-							disableOnInteraction: false,
-						}
+					? { delay: 3000, disableOnInteraction: false }
 					: false;
 
-				// Cấu hình
+				// Cấu hình cơ bản
 				const swiperConfig = {
 					slidesPerView: 'auto',
 					spaceBetween: 16,
@@ -76,14 +93,14 @@
 					autoplay: autoplayConfig,
 				};
 
-				// Pagination
+				// Pagination (dots)
 				if ($slider.hasClass('has_dots')) {
-					const paginationEl = $(
+					const $pagination = $(
 						'<div class="swiper-pagination"></div>'
 					);
-					$slider.append(paginationEl);
+					$slider.append($pagination);
 					swiperConfig.pagination = {
-						el: paginationEl[0],
+						el: $pagination[0],
 						clickable: true,
 					};
 				}
@@ -96,9 +113,35 @@
 					};
 				}
 
-				// Khởi tạo và lưu lại instance
-				const swiper = new Swiper('.' + swiperId, swiperConfig);
-				swiperInstances[index] = swiper;
+				// Khởi tạo & lưu instance
+				swiperInstances[index] = new Swiper(
+					`.${swiperId}`,
+					swiperConfig
+				);
+			});
+		}
+
+		function cardSlider() {
+			var navSwiper = new Swiper('.nav-slider', {
+				slidesPerView: 1, // Hiển thị 3 thumbnail cùng lúc
+				spaceBetween: 10, // Khoảng cách giữa các thumbnail
+				watchSlidesProgress: true, // Theo dõi tiến trình của slide
+				watchSlidesVisibility: true, // Theo dõi khả năng hiển thị của slide
+				allowTouchMove: false,
+			});
+
+			var swiper = new Swiper('.main-slider', {
+				effect: 'cards',
+				grabCursor: true,
+				cardsEffect: {
+					perSlideOffset: 30, // Tăng giá trị này để các thẻ xòe ra xa hơn (mặc định là 8)
+					perSlideRotate: 15, // Tăng giá trị này để các thẻ quay nhiều hơn (mặc định là 2)
+					rotate: true, // Mặc định là true, có thể giữ nguyên hoặc thay đổi
+					slideShadows: true, // Mặc định là true, có thể giữ nguyên hoặc thay đổi
+				},
+				controller: {
+					control: navSwiper,
+				},
 			});
 		}
 
