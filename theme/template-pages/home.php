@@ -55,7 +55,7 @@ get_header();
                                 style="background-image: url('<?php echo get_stylesheet_directory_uri() ?>/assets/images/home2.png');">
                                 <a href=""
                                     class="absolute lg:top-2 top-4 lg:right-2 right-4 lg:size-16 size-8 flex justify-center items-center rounded-full overflow-hidden bg-white shrink-0">
-                                    <?php echo svg('up-right', '27', '30', 'shrink-0 text-[#292929]') ?>
+                                    <?php echo svg('up-right', '27', '30', 'shrink-0 text-content') ?>
                                 </a>
                             </div>
                         <?php endfor ?>
@@ -108,7 +108,7 @@ get_header();
                                         Khởi nguồn từ sa mạc đầy nắng và gió
                                     </div>
                                     <a href=""
-                                        class="font-content mt-auto ml-auto py-[14px] px-[26px] rounded-full overflow-hidden bg-[#ffffff2b] text-white backdrop-blur-[10px]">
+                                        class="font-content mt-auto ml-auto py-[14px] px-[26px] rounded-full overflow-hidden bg-[#ffffff2b] hover:bg-white text-white hover:text-[#3A566A] backdrop-blur-[10px] transition-colors duration-300">
                                         Xem thêm
                                     </a>
                                 </div>
@@ -120,7 +120,7 @@ get_header();
                                         Tầm nhìn ra <strong>100 quốc gia</strong>
                                     </div>
                                     <a href=""
-                                        class="font-content mt-auto ml-auto py-[14px] px-[26px] rounded-full overflow-hidden bg-white text-[#3A566A] backdrop-blur-[10px]">
+                                        class="font-content mt-auto ml-auto py-[14px] px-[26px] rounded-full overflow-hidden bg-[#ffffff2b] hover:bg-white text-white hover:text-[#3A566A] backdrop-blur-[10px] transition-colors duration-300">
                                         Xem thêm
                                     </a>
                                 </div>
@@ -132,7 +132,7 @@ get_header();
                                         Cái bắt tay triệu đô mở ra cơ hội lớn
                                     </div>
                                     <a href=""
-                                        class="font-content mt-auto ml-auto py-[14px] px-[26px] rounded-full overflow-hidden bg-[#ffffff2b] text-white backdrop-blur-[10px]">
+                                        class="font-content mt-auto ml-auto py-[14px] px-[26px] rounded-full overflow-hidden bg-[#ffffff2b] hover:bg-white text-white hover:text-[#3A566A] backdrop-blur-[10px] transition-colors duration-300">
                                         Xem thêm
                                     </a>
                                 </div>
@@ -267,7 +267,7 @@ get_header();
                         style="background-image: url('<?php echo get_stylesheet_directory_uri() ?>/assets/images/home2.png');">
                         <a href=""
                             class="absolute lg:top-2 top-4 lg:right-2 right-4 lg:size-16 size-8 flex justify-center items-center rounded-full overflow-hidden bg-white shrink-0">
-                            <?php echo svg('up-right', '27', '30', 'shrink-0 text-[#292929]') ?>
+                            <?php echo svg('up-right', '27', '30', 'shrink-0 text-content') ?>
                         </a>
                     </div>
                 <?php endfor ?>
@@ -277,7 +277,7 @@ get_header();
 
     <section class="lg:mt-[180px] mt-[60px]">
         <div class="container">
-            <div class="lg:space-y-9 space-y-4 text-[#292929]">
+            <div class="lg:space-y-9 space-y-4 text-content">
                 <div class="lg:text-[25px] text-base lg:leading-[22.565px] tracking-[-0.242px] uppercase">
                     Bản tin kiềm hoá
                 </div>
@@ -301,7 +301,7 @@ get_header();
                             </div>
                             <p class="lg:mt-[49px] mt-4 line-clamp-3">
                                 <a href=""
-                                    class="block text-[#292929] text-[28.206px] leading-[36.265px] tracking-[-0.423px]">
+                                    class="block text-content text-[28.206px] leading-[36.265px] tracking-[-0.423px]">
                                     Bằng độc quyền sáng chế kiềm thảo dược. Niềm tự hào của trí tuệ Việt
                                 </a>
                             </p>
@@ -320,16 +320,7 @@ get_header();
         </div>
     </section>
 
-    <section class="lg:mt-[47px] mb-5">
-        <div class="py-16 md:w-full block_slider loop center_items has_autoplay md:mx-0 -mx-5">
-            <?php for ($i = 0; $i < 10; $i++): ?>
-                <div class="block_slider-item lg:mx-0 mx-5 lg:w-[20%] w-[30%] flex justify-center">
-                    <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/svg/logo-1.svg" alt="" loading="lazy"
-                        class="object-contain">
-                </div>
-            <?php endfor ?>
-        </div>
-    </section>
+    <?php echo get_template_part('/components/block_partner-slider') ?>
 
     <section class="lg:my-[120px] my-[60px]">
         <div class="container">
@@ -377,7 +368,7 @@ get_header();
                         </div>
                         <a href=""
                             class="absolute lg:top-2 top-4 lg:right-2 right-4 lg:size-16 size-8 flex justify-center items-center rounded-full overflow-hidden bg-white shrink-0 z-[1]">
-                            <?php echo svg('up-right', '27', '30', 'shrink-0 text-[#292929]') ?>
+                            <?php echo svg('up-right', '27', '30', 'shrink-0 text-content') ?>
                         </a>
                     </div>
                 <?php endfor ?>
@@ -402,7 +393,7 @@ get_header();
                     </div>
                     <a href=""
                         class="absolute bottom-2.5 right-2.5 lg:size-16 size-8 flex justify-center items-center rounded-full overflow-hidden bg-white shrink-0">
-                        <?php echo svg('up-right', '27', '30', 'shrink-0 text-[#292929]') ?>
+                        <?php echo svg('up-right', '27', '30', 'shrink-0 text-content') ?>
                     </a>
                 </div>
 
@@ -415,7 +406,7 @@ get_header();
                     </div>
                     <a href=""
                         class="absolute bottom-2.5 right-2.5 lg:size-16 size-8 flex justify-center items-center rounded-full overflow-hidden bg-white shrink-0">
-                        <?php echo svg('up-right', '27', '30', 'shrink-0 text-[#292929]') ?>
+                        <?php echo svg('up-right', '27', '30', 'shrink-0 text-content') ?>
                     </a>
                 </div>
 
@@ -428,7 +419,7 @@ get_header();
                     </div>
                     <a href=""
                         class="absolute bottom-2.5 right-2.5 lg:size-16 size-8 flex justify-center items-center rounded-full overflow-hidden bg-white shrink-0">
-                        <?php echo svg('up-right', '27', '30', 'shrink-0 text-[#292929]') ?>
+                        <?php echo svg('up-right', '27', '30', 'shrink-0 text-content') ?>
                     </a>
                 </div>
 
@@ -441,7 +432,7 @@ get_header();
                     </div>
                     <a href=""
                         class="absolute bottom-2.5 right-2.5 lg:size-16 size-8 flex justify-center items-center rounded-full overflow-hidden bg-white shrink-0">
-                        <?php echo svg('up-right', '27', '30', 'shrink-0 text-[#292929]') ?>
+                        <?php echo svg('up-right', '27', '30', 'shrink-0 text-content') ?>
                     </a>
                 </div>
 
@@ -454,7 +445,7 @@ get_header();
                     </div>
                     <a href=""
                         class="absolute bottom-2.5 right-2.5 lg:size-16 size-8 flex justify-center items-center rounded-full overflow-hidden bg-white shrink-0">
-                        <?php echo svg('up-right', '27', '30', 'shrink-0 text-[#292929]') ?>
+                        <?php echo svg('up-right', '27', '30', 'shrink-0 text-content') ?>
                     </a>
                 </div>
             </div>
@@ -487,9 +478,9 @@ get_header();
                                     proin sagittis
                                 </div>
                                 <a href=""
-                                    class="ml-auto xl:mt-12 mt-4 w-fit xl:text-xl text-sm lg:leading-[34px] text-[#292929] flex items-center gap-1">
+                                    class="ml-auto xl:mt-12 mt-4 w-fit xl:text-xl text-sm lg:leading-[34px] text-content flex items-center gap-1">
                                     Xem thêm
-                                    <?php echo svg('up-right', '21', '21', 'text-[#292929] shrink-0') ?>
+                                    <?php echo svg('up-right', '21', '21', 'text-content shrink-0') ?>
                                 </a>
                             </div>
                         <?php endfor ?>
@@ -507,7 +498,7 @@ get_header();
                                     proin sagittis
                                 </div>
                                 <a href=""
-                                    class="ml-auto xl:mt-12 mt-4 w-fit xl:text-xl text-sm xl:leading-[34px] text-[#292929] flex items-center gap-1">
+                                    class="ml-auto xl:mt-12 mt-4 w-fit xl:text-xl text-sm xl:leading-[34px] text-content flex items-center gap-1">
                                     Xem thêm
                                     <?php echo svg('up-right', '21', '21', 'text-[#292929] shrink-0') ?>
                                 </a>

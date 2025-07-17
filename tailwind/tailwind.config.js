@@ -17,6 +17,7 @@ module.exports = {
 			colors: {
 				primary: '#224393',
 				secondary: '#f47514',
+				content: '#292929',
 			},
 			fontFamily: {
 				body: ['Questrial'],
