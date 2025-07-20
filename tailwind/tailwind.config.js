@@ -29,9 +29,11 @@ module.exports = {
 				'card-gradient': 'linear-gradient(to top, #0000007A 0%, #00000000 100%)',
 				'text-gradient': 'linear-gradient(90deg, #124B96 0%, #26AAE1 100%)',
 				'products-gradient': 'linear-gradient(0deg, rgba(34, 67, 147, 0.80) -0.06%, rgba(255, 255, 255, 0.00) 100.05%)',
+				'line-gradient': 'linear-gradient(to right, #124B96 0%, #26AAE1 100%)',
 			},
 			boxShadow: {
 				'card': '0px 6.34px 38.041px 0px rgba(0, 0, 0, 0.16)',
+				'product': '0px 4px 4px 0px rgba(0, 0, 0, 0.25)',
 			}
 		},
 		container: {

@@ -55,6 +55,7 @@
 	},
 	"prettier": "@wordpress/prettier-config",
 	"dependencies": {
+		"apexcharts": "^5.2.0",
 		"masonry-layout": "^4.2.2"
 	}
 }
