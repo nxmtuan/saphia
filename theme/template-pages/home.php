@@ -10,8 +10,14 @@ get_header();
 <main>
     <section class="lg:my-[183px] my-[60px]">
         <div class="container">
-            <div class="lg:text-[76px] text-4xl leading-[1] tracking-[-1.425px] highlight text-black">
-                <span>Kiềm SAPHIA X300</span> <br>
+            <div class="lg:text-[76px] text-2xl leading-[1] tracking-[-1.425px] highlight text-black">
+                <div id="highlight-container" class="overflow-hidden relative w-full">
+                    <div id="highlight-list" class="flex flex-col leading-[1.5] transition-transform duration-500">
+                        <div class="highlight-item text-[#244896]">Kiềm SAPHIA X300</div>
+                        <div class="highlight-item text-[#244896]">SẢN PHẨM ĐẶC BIỆT</div>
+                        <div class="highlight-item text-[#244896]">CÔNG DỤNG HOÀN HẢO</div>
+                    </div>
+                </div>
                 Lựa chọn cho riêng bạn
             </div>
 

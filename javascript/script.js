@@ -4,7 +4,7 @@ import ApexCharts from 'apexcharts';
 (() => {
 	// javascript/script.js
 	(function ($) {
-		$(document).ready(function () {
+		$(function () {
 			backToTop();
 			handleSwiper();
 			cardSlider();
@@ -13,6 +13,7 @@ import ApexCharts from 'apexcharts';
 			handleMansoryLayout();
 			pHSlider();
 			pHChart();
+			highlightText();
 		});
 
 		let swiperInstances = [];
@@ -379,6 +380,22 @@ import ApexCharts from 'apexcharts';
 				options
 			);
 			chart.render();
+		}
+
+		function highlightText() {
+			const $list = $('#highlight-list');
+			const $items = $list.find('.highlight-item');
+			const count = $items.length;
+			let i = 0;
+
+			// Đảm bảo container cao đúng 1 dòng chữ
+			const itemHeight = $items.first().outerHeight();
+			$('#highlight-container').height(itemHeight);
+
+			setInterval(function () {
+				i = (i + 1) % count;
+				$list.css('transform', `translateY(-${i * itemHeight}px)`);
+			}, 3000);
 		}
 	})(jQuery);
 })();
