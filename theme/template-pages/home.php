@@ -10,8 +10,14 @@ get_header();
 <main>
     <section class="lg:my-[183px] my-[60px]">
         <div class="container">
-            <div class="lg:text-[76px] text-4xl leading-[1] tracking-[-1.425px] highlight text-black">
-                <span>Kiềm SAPHIA X300</span> <br>
+            <div class="lg:text-[76px] text-2xl leading-[1] tracking-[-1.425px] highlight text-black">
+                <div id="highlight-container" class="overflow-hidden relative w-full">
+                    <div id="highlight-list" class="flex flex-col leading-[1.5] transition-transform duration-500">
+                        <div class="highlight-item text-[#244896]">Kiềm SAPHIA X300</div>
+                        <div class="highlight-item text-[#244896]">SẢN PHẨM ĐẶC BIỆT</div>
+                        <div class="highlight-item text-[#244896]">CÔNG DỤNG HOÀN HẢO</div>
+                    </div>
+                </div>
                 Lựa chọn cho riêng bạn
             </div>
 
@@ -322,32 +328,7 @@ get_header();
 
     <?php echo get_template_part('/components/block_partner-slider') ?>
 
-    <section class="lg:my-[120px] my-[60px]">
-        <div class="container">
-            <div class="lg:text-[64px] text-4xl lg:leading-[77px] tracking-[-0.96px]">
-                Vì một thế giới tốt đẹp hơn
-            </div>
-            <div id="masonry" class="max-w-full lg:px-4 lg:mt-20 mt-10 flex flex-wrap">
-                <?php for ($i = 0; $i < 8; $i++): ?>
-                    <div class="grid-item w-full md:w-1/2 lg:w-1/3 px-2 mb-4">
-                        <div
-                            class="relative rounded-[30px] overflow-hidden pt-11 pl-11 h-[300px] sm:h-[350px] lg:h-[400px]">
-                            <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/home3.png" alt=""
-                                loading="lazy" class="absolute inset-0 w-full h-full object-cover">
-                            <div
-                                class="relative z-10 text-[32px] sm:text-[38px] lg:text-[42.5px] leading-snug tracking-wide text-white">
-                                Bảo vệ<br>môi trường
-                            </div>
-                            <a href="#"
-                                class="absolute bottom-4 right-4 z-10 bg-white text-[#3A566A] text-sm px-6 py-3 rounded-full">
-                                Xem thêm
-                            </a>
-                        </div>
-                    </div>
-                <?php endfor; ?>
-            </div>
-        </div>
-    </section>
+    <?php echo get_template_part('/components/block_mission-highlights') ?>
 
     <section class="lg:my-[150px] my-[60px]">
         <div class="container">

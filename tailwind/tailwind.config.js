@@ -28,9 +28,14 @@ module.exports = {
 					'linear-gradient(to bottom, #ffffff 0%, #DCECFD 30%, #DCECFD 80%, #ffffff 100%)',
 				'card-gradient': 'linear-gradient(to top, #0000007A 0%, #00000000 100%)',
 				'text-gradient': 'linear-gradient(90deg, #124B96 0%, #26AAE1 100%)',
+				'products-gradient': 'linear-gradient(0deg, rgba(34, 67, 147, 0.80) -0.06%, rgba(255, 255, 255, 0.00) 100.05%)',
+				'line-gradient': 'linear-gradient(to right, #124B96 0%, #26AAE1 100%)',
+				'section-gradient':'linear-gradient(0deg, rgba(255, 255, 255, 0.95) 49.99%, rgba(255, 255, 255, 0.73) 64.55%, rgba(255, 255, 255, 0.48) 70.09%, rgba(255, 255, 255, 0.00) 77.71%)',
+				'why-gradient': 'linear-gradient(270deg, rgba(34, 67, 147, 0.00) 35.77%, rgba(34, 67, 147, 0.70) 68.82%)',
 			},
 			boxShadow: {
 				'card': '0px 6.34px 38.041px 0px rgba(0, 0, 0, 0.16)',
+				'product': '0px 4px 4px 0px rgba(0, 0, 0, 0.25)',
 			}
 		},
 		container: {

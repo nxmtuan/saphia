@@ -1,13 +1,19 @@
+import Masonry from 'masonry-layout';
+import ApexCharts from 'apexcharts';
+
 (() => {
 	// javascript/script.js
 	(function ($) {
-		$(document).ready(function () {
+		$(function () {
 			backToTop();
 			handleSwiper();
 			cardSlider();
 			toggleContent();
 			toggleMenuMobile();
-			//handleMansoryLayout();
+			handleMansoryLayout();
+			pHSlider();
+			pHChart();
+			highlightText();
 		});
 
 		let swiperInstances = [];
@@ -145,13 +151,13 @@
 			});
 		}
 
-		// function handleMansoryLayout() {
-		// 	new Masonry('#masonry', {
-		// 		itemSelector: '.grid-item',
-		// 		percentPosition: true,
-		// 		gutter: 8,
-		// 	});
-		// }
+		function handleMansoryLayout() {
+			new Masonry('#masonry', {
+				itemSelector: '.grid-item',
+				percentPosition: true,
+				gutter: 8,
+			});
+		}
 
 		function toggleContent() {
 			// Toggle từng cặp nút/box
@@ -232,6 +238,54 @@
 			});
 		}
 
+		function pHSlider() {
+			const $slider = $('#phSlider');
+			const $display = $('#valueDisplay');
+			const $emojiItems = $('.emoji');
+			const $submitBtn = $('.btn-submitPH');
+
+			// Đảm bảo các phần tử tồn tại
+			if (
+				!$slider.length ||
+				!$display.length ||
+				!$emojiItems.length ||
+				!$submitBtn.length
+			)
+				return;
+
+			// Cập nhật giá trị pH hiển thị
+			$slider.on('input', function () {
+				$display.text(parseFloat(this.value).toFixed(1));
+			});
+
+			// Toggle emoji
+			$emojiItems.on('click', function () {
+				const $this = $(this);
+				const isActive = $this.hasClass('active');
+				$emojiItems.removeClass('active');
+				if (!isActive) {
+					$this.addClass('active');
+				}
+			});
+
+			// Xử lý nút submit
+			$submitBtn.on('click', function () {
+				const phValue = parseFloat($slider.val()).toFixed(1);
+				const $selected = $emojiItems.filter('.active');
+
+				if (!$selected.length) {
+					alert('Vui lòng chọn tâm trạng của bạn.');
+					return;
+				}
+
+				const moodText = $selected.find('span').text().trim();
+
+				alert(
+					`Giá trị pH bạn chọn là: ${phValue}\nTâm trạng hiện tại: ${moodText}`
+				);
+			});
+		}
+
 		function backToTop() {
 			var $backToTop = $('.back-to-top');
 			$backToTop.hide();
@@ -247,6 +301,101 @@
 			$backToTop.on('click', function (e) {
 				$('html, body').animate({ scrollTop: 0 }, 50);
 			});
+		}
+
+		function pHChart() {
+			var options = {
+				chart: {
+					type: 'area',
+					height: 250,
+					toolbar: { show: false },
+				},
+				series: [
+					{
+						name: 'Giá trị pH',
+						data: [7, 1.8, 7.5, 3.6, 2.1, 7.3, 7.2],
+					},
+				],
+				xaxis: {
+					categories: [
+						'Thứ 2',
+						'Thứ 3',
+						'Thứ 4',
+						'Thứ 5',
+						'Thứ 6',
+						'Thứ 7',
+						'Chủ nhật',
+					],
+				},
+				stroke: {
+					curve: 'smooth',
+					width: 2,
+				},
+				markers: {
+					size: 6,
+					colors: ['#00B0F0'],
+					strokeColors: '#fff',
+					strokeWidth: 2,
+					shape: 'circle', // đảm bảo là hình tròn
+				},
+				fill: {
+					type: 'gradient',
+					gradient: {
+						shadeIntensity: 1,
+						opacityFrom: 0.4,
+						opacityTo: 0.05,
+						stops: [0, 100],
+						colorStops: [
+							{
+								offset: 0,
+								color: '#00B0F0',
+								opacity: 0.4,
+							},
+							{
+								offset: 100,
+								color: '#00B0F0',
+								opacity: 0.05,
+							},
+						],
+					},
+				},
+				colors: ['#00B0F0'],
+				dataLabels: {
+					enabled: false,
+				},
+				grid: {
+					borderColor: '#e0e0e0',
+				},
+				legend: {
+					enabled: true,
+					position: 'bottom',
+				},
+				tooltip: {
+					enabled: true,
+				},
+			};
+
+			var chart = new ApexCharts(
+				document.querySelector('#pHChart'),
+				options
+			);
+			chart.render();
+		}
+
+		function highlightText() {
+			const $list = $('#highlight-list');
+			const $items = $list.find('.highlight-item');
+			const count = $items.length;
+			let i = 0;
+
+			// Đảm bảo container cao đúng 1 dòng chữ
+			const itemHeight = $items.first().outerHeight();
+			$('#highlight-container').height(itemHeight);
+
+			setInterval(function () {
+				i = (i + 1) % count;
+				$list.css('transform', `translateY(-${i * itemHeight}px)`);
+			}, 3000);
 		}
 	})(jQuery);
 })();
