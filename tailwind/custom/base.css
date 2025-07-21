@@ -91,6 +91,22 @@ body {
   @apply absolute bottom-0 left-0;
 }
 
+.form-dang-ky .row-input {
+  @apply flex md:flex-row flex-col items-center md:gap-2.5;
+}
+.form-dang-ky .row-input > span {
+  @apply md:w-1/2 w-full;
+}
+.form-dang-ky .row-input > span .input-field {
+  @apply md:mb-5 mb-2.5 lg:p-5 py-2 px-4 w-full rounded-xl bg-white overflow-hidden border border-transparent text-lg text-[#525256] focus:outline-none focus:border-primary transition-colors duration-300;
+}
+.form-dang-ky .area-field {
+  @apply lg:p-5 py-2 px-4 w-full max-h-[150px] rounded-xl bg-white overflow-hidden border border-transparent text-lg text-[#525256] focus:outline-none focus:border-primary transition-colors duration-300;
+}
+.form-dang-ky .submit {
+  @apply lg:mt-[60px] mt-7 lg:py-[25px] py-2 lg:px-11 px-5 rounded-full overflow-hidden bg-primary hover:hover:bg-[#224393c7] text-white text-xl cursor-pointer transition-colors duration-300;
+}
+
 .mission-slider .swiper-button-next,
 .mission-slider .swiper-button-prev {
   @apply size-[66px] shrink-0 bg-none bg-[#0000006b] rounded-full;
