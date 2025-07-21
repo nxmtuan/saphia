@@ -249,4 +249,14 @@ require get_template_directory() . '/inc/customizer-wp.php';
  */
 require get_template_directory() . '/inc/customizer-widget.php';
 
+/**
+ * Start PHP session on init for homepage layout selection and other session-based features.
+ */
+add_action('init', function(){
+  if ( ! session_id() ) session_start();
+  if ( empty($_SESSION['homepage_layout'])
+       && ! empty($_COOKIE['homepage_layout']) ) {
+    $_SESSION['homepage_layout'] = sanitize_key($_COOKIE['homepage_layout']);
+  }
+});
 

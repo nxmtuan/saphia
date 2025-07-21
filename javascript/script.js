@@ -14,6 +14,7 @@ import ApexCharts from 'apexcharts';
 			pHSlider();
 			pHChart();
 			highlightText();
+			handlePopup();
 		});
 
 		let swiperInstances = [];
@@ -152,11 +153,13 @@ import ApexCharts from 'apexcharts';
 		}
 
 		function handleMansoryLayout() {
-			new Masonry('#masonry', {
-				itemSelector: '.grid-item',
-				percentPosition: true,
-				gutter: 8,
-			});
+			if ($('#masonry').length) {
+				new Masonry('#masonry', {
+					itemSelector: '.grid-item',
+					percentPosition: true,
+					gutter: 8,
+				});
+			}
 		}
 
 		function toggleContent() {
@@ -396,6 +399,27 @@ import ApexCharts from 'apexcharts';
 				i = (i + 1) % count;
 				$list.css('transform', `translateY(-${i * itemHeight}px)`);
 			}, 3000);
+		}
+
+		function handlePopup() {
+			$(document).on('click', '[data-popup]', function () {
+				$('.popup').removeClass('active');
+
+				var targetId = $(this).attr('data-popup');
+				$('#' + targetId).addClass('active');
+				$('.modal-backdrop').addClass('active');
+			});
+			$('.modal-backdrop').click(function name(e) {
+				$(this).removeClass('active');
+				$('.popup').removeClass('active');
+			});
+
+			$(document).on('click', '.close-popup', function () {
+				$(this).closest('.popup').removeClass('active');
+				$('.modal-backdrop').removeClass('active');
+			});
+
+			
 		}
 	})(jQuery);
 })();
