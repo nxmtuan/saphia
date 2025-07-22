@@ -94,6 +94,13 @@ function my_acf_init_block_types() {
 			'render_template' => 'blocks/about_number.php',
 			'keywords' => array( 'about_number', 'quote' ),
 		) );
+		acf_register_block_type( array(
+			'name' => 'about_staff',
+			'title' => __( '[Saphia]-[About] Đội ngũ lãnh đạo' ),
+			'description' => __( '[Saphia]-[About] Đội ngũ lãnh đạo' ),
+			'render_template' => 'blocks/about_staff.php',
+			'keywords' => array( 'about_staff', 'quote' ),
+		) );
 
 	}
 }
