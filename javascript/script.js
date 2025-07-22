@@ -7,6 +7,7 @@ import ApexCharts from 'apexcharts';
 		$(function () {
 			backToTop();
 			handleSwiper();
+			marqueeSlider();
 			cardSlider();
 			toggleContent();
 			toggleMenuMobile();
@@ -127,6 +128,50 @@ import ApexCharts from 'apexcharts';
 					swiperConfig
 				);
 			});
+		}
+
+		function marqueeSlider() {
+			// COMMON OPTIONS
+			const commonOpts = {
+				direction: 'vertical',
+				slidesPerView: 'auto',
+				spaceBetween: 5,
+				speed: 10000, // sẽ override bằng data-speed
+				freeMode: true,
+				freeModeMomentum: false,
+				resistance: true,
+				resistanceRatio: 0,
+				loop: true,
+				allowTouchMove: false,
+				autoplay: {
+					delay: 1,
+					disableOnInteraction: false,
+					pauseOnMouseEnter: false,
+				},
+			};
+
+			// MARQUEE
+			const marqueeCarouselSpeed =
+				$('.marquee-carousel').data('speed') || 10000;
+			const marqueeCarousel = new Swiper('.marquee-carousel', {
+				...commonOpts,
+				speed: marqueeCarouselSpeed,
+			});
+
+			// REVERSE MARQUEE
+			const reverseMarqueeCarouselSpeed =
+				$('.reverse-marquee-carousel').data('speed') || 10000;
+			const reverseMarqueeCarousel = new Swiper(
+				'.reverse-marquee-carousel',
+				{
+					...commonOpts,
+					speed: reverseMarqueeCarouselSpeed,
+					autoplay: {
+						...commonOpts.autoplay,
+						reverseDirection: true,
+					},
+				}
+			);
 		}
 
 		function cardSlider() {
