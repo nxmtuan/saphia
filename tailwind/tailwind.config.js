@@ -37,6 +37,7 @@ module.exports = {
 			boxShadow: {
 				'card': '0px 6.34px 38.041px 0px rgba(0, 0, 0, 0.16)',
 				'product': '0px 4px 4px 0px rgba(0, 0, 0, 0.25)',
+				'contentCard': '0px 0px 0px 3px rgba(32, 65, 154, 0.05)',
 			}
 		},
 		container: {

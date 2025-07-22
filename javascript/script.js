@@ -14,6 +14,7 @@ import ApexCharts from 'apexcharts';
 			pHSlider();
 			pHChart();
 			highlightText();
+			activeItemOnClick();
 		});
 
 		let swiperInstances = [];
@@ -396,6 +397,21 @@ import ApexCharts from 'apexcharts';
 				i = (i + 1) % count;
 				$list.css('transform', `translateY(-${i * itemHeight}px)`);
 			}, 3000);
+		}
+
+		function activeItemOnClick() {
+			$(document)
+				.off('click.selectItem', '.selected-item')
+				.on('click.selectItem', '.selected-item', function (e) {
+					// Nếu đã active rồi thì thôi, không làm gì cả
+					if ($(this).hasClass('active')) {
+						return;
+					}
+					// Xoá active ở phần tử trước đó
+					$('.selected-item.active').removeClass('active');
+					// Thêm active cho phần tử đang click
+					$(this).addClass('active');
+				});
 		}
 	})(jQuery);
 })();
