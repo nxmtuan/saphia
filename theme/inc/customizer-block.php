@@ -31,12 +31,19 @@ function my_acf_init_block_types() {
 			'render_template' => 'blocks/block-news.php',
 			'keywords' => array( 'block-news', 'quote' ),
 		) );
-        		acf_register_block_type( array(
+		acf_register_block_type( array(
 			'name' => 'block_partner-slider',
 			'title' => __( '[Saphia]-[Home] Slider đối tác' ),
 			'description' => __( '[Saphia]-[Home] Slider đối tác' ),
 			'render_template' => 'blocks/block_partner-slider.php',
 			'keywords' => array( 'block_partner-slider', 'quote' ),
+		) );
+		acf_register_block_type( array(
+			'name' => 'block_mission-highlights',
+			'title' => __( '[Saphia]-[Home] Khối ảnh mansonry' ),
+			'description' => __( '[Saphia]-[Home] Khối ảnh mansonry' ),
+			'render_template' => 'blocks/block_mission-highlights.php',
+			'keywords' => array( 'block_mission-highlights', 'quote' ),
 		) );
 	}
 }
