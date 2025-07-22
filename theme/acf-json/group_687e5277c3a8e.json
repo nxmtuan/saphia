@@ -3,38 +3,6 @@
     "title": "Giao diện trang chủ",
     "fields": [
         {
-            "key": "field_687e5340e369e",
-            "label": "Chọn giao diện trang chủ",
-            "name": "select_homepage_layout",
-            "aria-label": "",
-            "type": "select",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "80",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "default": "Mặc định",
-                "customer": "Khách hàng",
-                "partner": "Đối tác",
-                "distributor": "Nhà phân phối",
-                "otc": "OTC\/ETC"
-            },
-            "default_value": "default",
-            "return_format": "value",
-            "multiple": 0,
-            "allow_null": 0,
-            "allow_in_bindings": 0,
-            "ui": 0,
-            "ajax": 0,
-            "placeholder": "",
-            "create_options": 0,
-            "save_options": 0
-        },
-        {
             "key": "field_687efee9b62d4",
             "label": "Danh sách giao diện",
             "name": "homepage_layout_list",
@@ -126,5 +94,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1753153355
+    "modified": 1753158183
 }
