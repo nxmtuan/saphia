@@ -59,12 +59,20 @@ function my_acf_init_block_types() {
 			'render_template' => 'blocks/block-benefit.php',
 			'keywords' => array( 'block-benefit', 'quote' ),
 		) );
-				acf_register_block_type( array(
+		acf_register_block_type( array(
 			'name' => 'block_core-values',
 			'title' => __( '[Saphia]-[Home] Giá trị cốt lõi' ),
 			'description' => __( '[Saphia]-[Home] Giá trị cốt lõi' ),
 			'render_template' => 'blocks/block_core-values.php',
 			'keywords' => array( 'block_core-values', 'quote' ),
 		) );
+			acf_register_block_type( array(
+			'name' => 'about_brand-intro',
+			'title' => __( '[Saphia]-[About] Khối banner' ),
+			'description' => __( '[Saphia]-[About] Khối banner' ),
+			'render_template' => 'blocks/about_brand-intro.php',
+			'keywords' => array( 'about_brand-intro', 'quote' ),
+		) );
+
 	}
 }

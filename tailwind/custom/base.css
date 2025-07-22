@@ -11,10 +11,6 @@
  * `theme.json` file and is applied both to the frontend and in the block
  * editor.
 */
-.nojq {
-  display: none;
-}
-
 body {
   @apply bg-background text-foreground font-sans;
 }
