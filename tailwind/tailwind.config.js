@@ -32,11 +32,14 @@ module.exports = {
 				'line-gradient': 'linear-gradient(to right, #124B96 0%, #26AAE1 100%)',
 				'section-gradient':'linear-gradient(0deg, rgba(255, 255, 255, 0.95) 49.99%, rgba(255, 255, 255, 0.73) 64.55%, rgba(255, 255, 255, 0.48) 70.09%, rgba(255, 255, 255, 0.00) 77.71%)',
 				'why-gradient': 'linear-gradient(270deg, rgba(34, 67, 147, 0.00) 35.77%, rgba(34, 67, 147, 0.70) 68.82%)',
-				'video-gradient': 'linear-gradient(270deg, rgba(0, 0, 0, 0.00) 38.58%, rgba(0, 0, 0, 0.80) 91.98%);'
+				'video-gradient': 'linear-gradient(270deg, rgba(0, 0, 0, 0.00) 38.58%, rgba(0, 0, 0, 0.80) 91.98%)',
+				'life-gradient': 'linear-gradient(0deg, rgba(115, 115, 115, 0.00) -2.66%, rgba(63, 61, 134, 0.64) 9.2%, #221F90 50.54%)',
 			},
 			boxShadow: {
 				'card': '0px 6.34px 38.041px 0px rgba(0, 0, 0, 0.16)',
 				'product': '0px 4px 4px 0px rgba(0, 0, 0, 0.25)',
+				'contentCard': '0px 0px 0px 3px rgba(32, 65, 154, 0.05)',
+				'ban-tin': '0px 4px 4px 0px rgba(0, 0, 0, 0.25)',
 			}
 		},
 		container: {
