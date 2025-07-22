@@ -309,3 +309,8 @@ body {
 		}
 	}
 }
+
+.marquee-carousel .swiper-wrapper,
+.reverse-marquee-carousel .swiper-wrapper {
+	transition-timing-function: linear !important;
+}

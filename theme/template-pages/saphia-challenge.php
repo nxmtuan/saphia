@@ -7,12 +7,7 @@ Template Name: Saphia Challenge
 get_header();
 ?>
 <main>
-    <section>
-        <div class="w-full lg:h-[600px] h-[400px] relative">
-            <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/banner3.png" alt="" loading="lazy"
-                class="absolute inset-0 size-full object-cover">
-        </div>
-    </section>
+    <?php echo get_template_part('/components/block_banner') ?>
 
     <section class="mt-[100px] mb-[150px]">
         <div class="container">
