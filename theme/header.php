@@ -12,10 +12,18 @@
 if ( ! session_id() ) {
     session_start();
 }
-if ( empty($_SESSION['homepage_layout']) && ! empty($_COOKIE['homepage_layout']) ) {
-    $val = intval( $_COOKIE['homepage_layout'] );
-    if ( $val > 0 ) {
-        $_SESSION['homepage_layout'] = $val;
+// Import homepage_layout from cookie into session
+if ( isset( $_COOKIE['homepage_layout'] ) ) {
+    $cookie = sanitize_text_field( wp_unslash( $_COOKIE['homepage_layout'] ) );
+    if ( $cookie === 'default' ) {
+        $_SESSION['homepage_layout'] = 'default';
+    } elseif ( is_numeric( $cookie ) ) {
+        $_SESSION['homepage_layout'] = intval( $cookie );
+    } elseif ( filter_var( $cookie, FILTER_VALIDATE_URL ) ) {
+        $pid = url_to_postid( $cookie );
+        if ( $pid ) {
+            $_SESSION['homepage_layout'] = $pid;
+        }
     }
 }
 ?><!doctype html>
