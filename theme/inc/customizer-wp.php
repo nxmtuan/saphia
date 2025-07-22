@@ -89,9 +89,9 @@ function remove_extra_image_sizes() {
  * Remove Editor Gutenberg, make Edior Classic
  */
 // Post
-add_filter( 'use_block_editor_for_post', '__return_false', 10 );
-// Post type
-add_filter( 'use_block_editor_for_post_type', '__return_false', 10 );
+// add_filter( 'use_block_editor_for_post', '__return_false', 10 );
+// // Post type
+// add_filter( 'use_block_editor_for_post_type', '__return_false', 10 );
 
 /**
  * Setup Plugin ACF
@@ -358,3 +358,76 @@ function add_lazy_loading_to_images( $attr ) {
 	return $attr;
 }
 add_filter( 'wp_get_attachment_image_attributes', 'add_lazy_loading_to_images' );
+
+/**
+ * Render homepage layout chooser popup.
+ */
+function saphia_render_homepage_popup() {
+    // Đảm bảo session đã được khởi
+    if ( session_status() !== PHP_SESSION_ACTIVE ) {
+        session_start();
+    }
+
+    // Chỉ show popup trên front page khi user chưa chọn layout
+    if ( ! empty( $_SESSION['homepage_layout'] ) || ! is_front_page() ) {
+        return;
+    }
+
+    // Lấy repeater rows từ ACF Options
+    $rows = get_field( 'homepage_layout_list', 'option' );
+    if ( ! $rows ) {
+        return;
+    }
+
+    // In popup
+    ?>
+    <div class="fixed top-0 z-[51] transition-all duration-500 [&:not(.active)]:opacity-0 [&:not(.active)]:pointer-events-none [&:not(.active)]:invisible popup active">
+        
+        <div class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 py-8 md:px-10 px-4 bg-white rounded-xl overflow-hidden md:w-[33.063rem] w-[95vw] z-[52] popup-content">
+            <h3>Chúng tôi có thể giúp gì cho bạn?</h3>
+            <p>Hãy chọn vai trò của bạn để nhận trải nghiệm phù hợp.</p>
+            <ul class="popup-list flex flex-wrap gap-4">
+                <?php foreach ( $rows as $row ) :
+                    // Xác định page ID
+                    $raw = $row['select_page'];
+                    if ( is_object( $raw ) && isset( $raw->ID ) ) {
+                        $pid = $raw->ID;
+                    } elseif ( is_numeric( $raw ) ) {
+                        $pid = intval( $raw );
+                    } elseif ( is_string( $raw ) ) {
+                        $pid = url_to_postid( $raw );
+                    } else {
+                        continue;
+                    }
+                    $label = $row['title'];
+                    if ( ! $pid ) {
+                        continue;
+                    }
+                ?>
+                    <li class="popup-item">
+                        <a href="#"
+                           onclick="
+                               document.cookie = 'homepage_layout=<?php echo esc_js( $pid ); ?>; path=/';
+                               window.location.href = '<?php echo esc_url( home_url() ); ?>';
+                               return false;
+                           ">
+                            <?php echo esc_html( $label ); ?>
+                        </a>
+                    </li>
+                <?php endforeach; ?>
+            </ul>
+                  <p class="close-popup cursor-pointer">
+           <a href="#"
+              onclick="
+                  document.cookie = 'homepage_layout=default; path=/';
+                  window.location.href = '<?php echo esc_url( home_url() ); ?>';
+                  return false;
+              ">
+               Bỏ qua
+           </a>
+       </p>
+        </div>
+    </div>
+    <?php
+}
+add_action( 'wp_footer', 'saphia_render_homepage_popup', 5 );

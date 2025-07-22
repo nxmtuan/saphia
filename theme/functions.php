@@ -81,7 +81,6 @@ if ( ! function_exists( 'gnws_setup' ) ) :
 		register_nav_menus(
 			array(
 				'menu-1' => __( 'Menu Chính', 'gnws' ),
-				'menu-2' => __( 'Footer Menu', 'gnws' ),
 			)
 		);
 
@@ -249,4 +248,7 @@ require get_template_directory() . '/inc/customizer-wp.php';
  */
 require get_template_directory() . '/inc/customizer-widget.php';
 
-
+/**
+ * Customizer Block.
+ */
+require get_template_directory() . '/inc/customizer-block.php';

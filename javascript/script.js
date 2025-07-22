@@ -14,7 +14,7 @@ import ApexCharts from 'apexcharts';
 			pHSlider();
 			pHChart();
 			highlightText();
-			activeItemOnClick();
+			handlePopup();
 		});
 
 		let swiperInstances = [];
@@ -153,11 +153,13 @@ import ApexCharts from 'apexcharts';
 		}
 
 		function handleMansoryLayout() {
-			new Masonry('#masonry', {
-				itemSelector: '.grid-item',
-				percentPosition: true,
-				gutter: 8,
-			});
+			if ($('#masonry').length) {
+				new Masonry('#masonry', {
+					itemSelector: '.grid-item',
+					percentPosition: true,
+					gutter: 8,
+				});
+			}
 		}
 
 		function toggleContent() {
@@ -399,19 +401,25 @@ import ApexCharts from 'apexcharts';
 			}, 3000);
 		}
 
-		function activeItemOnClick() {
-			$(document)
-				.off('click.selectItem', '.selected-item')
-				.on('click.selectItem', '.selected-item', function (e) {
-					// Nếu đã active rồi thì thôi, không làm gì cả
-					if ($(this).hasClass('active')) {
-						return;
-					}
-					// Xoá active ở phần tử trước đó
-					$('.selected-item.active').removeClass('active');
-					// Thêm active cho phần tử đang click
-					$(this).addClass('active');
-				});
+		function handlePopup() {
+			$(document).on('click', '[data-popup]', function () {
+				$('.popup').removeClass('active');
+
+				var targetId = $(this).attr('data-popup');
+				$('#' + targetId).addClass('active');
+				$('.modal-backdrop').addClass('active');
+			});
+			$('.modal-backdrop').click(function name(e) {
+				$(this).removeClass('active');
+				$('.popup').removeClass('active');
+			});
+
+			$(document).on('click', '.close-popup', function () {
+				$(this).closest('.popup').removeClass('active');
+				$('.modal-backdrop').removeClass('active');
+			});
+
+			
 		}
 	})(jQuery);
 })();
