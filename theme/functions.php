@@ -247,3 +247,8 @@ require get_template_directory() . '/inc/customizer-wp.php';
  * Customizer Widget.
  */
 require get_template_directory() . '/inc/customizer-widget.php';
+
+/**
+ * Customizer Block.
+ */
+require get_template_directory() . '/inc/customizer-block.php';
