@@ -45,5 +45,26 @@ function my_acf_init_block_types() {
 			'render_template' => 'blocks/block_mission-highlights.php',
 			'keywords' => array( 'block_mission-highlights', 'quote' ),
 		) );
+		acf_register_block_type( array(
+			'name' => 'block-strong_point',
+			'title' => __( '[Saphia]-[Home] Điểm mạnh' ),
+			'description' => __( '[Saphia]-[Home] Điểm mạnh' ),
+			'render_template' => 'blocks/block-strong_point.php',
+			'keywords' => array( 'block-strong_point', 'quote' ),
+		) );
+		acf_register_block_type( array(
+			'name' => 'block-benefit',
+			'title' => __( '[Saphia]-[Home] Lợi ích' ),
+			'description' => __( '[Saphia]-[Home] Lợi ích' ),
+			'render_template' => 'blocks/block-benefit.php',
+			'keywords' => array( 'block-benefit', 'quote' ),
+		) );
+				acf_register_block_type( array(
+			'name' => 'block_core-values',
+			'title' => __( '[Saphia]-[Home] Giá trị cốt lõi' ),
+			'description' => __( '[Saphia]-[Home] Giá trị cốt lõi' ),
+			'render_template' => 'blocks/block_core-values.php',
+			'keywords' => array( 'block_core-values', 'quote' ),
+		) );
 	}
 }
