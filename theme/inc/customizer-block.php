@@ -66,12 +66,33 @@ function my_acf_init_block_types() {
 			'render_template' => 'blocks/block_core-values.php',
 			'keywords' => array( 'block_core-values', 'quote' ),
 		) );
-			acf_register_block_type( array(
+		acf_register_block_type( array(
 			'name' => 'about_brand-intro',
 			'title' => __( '[Saphia]-[About] Khối banner' ),
 			'description' => __( '[Saphia]-[About] Khối banner' ),
 			'render_template' => 'blocks/about_brand-intro.php',
 			'keywords' => array( 'about_brand-intro', 'quote' ),
+		) );
+		acf_register_block_type( array(
+			'name' => 'about_image-content',
+			'title' => __( '[Saphia]-[About] Hình ảnh nội dung' ),
+			'description' => __( '[Saphia]-[About] Hình ảnh nội dung' ),
+			'render_template' => 'blocks/about_image-content.php',
+			'keywords' => array( 'about_image-content', 'quote' ),
+		) );
+		acf_register_block_type( array(
+			'name' => 'about_missions',
+			'title' => __( '[Saphia]-[About] Sứ mệnh' ),
+			'description' => __( '[Saphia]-[About] Sứ mệnh' ),
+			'render_template' => 'blocks/about_mission.php',
+			'keywords' => array( 'about_missions', 'quote' ),
+		) );
+		acf_register_block_type( array(
+			'name' => 'about_number',
+			'title' => __( '[Saphia]-[About] Số liệu' ),
+			'description' => __( '[Saphia]-[About] Số liệu' ),
+			'render_template' => 'blocks/about_number.php',
+			'keywords' => array( 'about_number', 'quote' ),
 		) );
 
 	}
