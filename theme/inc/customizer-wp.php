@@ -416,14 +416,16 @@ function saphia_render_homepage_popup() {
                     </li>
                 <?php endforeach; ?>
             </ul>
-            <p class="close-popup">
-                <a href="#"
-                   onclick="
-                       document.cookie = 'homepage_layout=default; path=/';
-                       window.location.href = '<?php echo esc_url( home_url() ); ?>';
-                       return false;
-                   ">Bỏ qua</a>
-            </p>
+                  <p class="close-popup cursor-pointer">
+           <a href="#"
+              onclick="
+                  document.cookie = 'homepage_layout=default; path=/';
+                  window.location.href = '<?php echo esc_url( home_url() ); ?>';
+                  return false;
+              ">
+               Bỏ qua
+           </a>
+       </p>
         </div>
     </div>
     <?php
