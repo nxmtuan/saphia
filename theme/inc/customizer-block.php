@@ -129,12 +129,40 @@ function my_acf_init_block_types() {
 			'render_template' => 'blocks/block_roadmap.php',
 			'keywords' => array( 'block_roadmap', 'quote' ),
 		) );
-				acf_register_block_type( array(
+		acf_register_block_type( array(
 			'name' => 'block_product_desc',
 			'title' => __( '[Saphia]-[Product] Khối sản phẩm' ),
 			'description' => __( '[Saphia]-[Product] Khối sản phẩm' ),
 			'render_template' => 'blocks/block_product_desc.php',
 			'keywords' => array( 'block_product_desc', 'quote' ),
+		) );
+		acf_register_block_type( array(
+			'name' => 'block_product_impact',
+			'title' => __( '[Saphia]-[Product] Tác động của kiềm thảo' ),
+			'description' => __( '[Saphia]-[Product] Tác động của kiềm thảo' ),
+			'render_template' => 'blocks/block_product_impact.php',
+			'keywords' => array( 'block_product_impact', 'quote' ),
+		) );
+		acf_register_block_type( array(
+			'name' => 'block_product-excellence',
+			'title' => __( '[Saphia]-[Product] Thượng tôn sản phẩm' ),
+			'description' => __( '[Saphia]-[Product] Thượng tôn sản phẩm' ),
+			'render_template' => 'blocks/block_product-excellence.php',
+			'keywords' => array( 'block_product-excellence', 'quote' ),
+		) );
+		acf_register_block_type( array(
+			'name' => 'block_product-video',
+			'title' => __( '[Saphia]-[Product] Thành phần thảo dược' ),
+			'description' => __( '[Saphia]-[Product] Thành phần thảo dược' ),
+			'render_template' => 'blocks/block_product-video.php',
+			'keywords' => array( 'block_product-video', 'quote' ),
+		) );
+		acf_register_block_type( array(
+			'name' => 'block_product-recreate',
+			'title' => __( '[Saphia]-[Product] Tái tạo sức sống' ),
+			'description' => __( '[Saphia]-[Product] Tái tạo sức sống' ),
+			'render_template' => 'blocks/block_product-recreate.php',
+			'keywords' => array( 'block_product-recreate', 'quote' ),
 		) );
 	}
 }
