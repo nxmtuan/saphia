@@ -178,5 +178,33 @@ function my_acf_init_block_types() {
 			'render_template' => 'blocks/block_product-sustainable.php',
 			'keywords' => array( 'block_product-sustainable', 'quote' ),
 		) );
+		acf_register_block_type( array(
+			'name' => 'single_product-banner',
+			'title' => __( '[Saphia]-[Single Product] Banner sản phẩm' ),
+			'description' => __( '[Saphia]-[Single Product] Banner sản phẩm' ),
+			'render_template' => 'blocks/single_product-banner.php',
+			'keywords' => array( 'single_product-banner', 'quote' ),
+		) );
+		acf_register_block_type( array(
+			'name' => 'single_product-cart',
+			'title' => __( '[Saphia]-[Single Product] Thêm vào giỏ hàng' ),
+			'description' => __( '[Saphia]-[Single Product] Thêm vào giỏ hàng' ),
+			'render_template' => 'blocks/single_product-cart.php',
+			'keywords' => array( 'single_product-cart', 'quote' ),
+		) );
+		acf_register_block_type( array(
+			'name' => 'single_product-usage',
+			'title' => __( '[Saphia]-[Single Product] Hướng dẫn sử dụng' ),
+			'description' => __( '[Saphia]-[Single Product] Hướng dẫn sử dụng' ),
+			'render_template' => 'blocks/single_product-usage.php',
+			'keywords' => array( 'single_product-usage', 'quote' ),
+		) );
+		acf_register_block_type( array(
+			'name' => 'single_product-certificate',
+			'title' => __( '[Saphia]-[Single Product] Chứng nhận' ),
+			'description' => __( '[Saphia]-[Single Product] Chứng nhận' ),
+			'render_template' => 'blocks/single_product-certificate.php',
+			'keywords' => array( 'single_product-certificate', 'quote' ),
+		) );
 	}
 }
