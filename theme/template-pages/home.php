@@ -73,11 +73,10 @@ get_header();
 
     <section class="lg:my-[183px] my-[60px]">
         <div class="container">
-            <div
-                class="relative py-[103px] xl:px-[266px] px-6 bg-primary lg:rounded-[35px] rounded-[20px] overflow-hidden w-full">
+            <div class="relative py-[103px] bg-primary lg:rounded-[35px] rounded-[20px] overflow-hidden w-full">
                 <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/cloud.png" alt="" loading="lazy"
                     class="absolute top-0 right-0 w-[818px] object-contain">
-                <div class="lg:space-y-[30px] space-y-5 text-white">
+                <div class="lg:space-y-[30px] space-y-5 text-white xl:px-[266px] px-6">
                     <div class="lg:text-[64px] text-4xl lg:leading-[77px] tracking-[-0.96px]">
                         Hành trình của <br> Kiềm Thảo Dược Saphia
                     </div>
@@ -87,19 +86,19 @@ get_header();
                         gieo mầm sức khoẻ tới mọi gia đình. Cuộc đời bà gắn liền với Kiềm Thảo Dược Saphia
                     </div>
                 </div>
-                <div class="lg:mt-[110px] mt-10">
+                <div class="tab-wrapper lg:mt-[110px] mt-10">
                     <div class="flex gap-2 items-center justify-center">
                         <div
-                            class="font-content p-[14px] md:text-base text-xs leading-[18px] tracking-[-0.16px] rounded-full overflow-hidden border [&:not(.active)]:bg-[#ffffff12] bg-white [&:not(.active)]:border-[#ffffff2b] border-transparent [&:not(.active)]:backdrop-blur-[10px] backdrop-blur-0 [&:not(.active)]:text-white text-black cursor-pointer transition-all duration-300 active">
+                            class="tab-button font-content p-[14px] md:text-base text-xs leading-[18px] tracking-[-0.16px] rounded-full overflow-hidden border [&:not(.active)]:bg-[#ffffff12] bg-white [&:not(.active)]:border-[#ffffff2b] border-transparent [&:not(.active)]:backdrop-blur-[10px] backdrop-blur-0 [&:not(.active)]:text-white text-black cursor-pointer transition-all duration-300 active">
                             Hành trình go global
                         </div>
                         <div
-                            class="font-content p-[14px] md:text-base text-xs leading-[18px] tracking-[-0.16px] rounded-full overflow-hidden border [&:not(.active)]:bg-[#ffffff12] bg-white [&:not(.active)]:border-[#ffffff2b] border-transparent [&:not(.active)]:backdrop-blur-[10px] backdrop-blur-0 [&:not(.active)]:text-white text-black cursor-pointer transition-all duration-300">
+                            class="tab-button font-content p-[14px] md:text-base text-xs leading-[18px] tracking-[-0.16px] rounded-full overflow-hidden border [&:not(.active)]:bg-[#ffffff12] bg-white [&:not(.active)]:border-[#ffffff2b] border-transparent [&:not(.active)]:backdrop-blur-[10px] backdrop-blur-0 [&:not(.active)]:text-white text-black cursor-pointer transition-all duration-300">
                             Hoãi bão 10 năm
                         </div>
                     </div>
                     <div class="mt-[3px]">
-                        <div>
+                        <div class="tab-content xl:px-[266px] px-6">
                             <div
                                 class="text-[#D9EAFD] lg:text-[30px] text-xl lg:leading-[37px] tracking-[-0.96px] max-w-[370px]">
                                 Tiểu vương quốc Dubai <br>
@@ -178,7 +177,91 @@ get_header();
                             </div>
                         </div>
 
-                        <div class=""></div>
+                        <div class="tab-content">
+                            <div class="relative py-[50px] aspect-[1632/1020] w-full flex items-end justify-center">
+                                <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/bg3.png" alt=""
+                                    loading="lazy" class="absolute inset-0 size-full object-cover">
+                                <div>
+                                    <div
+                                        class="max-lg:mt-[400px] max-md:mt-[377px] relative md:flex items-stretch gap-2.5 max-w-[1093px] z-[1] block_slider watch_css center_items">
+                                        <?php for ($i = 0; $i < 3; $i++): ?>
+                                            <div
+                                                class="block_slider-item aspect-[358/262] md:w-1/3 w-[83%] rounded-[24px] overflow-hidden backdrop-blur-[10px]">
+                                                <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/home1.png"
+                                                    alt="" loading="lazy" class="size-full object-cover">
+                                            </div>
+                                        <?php endfor ?>
+                                    </div>
+                                    <div
+                                        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 xl:size-[765px] md:size-[400px] size-[300px] aspect-square">
+                                        <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/circle.png"
+                                            alt="" loading="lazy" class="size-full object-contain">
+                                    </div>
+                                    <div
+                                        class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 aspect-[708/854] xl:w-[708px] md:w-[364px] w-[220px]">
+                                        <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/kh.png"
+                                            alt="" loading="lazy" class="size-full object-contain">
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="flex lg:flex-row flex-col justify-between gap-[46px] xl:px-[266px] px-6 text-white">
+                                <div class="mt-16 flex flex-col gap-[30px] lg:max-w-[448px] max-w-full">
+                                    <?php for ($i = 0; $i < 5; $i++): ?>
+                                        <div
+                                            class="<?= $i % 2 == 0 ? '' : 'max-lg:ml-auto' ?> space-y-[14px] max-w-[448px]">
+                                            <div
+                                                class="timeline_marker <?= $i % 2 == 0 ? '' : 'max-lg:ml-auto' ?> lg:ml-auto relative w-fit py-3 px-5 rounded-full border border-[#FFFFFF2B] bg-[#FFFFFF2B] backdrop-blur-[10px] text-white lg:after:block after:hidden after:absolute after:top-1/2 after:-translate-y-1/2 2xl:after:-right-[63px] after:-right-[56px] after:size-[18px] after:bg-no-repeat after:bg-cover after:bg-center">
+                                                Năm 1999 - Năm 2000
+                                            </div>
+                                            <div class="xl:text-xl">
+                                                Nhà khoa học Phương Dung nhận được học bổng chính phủ du học tại Mỹ. Bà từ
+                                                chối lời mời hấp dẫn của nhiều doanh nghiệp lớn để quay về Việt Nam và thực
+                                                hiện kế hoạch 25 năm của mình.
+                                            </div>
+                                        </div>
+                                    <?php endfor ?>
+                                </div>
+                                <div class="lg:block hidden h-auto">
+                                    <svg height="100%" viewBox="0 0 102 839" class="lg:w-[102px] w-[50px]"
+                                        preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_901_23228)">
+                                            <path
+                                                d="M93.45 2.17188V792.212C93.45 818.012 72.53 838.932 46.73 838.932C20.93 838.932 0 818.022 0 792.212V63.1919"
+                                                stroke="white" stroke-width="2" stroke-miterlimit="10" />
+                                            <path
+                                                d="M85.2695 8.8L86.7295 10.16L93.4395 2.94L100.16 10.16L101.62 8.8L93.4395 0L85.2695 8.8Z"
+                                                fill="white" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_901_23228">
+                                                <rect width="101.62" height="838.932" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </div>
+                                <div class="flex flex-col gap-[30px] lg:max-w-[448px] max-w-full">
+                                    <?php for ($i = 0; $i < 5; $i++): ?>
+                                        <div
+                                            class="<?= $i % 2 == 0 ? '' : 'max-lg:ml-auto' ?> space-y-[14px] max-w-[448px]">
+                                            <div
+                                                class="timeline_marker <?= $i % 2 == 0 ? '' : 'max-lg:ml-auto' ?> relative w-fit py-3 px-5 rounded-full border border-[#FFFFFF2B] bg-[#FFFFFF2B] backdrop-blur-[10px] text-white lg:after:block after:hidden after:absolute after:top-1/2 after:-translate-y-1/2 2xl:after:-left-[71px] after:-left-[65px] after:size-[18px] after:bg-no-repeat after:bg-cover after:bg-center">
+                                                Năm 1999 - Năm 2000
+                                            </div>
+                                            <div class="xl:text-xl">
+                                                Nhà khoa học Phương Dung nhận được học bổng chính phủ du học tại Mỹ. Bà từ
+                                                chối lời mời hấp dẫn của nhiều doanh nghiệp lớn để quay về Việt Nam và thực
+                                                hiện kế hoạch 25 năm của mình.
+                                            </div>
+                                        </div>
+                                    <?php endfor ?>
+                                </div>
+                            </div>
+                            <a href=""
+                                class="mt-[57px] block w-fit mx-auto font-content py-[14px] px-[26px] rounded-full overflow-hidden bg-white hover:bg-[#cbc9c9] text-[#3A566A] transition-colors duration-300">
+                                Xem thêm
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
