@@ -115,5 +115,12 @@ function my_acf_init_block_types() {
 			'render_template' => 'blocks/block_category.php',
 			'keywords' => array( 'block_category', 'quote' ),
 		) );
+		acf_register_block_type( array(
+			'name' => 'block_balance',
+			'title' => __( '[Saphia]-[Product] Cân Bằng Tế Bào' ),
+			'description' => __( '[Saphia]-[Product] Cân Bằng Tế Bào' ),
+			'render_template' => 'blocks/block_balance.php',
+			'keywords' => array( 'block_balance', 'quote' ),
+		) );
 	}
 }
