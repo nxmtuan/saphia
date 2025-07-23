@@ -101,6 +101,12 @@ function my_acf_init_block_types() {
 			'render_template' => 'blocks/about_staff.php',
 			'keywords' => array( 'about_staff', 'quote' ),
 		) );
-
+		acf_register_block_type( array(
+			'name' => 'about_trip',
+			'title' => __( '[Saphia]-[About] Hành trình' ),
+			'description' => __( '[Saphia]-[About] Hành trình' ),
+			'render_template' => 'blocks/about_trip.php',
+			'keywords' => array( 'about_trip', 'quote' ),
+		) );
 	}
 }

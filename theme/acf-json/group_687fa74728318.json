@@ -5,7 +5,75 @@
         {
             "key": "field_687fa747e244e",
             "label": "Tiêu đề",
-            "name": "title",
+            "name": "main_title",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Thêm tiêu đề",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_68804d8cc803a",
+                    "label": "Tiêu đề",
+                    "name": "title",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "85",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_687fa747e244e"
+                },
+                {
+                    "key": "field_68804d9fc803b",
+                    "label": "Highlight",
+                    "name": "highlight",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "15",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "allow_in_bindings": 0,
+                    "ui_on_text": "Yes",
+                    "ui_off_text": "No",
+                    "ui": 1,
+                    "parent_repeater": "field_687fa747e244e"
+                }
+            ]
+        },
+        {
+            "key": "field_68804e44c803c",
+            "label": "Mô tả",
+            "name": "desc",
             "aria-label": "",
             "type": "textarea",
             "instructions": "",
@@ -33,7 +101,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "20",
                 "class": "",
                 "id": ""
             },
@@ -59,7 +127,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "80",
                 "class": "",
                 "id": ""
             },
@@ -158,5 +226,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1753197271
+    "modified": 1753239297
 }

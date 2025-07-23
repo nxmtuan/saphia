@@ -3,6 +3,35 @@
     "title": "[Block] Hình ảnh nội dung",
     "fields": [
         {
+            "key": "field_6880467756d3c",
+            "label": "Vị trí hình ảnh",
+            "name": "img_pos",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "right": "Bên phải",
+                "left": "Bên trái"
+            },
+            "default_value": "right",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
+        },
+        {
             "key": "field_687fb69213fe0",
             "label": "Nội dung",
             "name": "content",
@@ -26,9 +55,9 @@
         {
             "key": "field_687fb65e13fdf",
             "label": "Hình ảnh",
-            "name": "img",
+            "name": "list_img",
             "aria-label": "",
-            "type": "image",
+            "type": "repeater",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -37,17 +66,42 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "id",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": "",
-            "allow_in_bindings": 0,
-            "preview_size": "medium"
+            "layout": "table",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Thêm ảnh",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_6880475656d3d",
+                    "label": "Ảnh",
+                    "name": "img",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "id",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "allow_in_bindings": 0,
+                    "preview_size": "medium",
+                    "parent_repeater": "field_687fb65e13fdf"
+                }
+            ]
         }
     ],
     "location": [
@@ -68,5 +122,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1753200579
+    "modified": 1753237487
 }
