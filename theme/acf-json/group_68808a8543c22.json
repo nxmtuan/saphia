@@ -1,98 +1,9 @@
 {
-    "key": "group_687fa74728318",
-    "title": "[Block] Giá trị cốt lõi",
+    "key": "group_68808a8543c22",
+    "title": "[Block]-[Product] Tác động của kiềm thảo",
     "fields": [
         {
-            "key": "field_687fa747e244e",
-            "label": "Tiêu đề",
-            "name": "main_title",
-            "aria-label": "",
-            "type": "repeater",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "layout": "table",
-            "pagination": 0,
-            "min": 0,
-            "max": 0,
-            "collapsed": "",
-            "button_label": "Thêm tiêu đề",
-            "rows_per_page": 20,
-            "sub_fields": [
-                {
-                    "key": "field_68804d8cc803a",
-                    "label": "Tiêu đề",
-                    "name": "title",
-                    "aria-label": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "85",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "maxlength": "",
-                    "allow_in_bindings": 0,
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "parent_repeater": "field_687fa747e244e"
-                },
-                {
-                    "key": "field_68804d9fc803b",
-                    "label": "Highlight",
-                    "name": "highlight",
-                    "aria-label": "",
-                    "type": "true_false",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "15",
-                        "class": "",
-                        "id": ""
-                    },
-                    "message": "",
-                    "default_value": 0,
-                    "allow_in_bindings": 0,
-                    "ui_on_text": "Yes",
-                    "ui_off_text": "No",
-                    "ui": 1,
-                    "parent_repeater": "field_687fa747e244e"
-                }
-            ]
-        },
-        {
-            "key": "field_68804e44c803c",
-            "label": "Mô tả",
-            "name": "desc",
-            "aria-label": "",
-            "type": "textarea",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "allow_in_bindings": 0,
-            "rows": "",
-            "placeholder": "",
-            "new_lines": ""
-        },
-        {
-            "key": "field_687fa793e244f",
+            "key": "field_68808a8525b0d",
             "label": "Hình ảnh",
             "name": "img",
             "aria-label": "",
@@ -101,7 +12,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "20",
+                "width": "15",
                 "class": "",
                 "id": ""
             },
@@ -118,16 +29,37 @@
             "preview_size": "medium"
         },
         {
-            "key": "field_687fa81ae2450",
-            "label": "Danh sách nội dung",
-            "name": "list_content",
+            "key": "field_68808aaa25b0e",
+            "label": "Tiêu đề trên",
+            "name": "top_title",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "20",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "rows": "",
+            "placeholder": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_68808ab725b0f",
+            "label": "Tiêu đề chính",
+            "name": "main_title",
             "aria-label": "",
             "type": "repeater",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "80",
+                "width": "30",
                 "class": "",
                 "id": ""
             },
@@ -136,11 +68,94 @@
             "min": 0,
             "max": 0,
             "collapsed": "",
-            "button_label": "Thêm nội dung",
+            "button_label": "Thêm tiêu đề",
             "rows_per_page": 20,
             "sub_fields": [
                 {
-                    "key": "field_687fa82de2451",
+                    "key": "field_68808ac425b10",
+                    "label": "Tiêu đề",
+                    "name": "title",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "rows": "",
+                    "placeholder": "",
+                    "new_lines": "",
+                    "parent_repeater": "field_68808ab725b0f"
+                },
+                {
+                    "key": "field_68808acc25b11",
+                    "label": "Highlight",
+                    "name": "highlight",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "allow_in_bindings": 0,
+                    "ui_on_text": "Yes",
+                    "ui_off_text": "No",
+                    "ui": 1,
+                    "parent_repeater": "field_68808ab725b0f"
+                }
+            ]
+        },
+        {
+            "key": "field_68808ae425b12",
+            "label": "Mô tả",
+            "name": "desc",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "20",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "rows": "",
+            "placeholder": "",
+            "new_lines": ""
+        },
+        {
+            "key": "field_68808aed25b13",
+            "label": "Nút điều hướng",
+            "name": "button",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "15",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_68808b1125b14",
                     "label": "Tiêu đề",
                     "name": "title",
                     "aria-label": "",
@@ -158,33 +173,10 @@
                     "allow_in_bindings": 0,
                     "placeholder": "",
                     "prepend": "",
-                    "append": "",
-                    "parent_repeater": "field_687fa81ae2450"
+                    "append": ""
                 },
                 {
-                    "key": "field_687fa834e2452",
-                    "label": "Mô tả",
-                    "name": "desc",
-                    "aria-label": "",
-                    "type": "textarea",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "maxlength": "",
-                    "allow_in_bindings": 0,
-                    "rows": "",
-                    "placeholder": "",
-                    "new_lines": "",
-                    "parent_repeater": "field_687fa81ae2450"
-                },
-                {
-                    "key": "field_687fa83de2453",
+                    "key": "field_68808b1d25b15",
                     "label": "Đường dẫn",
                     "name": "link",
                     "aria-label": "",
@@ -202,8 +194,7 @@
                     "allow_in_bindings": 0,
                     "placeholder": "",
                     "prepend": "",
-                    "append": "",
-                    "parent_repeater": "field_687fa81ae2450"
+                    "append": ""
                 }
             ]
         }
@@ -213,7 +204,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/block-core-values"
+                "value": "acf\/block-product-impact"
             }
         ]
     ],
@@ -226,5 +217,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1753239297
+    "modified": 1753258357
 }

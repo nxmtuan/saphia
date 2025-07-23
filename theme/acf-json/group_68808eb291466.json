@@ -1,10 +1,10 @@
 {
-    "key": "group_687fa74728318",
-    "title": "[Block] Giá trị cốt lõi",
+    "key": "group_68808eb291466",
+    "title": "[Block]-[Product] Thượng tôn sản phẩm",
     "fields": [
         {
-            "key": "field_687fa747e244e",
-            "label": "Tiêu đề",
+            "key": "field_68808eb263ecf",
+            "label": "Tiêu đề chính",
             "name": "main_title",
             "aria-label": "",
             "type": "repeater",
@@ -12,7 +12,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "60",
                 "class": "",
                 "id": ""
             },
@@ -25,7 +25,7 @@
             "rows_per_page": 20,
             "sub_fields": [
                 {
-                    "key": "field_68804d8cc803a",
+                    "key": "field_68808ed463ed0",
                     "label": "Tiêu đề",
                     "name": "title",
                     "aria-label": "",
@@ -34,7 +34,7 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "85",
+                        "width": "",
                         "class": "",
                         "id": ""
                     },
@@ -44,10 +44,10 @@
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
-                    "parent_repeater": "field_687fa747e244e"
+                    "parent_repeater": "field_68808eb263ecf"
                 },
                 {
-                    "key": "field_68804d9fc803b",
+                    "key": "field_68808edd63ed1",
                     "label": "Highlight",
                     "name": "highlight",
                     "aria-label": "",
@@ -56,7 +56,7 @@
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "15",
+                        "width": "20",
                         "class": "",
                         "id": ""
                     },
@@ -66,12 +66,12 @@
                     "ui_on_text": "Yes",
                     "ui_off_text": "No",
                     "ui": 1,
-                    "parent_repeater": "field_687fa747e244e"
+                    "parent_repeater": "field_68808eb263ecf"
                 }
             ]
         },
         {
-            "key": "field_68804e44c803c",
+            "key": "field_68808f0363ed2",
             "label": "Mô tả",
             "name": "desc",
             "aria-label": "",
@@ -80,7 +80,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "50",
+                "width": "40",
                 "class": "",
                 "id": ""
             },
@@ -92,7 +92,75 @@
             "new_lines": ""
         },
         {
-            "key": "field_687fa793e244f",
+            "key": "field_68808f2763ed3",
+            "label": "Danh sách nội dung",
+            "name": "list_content",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "70",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Thêm nội dung",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_68808f3763ed4",
+                    "label": "Tiêu đề",
+                    "name": "title",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_68808f2763ed3"
+                },
+                {
+                    "key": "field_68808f3d63ed5",
+                    "label": "Mô tả",
+                    "name": "desc",
+                    "aria-label": "",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "allow_in_bindings": 0,
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0,
+                    "parent_repeater": "field_68808f2763ed3"
+                }
+            ]
+        },
+        {
+            "key": "field_68808f5663ed6",
             "label": "Hình ảnh",
             "name": "img",
             "aria-label": "",
@@ -101,7 +169,7 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "20",
+                "width": "30",
                 "class": "",
                 "id": ""
             },
@@ -116,96 +184,6 @@
             "mime_types": "",
             "allow_in_bindings": 0,
             "preview_size": "medium"
-        },
-        {
-            "key": "field_687fa81ae2450",
-            "label": "Danh sách nội dung",
-            "name": "list_content",
-            "aria-label": "",
-            "type": "repeater",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "80",
-                "class": "",
-                "id": ""
-            },
-            "layout": "table",
-            "pagination": 0,
-            "min": 0,
-            "max": 0,
-            "collapsed": "",
-            "button_label": "Thêm nội dung",
-            "rows_per_page": 20,
-            "sub_fields": [
-                {
-                    "key": "field_687fa82de2451",
-                    "label": "Tiêu đề",
-                    "name": "title",
-                    "aria-label": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "maxlength": "",
-                    "allow_in_bindings": 0,
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "parent_repeater": "field_687fa81ae2450"
-                },
-                {
-                    "key": "field_687fa834e2452",
-                    "label": "Mô tả",
-                    "name": "desc",
-                    "aria-label": "",
-                    "type": "textarea",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "maxlength": "",
-                    "allow_in_bindings": 0,
-                    "rows": "",
-                    "placeholder": "",
-                    "new_lines": "",
-                    "parent_repeater": "field_687fa81ae2450"
-                },
-                {
-                    "key": "field_687fa83de2453",
-                    "label": "Đường dẫn",
-                    "name": "link",
-                    "aria-label": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "maxlength": "",
-                    "allow_in_bindings": 0,
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "parent_repeater": "field_687fa81ae2450"
-                }
-            ]
         }
     ],
     "location": [
@@ -213,7 +191,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/block-core-values"
+                "value": "acf\/block-product-excellence"
             }
         ]
     ],
@@ -226,5 +204,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1753239297
+    "modified": 1753255947
 }
