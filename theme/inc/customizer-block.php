@@ -108,5 +108,12 @@ function my_acf_init_block_types() {
 			'render_template' => 'blocks/about_trip.php',
 			'keywords' => array( 'about_trip', 'quote' ),
 		) );
+		acf_register_block_type( array(
+			'name' => 'block_category',
+			'title' => __( '[Saphia]-[Product] Danh mục sản phẩm' ),
+			'description' => __( '[Saphia]-[Product] Danh mục sản phẩm' ),
+			'render_template' => 'blocks/block_category.php',
+			'keywords' => array( 'block_category', 'quote' ),
+		) );
 	}
 }
