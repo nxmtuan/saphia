@@ -18,6 +18,7 @@ import ApexCharts from 'apexcharts';
 			handlePopup();
 			activeItemOnClick();
 			switchTab();
+			toggleContentBlock();
 		});
 
 		let swiperInstances = [];
@@ -524,6 +525,67 @@ import ApexCharts from 'apexcharts';
 						.fadeOut(o.fadeOut)
 						.eq(idx)
 						.fadeIn(o.fadeIn);
+				});
+			});
+		}
+
+		function toggleContentBlock(selector = '.content-wrapper', opts = {}) {
+			const o = $.extend(
+				{
+					btn: '.content-btn',
+					block: '.content-block',
+					icon: '.icon',
+					activeClass: 'active',
+					slideDur: 250,
+					accordion: false, // true: đóng các block khác trong cùng wrapper
+					ns: '.cnt', // namespace để tránh chồng sự kiện
+				},
+				opts
+			);
+
+			$(selector).each(function () {
+				const $wrap = $(this);
+				const $btn = $wrap.find(o.btn).first(); // theo cấu trúc mẫu là 1 cặp
+				const $block = $wrap.find(o.block).first();
+
+				if (!$btn.length || !$block.length) return; // thiếu gì thì thôi, không crash
+
+				// Ẩn block mặc định
+				if (!$block.data('inited')) {
+					$block.hide().data('inited', true);
+				}
+
+				// Hủy bind cũ
+				$btn.off('click' + o.ns);
+
+				$btn.on('click' + o.ns, function (e) {
+					e.preventDefault();
+
+					const $thisWrap = $(this).closest(selector);
+					const $thisBlock = $thisWrap.find(o.block).first();
+					const $thisIcon = $thisWrap.find(o.icon).first();
+
+					// Accordion: đóng những block khác
+					if (o.accordion) {
+						$(selector)
+							.not($thisWrap)
+							.each(function () {
+								const $b = $(this).find(o.block).first();
+								const $i = $(this).find(o.icon).first();
+								if ($b.is(':visible'))
+									$b.stop(true, true).slideUp(o.slideDur);
+								$i.removeClass(o.activeClass);
+							});
+					}
+
+					// Toggle block
+					if ($thisBlock.is(':visible')) {
+						$thisBlock.stop(true, true).slideUp(o.slideDur);
+						$thisIcon.removeClass(o.activeClass);
+					} else {
+						$thisBlock.stop(true, true).slideDown(o.slideDur);
+						$thisIcon.addClass(o.activeClass);
+					}
 				});
 			});
 		}
