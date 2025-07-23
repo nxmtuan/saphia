@@ -122,5 +122,19 @@ function my_acf_init_block_types() {
 			'render_template' => 'blocks/block_balance.php',
 			'keywords' => array( 'block_balance', 'quote' ),
 		) );
+		acf_register_block_type( array(
+			'name' => 'block_roadmap',
+			'title' => __( '[Saphia]-[Product] Lộ trình cải thiện' ),
+			'description' => __( '[Saphia]-[Product] Lộ trình cải thiện' ),
+			'render_template' => 'blocks/block_roadmap.php',
+			'keywords' => array( 'block_roadmap', 'quote' ),
+		) );
+				acf_register_block_type( array(
+			'name' => 'block_product_desc',
+			'title' => __( '[Saphia]-[Product] Khối sản phẩm' ),
+			'description' => __( '[Saphia]-[Product] Khối sản phẩm' ),
+			'render_template' => 'blocks/block_product_desc.php',
+			'keywords' => array( 'block_product_desc', 'quote' ),
+		) );
 	}
 }
