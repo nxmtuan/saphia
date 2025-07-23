@@ -164,5 +164,12 @@ function my_acf_init_block_types() {
 			'render_template' => 'blocks/block_product-recreate.php',
 			'keywords' => array( 'block_product-recreate', 'quote' ),
 		) );
+		acf_register_block_type( array(
+			'name' => 'block_product-sustainable',
+			'title' => __( '[Saphia]-[Product] Phát Triển Bền Vững' ),
+			'description' => __( '[Saphia]-[Product] Phát Triển Bền Vững' ),
+			'render_template' => 'blocks/block_product-sustainable.php',
+			'keywords' => array( 'block_product-sustainable', 'quote' ),
+		) );
 	}
 }
