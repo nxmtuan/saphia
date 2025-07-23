@@ -17,6 +17,7 @@ import ApexCharts from 'apexcharts';
 			highlightText();
 			handlePopup();
 			activeItemOnClick();
+			switchTab();
 		});
 
 		let swiperInstances = [];
@@ -479,6 +480,52 @@ import ApexCharts from 'apexcharts';
 					// Thêm active cho phần tử đang click
 					$(this).addClass('active');
 				});
+		}
+
+		function switchTab(selector = '.tab-wrapper', opts = {}) {
+			const o = $.extend(
+				{
+					btn: '.tab-button',
+					content: '.tab-content',
+					activeClass: 'active',
+					fadeOut: 150,
+					fadeIn: 200,
+					ns: '.tabs', // namespace để tránh chồng sự kiện
+				},
+				opts
+			);
+
+			$(selector).each(function () {
+				const $wrap = $(this);
+				const $btns = $wrap.find(o.btn);
+				const $cts = $wrap.find(o.content);
+
+				if (!$btns.length || !$cts.length) return;
+
+				// Gỡ bind cũ
+				$btns.off(o.ns);
+
+				// Trạng thái mặc định
+				$cts.hide().eq(0).show();
+				$btns.removeClass(o.activeClass).eq(0).addClass(o.activeClass);
+
+				// Click
+				$btns.on('click' + o.ns, function (e) {
+					e.preventDefault();
+					const $b = $(this);
+					if ($b.hasClass(o.activeClass)) return;
+
+					const idx = $btns.index($b);
+
+					$btns.removeClass(o.activeClass);
+					$b.addClass(o.activeClass);
+
+					$cts.stop(true, true)
+						.fadeOut(o.fadeOut)
+						.eq(idx)
+						.fadeIn(o.fadeIn);
+				});
+			});
 		}
 	})(jQuery);
 })();
