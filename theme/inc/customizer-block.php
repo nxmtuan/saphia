@@ -11,6 +11,13 @@ function my_acf_init_block_types() {
 			'keywords' => array( 'intro', 'quote' ),
 		) );
 		acf_register_block_type( array(
+			'name' => 'home_trip',
+			'title' => __( '[Saphia]-[Home] Hành trình' ),
+			'description' => __( '[Saphia]-[Home] Hành trình' ),
+			'render_template' => 'blocks/home_trip.php',
+			'keywords' => array( 'home_trip', 'quote' ),
+		) );
+		acf_register_block_type( array(
 			'name' => 'product-featured',
 			'title' => __( '[Saphia]-[Home] Sản phẩm nổi bật' ),
 			'description' => __( '[Saphia]-[Home] Sản phẩm nổi bật' ),

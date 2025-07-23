@@ -322,3 +322,15 @@ body {
 		background-size: 100% 100%;
 	}
 }
+
+.slide-cloud{
+	animation: slideLeft 30s linear infinite;
+}
+@keyframes slideLeft {
+  0% {
+    right: -100%;
+  }
+  100% {
+    right: 100%;
+  }
+}
