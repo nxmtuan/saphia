@@ -332,12 +332,19 @@ function my_acf_init_block_types() {
 			'render_template' => 'blocks/research-invention.php',
 			'keywords' => array( 'research-invention', 'quote' ),
 		) );
-				acf_register_block_type( array(
+		acf_register_block_type( array(
 			'name' => 'support-customer',
 			'title' => __( '[Saphia]- Hỗ trợ khách hàng' ),
 			'description' => __( '[Saphia]- Hỗ trợ khách hàng' ),
 			'render_template' => 'blocks/support-customer.php',
 			'keywords' => array( 'support-customer', 'quote' ),
+		) );
+				acf_register_block_type( array(
+			'name' => 'branch-system',
+			'title' => __( '[Saphia]- Hệ thống chi nhánh' ),
+			'description' => __( '[Saphia]- Hệ thống chi nhánh' ),
+			'render_template' => 'blocks/branch-system.php',
+			'keywords' => array( 'branch-system', 'quote' ),
 		) );
 	}
 }
