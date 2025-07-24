@@ -75,8 +75,8 @@ function my_acf_init_block_types() {
 		) );
 		acf_register_block_type( array(
 			'name' => 'about_brand-intro',
-			'title' => __( '[Saphia]-[About] Khối banner' ),
-			'description' => __( '[Saphia]-[About] Khối banner' ),
+			'title' => __( '[Saphia]-[Page] Khối banner' ),
+			'description' => __( '[Saphia]-[Page] Khối banner' ),
 			'render_template' => 'blocks/about_brand-intro.php',
 			'keywords' => array( 'about_brand-intro', 'quote' ),
 		) );
@@ -261,6 +261,20 @@ function my_acf_init_block_types() {
 			'description' => __( '[Saphia]-[Thông tin khoa học] Ứng dụng công nghệ' ),
 			'render_template' => 'blocks/ttkh_apply.php',
 			'keywords' => array( 'ttkh_apply', 'quote' ),
+		) );
+		acf_register_block_type( array(
+			'name' => 'sapphire_trip',
+			'title' => __( '[Saphia]-[Ngọc xanh ] Hành trình' ),
+			'description' => __( '[Saphia]-[Ngọc xanh ] Hành trình' ),
+			'render_template' => 'blocks/sapphire_trip.php',
+			'keywords' => array( 'sapphire_trip', 'quote' ),
+		) );
+		acf_register_block_type( array(
+			'name' => 'block_campaign',
+			'title' => __( '[Saphia]-[Ngọc xanh ] Khối nội dung' ),
+			'description' => __( '[Saphia]-[Ngọc xanh ] Khối nội dung' ),
+			'render_template' => 'blocks/block_campaign.php',
+			'keywords' => array( 'block_campaign', 'quote' ),
 		) );
 	}
 }
