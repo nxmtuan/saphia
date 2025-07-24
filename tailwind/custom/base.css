@@ -11,10 +11,6 @@
  * `theme.json` file and is applied both to the frontend and in the block
  * editor.
 */
-.nojq {
-  display: none;
-}
-
 body {
   @apply bg-background text-foreground font-sans;
 }
@@ -324,6 +320,19 @@ body {
   background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='9' cy='9' r='3' fill='white'/%3E%3Ccircle opacity='0.35' cx='9' cy='9' r='9' fill='white'/%3E%3C/svg%3E");
   background-position: center center;
   background-size: 100% 100%;
+}
+
+.slide-cloud {
+  animation: slideLeft 30s linear infinite;
+}
+
+@keyframes slideLeft {
+  0% {
+    right: -100%;
+  }
+  100% {
+    right: 100%;
+  }
 }
 
 /*# sourceMappingURL=base.css.map */

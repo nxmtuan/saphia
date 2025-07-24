@@ -11,9 +11,8 @@
  * `theme.json` file and is applied both to the frontend and in the block
  * editor.
 */
-.nojq {
-	display: none;
-}
+
+
 body {
 	@apply bg-background text-foreground font-sans;
 }
@@ -368,4 +367,16 @@ body {
 		background-position: center center;
 		background-size: 100% 100%;
 	}
+}
+
+.slide-cloud{
+	animation: slideLeft 30s linear infinite;
+}
+@keyframes slideLeft {
+  0% {
+    right: -100%;
+  }
+  100% {
+    right: 100%;
+  }
 }
