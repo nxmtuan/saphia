@@ -37,13 +37,13 @@ body {
   background-position: calc(100% - 15px) center;
 }
 .main-menu > li.menu-item-has-children > .sub-menu {
-  @apply absolute min-w-max space-y-[14px] origin-top left-0 border border-[#ffffff2b] bg-[#d3d3d359] backdrop-blur-[20px] w-full p-[26px] pb-[60px] [&:not(.active)]:-z-10 z-10 [&:not(.active)]:opacity-0 opacity-100 [&:not(.active)]:invisible visible [&:not(.active)]:pointer-events-none pointer-events-auto [&:not(.active)]:scale-y-50 scale-y-100 transition-all duration-500;
+  @apply absolute min-w-max space-y-[14px] origin-top left-0 border border-[#ffffff2b] bg-[#5C82E080] backdrop-blur-[10px] w-full p-[26px] [&:not(.active)]:-z-10 z-10 [&:not(.active)]:opacity-0 opacity-100 [&:not(.active)]:invisible visible [&:not(.active)]:pointer-events-none pointer-events-auto [&:not(.active)]:scale-y-50 scale-y-100 transition-all duration-500;
 }
 .main-menu > li.menu-item-has-children > .sub-menu > li {
-  @apply text-[#A2A2A2] transition-colors duration-300;
+  @apply text-[#002681] transition-colors duration-300;
 }
 .main-menu > li.menu-item-has-children > .sub-menu > li:hover {
-  @apply text-primary;
+  @apply text-white;
 }
 .main-menu > li.menu-item-has-children > a {
   @apply pr-0;
