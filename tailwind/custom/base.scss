@@ -12,7 +12,6 @@
  * editor.
 */
 
-
 body {
 	@apply bg-background text-foreground font-sans;
 }
@@ -166,21 +165,42 @@ body {
 	}
 }
 
-@media (max-width: 768px) {
-	.form-lien-he-saphia {
-		.contact-area {
+.form-de-lai-thong-tin-tu-van {
+	.row-input {
+		@apply flex md:flex-row flex-col md:gap-2.5;
 
-		.call-button {
-			&::after {
-				background-size: 40px 40px;
-			}
-		}
-
-		.submit {&::after {
-				background-size: 40px 40px;
+		span {
+			@apply md:w-1/2 w-full;
+			.input-field {
+				@apply md:mb-5 mb-3 w-full lg:p-5 px-5 py-2 rounded-xl bg-white border border-transparent lg:text-lg text-[#525256] focus:outline-none focus:border-primary transition-colors duration-300;
 			}
 		}
 	}
+
+	.text {
+		@apply lg:text-lg text-[#525256];
+	}
+
+	.submit {
+		@apply lg:mt-10 mt-5 w-fit lg:py-5 py-2 px-10 rounded-full overflow-hidden bg-primary hover:bg-[#224393c7] text-white lg:text-xl cursor-pointer transition-colors duration-300;
+	}
+}
+
+@media (max-width: 768px) {
+	.form-lien-he-saphia {
+		.contact-area {
+			.call-button {
+				&::after {
+					background-size: 40px 40px;
+				}
+			}
+
+			.submit {
+				&::after {
+					background-size: 40px 40px;
+				}
+			}
+		}
 	}
 }
 
@@ -415,14 +435,14 @@ body {
 	}
 }
 
-.slide-cloud{
+.slide-cloud {
 	animation: slideLeft 30s linear infinite;
 }
 @keyframes slideLeft {
-  0% {
-    right: -100%;
-  }
-  100% {
-    right: 100%;
-  }
+	0% {
+		right: -100%;
+	}
+	100% {
+		right: 100%;
+	}
 }

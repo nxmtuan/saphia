@@ -34,6 +34,7 @@ module.exports = {
 				'why-gradient': 'linear-gradient(270deg, rgba(34, 67, 147, 0.00) 35.77%, rgba(34, 67, 147, 0.70) 68.82%)',
 				'video-gradient': 'linear-gradient(270deg, rgba(0, 0, 0, 0.00) 38.58%, rgba(0, 0, 0, 0.80) 91.98%)',
 				'life-gradient': 'linear-gradient(0deg, rgba(115, 115, 115, 0.00) -2.66%, rgba(63, 61, 134, 0.64) 9.2%, #221F90 50.54%)',
+				'form-gradient': 'linear-gradient(to left, #EBF3FD 0%, #ebf3fd00 40%, #ebf3fd00 100%)',
 			},
 			boxShadow: {
 				'card': '0px 6.34px 38.041px 0px rgba(0, 0, 0, 0.16)',

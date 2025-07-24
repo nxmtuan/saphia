@@ -120,6 +120,8 @@
 <div
 	class="modal-backdrop fixed inset-0 top-0 transition-all duration-500 left-0 bg-[#00000040] w-[100dvw] h-[100dvh] [&:not(.active)]:opacity-0 [&:not(.active)]:pointer-events-none [&:not(.active)]:invisible z-[2] <?= empty( $_SESSION['homepage_layout'] ) ? 'active' : '' ?>">
 </div>
+
+<?php echo get_template_part('/components/popup') ?>
 </body>
 
 </html>
