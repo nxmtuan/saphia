@@ -103,6 +103,53 @@ body {
   @apply lg:mt-[60px] mt-7 lg:py-[25px] py-2 lg:px-11 px-5 rounded-full overflow-hidden bg-primary hover:hover:bg-[#224393c7] text-white text-xl cursor-pointer transition-colors duration-300;
 }
 
+.form-lien-he-saphia .input-field {
+  @apply bg-white rounded-full overflow-hidden shadow-contact-form py-2.5 px-[30px] w-full lg:text-[26px] text-lg leading-[40px] mt-5 text-[#1E1E1E];
+}
+.form-lien-he-saphia .contact-area {
+  @apply mt-[100px] flex md:flex-row flex-col md:items-center md:justify-center gap-4;
+}
+.form-lien-he-saphia .contact-area .call-button {
+  @apply py-4 pl-8 pr-[72px] md:w-fit w-full rounded-full overflow-hidden relative text-[#F7F7F7] lg:text-[26px] text-lg leading-[1] bg-primary lg:after:size-[48.665px] after:size-10 after:shrink-0 after:absolute after:right-[6px] after:top-1/2 after:-translate-y-1/2 after:bg-no-repeat after:bg-cover after:bg-center;
+}
+.form-lien-he-saphia .contact-area .call-button::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='49' height='50' viewBox='0 0 49 50' fill='none'%3E%3Crect x='0.335938' y='0.421875' width='48.6645' height='48.6645' rx='24.3323' fill='white'/%3E%3Cpath d='M17.1763 14.3086C16.565 14.3086 15.9981 14.575 15.4534 15.1078C14.9421 15.5852 14.5864 16.1069 14.3641 16.673C14.1307 17.2503 14.0195 17.8608 14.0195 18.5158C14.0195 19.5481 14.2641 20.6693 14.7532 21.8238C15.2534 23.0004 15.9536 24.2215 16.8429 25.4426C17.7321 26.6637 18.7436 27.8514 19.8552 28.9726C20.9667 30.0716 22.1672 31.0928 23.401 31.992C24.6015 32.869 25.8353 33.5794 27.058 34.09C28.9588 34.9004 30.7373 35.0891 32.2045 34.4786C32.7714 34.2454 33.2716 33.8902 33.7273 33.3796C33.983 33.1021 34.1831 32.8024 34.3498 32.4471C34.4832 32.1696 34.5499 31.881 34.5499 31.5924C34.5499 31.4148 34.5165 31.2372 34.4276 31.0373C34.3943 30.9707 34.3276 30.8486 34.1164 30.7043L30.426 28.0846C30.2037 27.9291 30.0036 27.8181 29.8147 27.7404C29.5701 27.6405 29.4701 27.5406 29.0922 27.7737C28.8698 27.8847 28.6698 28.0513 28.4475 28.2733L27.6027 29.1058C27.1692 29.5276 26.5022 29.6276 25.9909 29.4388L25.6908 29.3056C25.2351 29.0614 24.7015 28.684 24.1124 28.1845C23.5789 27.7293 23.0009 27.1965 22.3006 26.5083C21.7559 25.9532 21.2113 25.3649 20.6444 24.7099C20.1219 24.0994 19.744 23.5777 19.5106 23.1447L19.3772 22.8117C19.3105 22.5564 19.2883 22.4121 19.2883 22.2567C19.2883 21.8571 19.4328 21.5018 19.7107 21.2243L20.5443 20.3585C20.7666 20.1365 20.9334 19.9255 21.0445 19.7368C21.1335 19.5925 21.1668 19.4704 21.1668 19.3594C21.1668 19.2706 21.1335 19.1374 21.0779 19.0042C21.0001 18.8266 20.8778 18.6268 20.7222 18.4159L18.1434 14.7748C18.0322 14.6194 17.8988 14.5084 17.7321 14.4307C17.5543 14.353 17.3653 14.3086 17.1763 14.3086Z' fill='%23393CA2'/%3E%3C/svg%3E");
+  background-size: 48.665px 48.665px;
+  background-position: center center;
+}
+.form-lien-he-saphia .contact-area .submit {
+  @apply py-4 pl-8 pr-[72px] md:w-fit w-full rounded-full overflow-hidden relative border border-[#00000080] text-[#1E1E1E] lg:text-[26px] text-lg leading-[1] bg-transparent lg:after:size-[48.665px] after:size-10 after:shrink-0 after:absolute after:right-[6px] after:top-1/2 after:-translate-y-1/2 after:bg-no-repeat after:bg-cover after:bg-center;
+}
+.form-lien-he-saphia .contact-area .submit::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='49' height='50' viewBox='0 0 49 50' fill='none'%3E%3Crect x='0.335938' y='0.421875' width='48.6645' height='48.6645' rx='24.3323' fill='white'/%3E%3Csvg width='50' height='50' viewBox='0 0 50 50' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0.847656' y='0.679688' width='49.1508' height='49.1508' rx='24.5754' fill='black' fill-opacity='0.5'/%3E%3Cpath d='M34.1328 25.9544C34.3203 25.76 34.4141 25.5239 34.4141 25.2461C34.4141 24.9683 34.3203 24.7322 34.1328 24.5378L27.0614 17.5378C26.5792 17.1489 26.1239 17.1489 25.6953 17.5378C25.3203 18.0378 25.3337 18.51 25.7355 18.9544L31.0391 24.2461H17.3783C16.7891 24.3016 16.4676 24.635 16.4141 25.2461C16.4676 25.8572 16.7891 26.1905 17.3783 26.2461H31.0391L25.6953 31.5378C25.3203 31.9822 25.3203 32.4544 25.6953 32.9544C26.1239 33.3433 26.5792 33.3433 27.0614 32.9544L34.1328 25.9544Z' fill='%23F7F7F7'/%3E%3C/svg%3E%3C/svg%3E");
+  background-size: 48.665px 48.665px;
+  background-position: center center;
+}
+
+.form-de-lai-thong-tin-tu-van .row-input {
+  @apply flex md:flex-row flex-col md:gap-2.5;
+}
+.form-de-lai-thong-tin-tu-van .row-input span {
+  @apply md:w-1/2 w-full;
+}
+.form-de-lai-thong-tin-tu-van .row-input span .input-field {
+  @apply md:mb-5 mb-3 w-full lg:p-5 px-5 py-2 rounded-xl bg-white border border-transparent lg:text-lg text-[#525256] focus:outline-none focus:border-primary transition-colors duration-300;
+}
+.form-de-lai-thong-tin-tu-van .text {
+  @apply lg:text-lg text-[#525256];
+}
+.form-de-lai-thong-tin-tu-van .submit {
+  @apply lg:mt-10 mt-5 w-fit lg:py-5 py-2 px-10 rounded-full overflow-hidden bg-primary hover:bg-[#224393c7] text-white lg:text-xl cursor-pointer transition-colors duration-300;
+}
+
+@media (max-width: 768px) {
+  .form-lien-he-saphia .contact-area .call-button::after {
+    background-size: 40px 40px;
+  }
+  .form-lien-he-saphia .contact-area .submit::after {
+    background-size: 40px 40px;
+  }
+}
 .mission-slider .swiper-button-next,
 .mission-slider .swiper-button-prev {
   @apply size-[66px] shrink-0 bg-none bg-[#0000006b] rounded-full;
