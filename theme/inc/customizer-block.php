@@ -264,17 +264,38 @@ function my_acf_init_block_types() {
 		) );
 		acf_register_block_type( array(
 			'name' => 'sapphire_trip',
-			'title' => __( '[Saphia]-[Ngọc xanh ] Hành trình' ),
+			'title' => __( '[Saphia]-[Ngọc xanh] Hành trình' ),
 			'description' => __( '[Saphia]-[Ngọc xanh ] Hành trình' ),
 			'render_template' => 'blocks/sapphire_trip.php',
 			'keywords' => array( 'sapphire_trip', 'quote' ),
 		) );
 		acf_register_block_type( array(
 			'name' => 'block_campaign',
-			'title' => __( '[Saphia]-[Ngọc xanh ] Khối nội dung' ),
+			'title' => __( '[Saphia]-[Ngọc xanh] Khối nội dung' ),
 			'description' => __( '[Saphia]-[Ngọc xanh ] Khối nội dung' ),
 			'render_template' => 'blocks/block_campaign.php',
 			'keywords' => array( 'block_campaign', 'quote' ),
+		) );
+		acf_register_block_type( array(
+			'name' => 'aspiration',
+			'title' => __( '[Saphia]-[Vì cộng đồng] Khát vọng' ),
+			'description' => __( '[Saphia]-[Vì cộng đồng] Khát vọng' ),
+			'render_template' => 'blocks/aspiration.php',
+			'keywords' => array( 'aspiration', 'quote' ),
+		) );
+		acf_register_block_type( array(
+			'name' => 'aspiration-video',
+			'title' => __( '[Saphia]-[Vì cộng đồng] Video' ),
+			'description' => __( '[Saphia]-[Vì cộng đồng] Video' ),
+			'render_template' => 'blocks/aspiration-video.php',
+			'keywords' => array( 'aspiration-video', 'quote' ),
+		) );
+		acf_register_block_type( array(
+			'name' => 'aspiration-form',
+			'title' => __( '[Saphia]-[Vì cộng đồng] Form đăng ký' ),
+			'description' => __( '[Saphia]-[Vì cộng đồng] Form đăng ký' ),
+			'render_template' => 'blocks/aspiration-form.php',
+			'keywords' => array( 'aspiration-form', 'quote' ),
 		) );
 	}
 }
