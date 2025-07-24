@@ -339,12 +339,27 @@ function my_acf_init_block_types() {
 			'render_template' => 'blocks/support-customer.php',
 			'keywords' => array( 'support-customer', 'quote' ),
 		) );
-				acf_register_block_type( array(
+		acf_register_block_type( array(
 			'name' => 'branch-system',
 			'title' => __( '[Saphia]- Hệ thống chi nhánh' ),
 			'description' => __( '[Saphia]- Hệ thống chi nhánh' ),
 			'render_template' => 'blocks/branch-system.php',
 			'keywords' => array( 'branch-system', 'quote' ),
 		) );
+		acf_register_block_type( array(
+			'name' => 'branch-road',
+			'title' => __( '[Saphia]-[Điểm bán] Đại lộ danh vọng' ),
+			'description' => __( '[Saphia]-[Điểm bán] Đại lộ danh vọng' ),
+			'render_template' => 'blocks/branch-road.php',
+			'keywords' => array( 'branch-road', 'quote' ),
+		) );
+				acf_register_block_type( array(
+			'name' => 'branch-office',
+			'title' => __( '[Saphia]-[Điểm bán] Văn phòng đại diện' ),
+			'description' => __( '[Saphia]-[Điểm bán] Văn phòng đại diện' ),
+			'render_template' => 'blocks/branch-office.php',
+			'keywords' => array( 'branch-office', 'quote' ),
+		) );
+
 	}
 }
