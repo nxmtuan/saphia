@@ -412,8 +412,8 @@ function saphia_render_homepage_popup()
 				<img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/bg-popup.png" alt="" loading="lazy"
 					class="absolute inset-0 object-cover size-full pointer-events-none">
 				<div class="relative z-[1]">
-					<div class="lg:text-[32px] text-2xl leading-[1] text-center">Chúng tôi có thể giúp gì cho bạn?</div>
-					<div class="mt-3 lg:text-lg text-center">Hãy chọn vai trò của bạn để nhận trải nghiệm phù hợp.</div>
+					<div class="lg:text-[32px] text-2xl leading-[1] text-center"><?php _e('Chúng tôi có thể giúp gì cho bạn?', 'gnws') ?></div>
+					<div class="mt-3 lg:text-lg text-center"><?php _e('Hãy chọn vai trò của bạn để nhận trải nghiệm phù hợp.', 'gnws') ?></div>
 					<ul class="mt-8 popup-list flex flex-wrap gap-x-4 md:gap-y-[30px] gap-y-4">
 						<?php foreach ($rows as $row):
 							// Xác định page ID

@@ -451,20 +451,31 @@ import ApexCharts from 'apexcharts';
 
 		function handlePopup() {
 			$(document).on('click', '[data-popup]', function () {
-				$('.popup').removeClass('active');
+				$('.popup').removeClass('show');
 
 				var targetId = $(this).attr('data-popup');
-				$('#' + targetId).addClass('active');
-				$('.modal-backdrop').addClass('active');
+				$('#' + targetId).addClass('show');
+				$('.modal-backdrop').addClass('show');
 			});
 			$('.modal-backdrop').click(function name(e) {
-				$(this).removeClass('active');
-				$('.popup').removeClass('active');
+				$(this).removeClass('show');
+				$('.popup').removeClass('show');
 			});
 
 			$(document).on('click', '.close-popup', function () {
-				$(this).closest('.popup').removeClass('active');
-				$('.modal-backdrop').removeClass('active');
+				$(this).closest('.popup').removeClass('show');
+				$('.modal-backdrop').removeClass('show');
+			});
+
+			// Handle populating add-cart-popup form
+			$('[data-popup="add-cart-popup"]').on('click', function () {
+			    var productName = $('.product-name').text().trim();
+			    var productPrice = $('.product-price').text().trim();
+			    var productPriceMonthly = $('.product-price-monthly').text().trim();
+			    var form = $('#add-cart-popup');
+			    form.find('input[name="product-name"]').val(productName);
+			    form.find('input[name="product-price"]').val(productPrice);
+			    form.find('input[name="product-monthly"]').val(productPriceMonthly);
 			});
 		}
 
