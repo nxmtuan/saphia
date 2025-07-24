@@ -220,12 +220,47 @@ function my_acf_init_block_types() {
 			'render_template' => 'blocks/single_product-related.php',
 			'keywords' => array( 'single_product-related', 'quote' ),
 		) );
-				acf_register_block_type( array(
+		acf_register_block_type( array(
 			'name' => 'product-category',
 			'title' => __( '[Saphia]-[Product Category] Sản phẩm' ),
 			'description' => __( '[Saphia]-[Product Category] Sản phẩm' ),
 			'render_template' => 'blocks/product-category.php',
 			'keywords' => array( 'product-category', 'quote' ),
+		) );
+		acf_register_block_type( array(
+			'name' => 'ttkh_banner',
+			'title' => __( '[Saphia]-[Thông tin khoa học] Banner' ),
+			'description' => __( '[Saphia]-[Thông tin khoa học] Banner' ),
+			'render_template' => 'blocks/ttkh_banner.php',
+			'keywords' => array( 'ttkh_banner', 'quote' ),
+		) );
+		acf_register_block_type( array(
+			'name' => 'ttkh_tech',
+			'title' => __( '[Saphia]-[Thông tin khoa học] Công nghệ' ),
+			'description' => __( '[Saphia]-[Thông tin khoa học] Công nghệ' ),
+			'render_template' => 'blocks/ttkh_tech.php',
+			'keywords' => array( 'ttkh_tech', 'quote' ),
+		) );
+		acf_register_block_type( array(
+			'name' => 'ttkh_resoure',
+			'title' => __( '[Saphia]-[Thông tin khoa học] Nguồn gốc & sức mạnh' ),
+			'description' => __( '[Saphia]-[Thông tin khoa học] Nguồn gốc & sức mạnh' ),
+			'render_template' => 'blocks/ttkh_resoure.php',
+			'keywords' => array( 'ttkh_resoure', 'quote' ),
+		) );
+		acf_register_block_type( array(
+			'name' => 'ttkh_principle',
+			'title' => __( '[Saphia]-[Thông tin khoa học] Nguyên lý' ),
+			'description' => __( '[Saphia]-[Thông tin khoa học] Nguyên lý' ),
+			'render_template' => 'blocks/ttkh_principle.php',
+			'keywords' => array( 'ttkh_principle', 'quote' ),
+		) );
+		acf_register_block_type( array(
+			'name' => 'ttkh_apply',
+			'title' => __( '[Saphia]-[Thông tin khoa học] Ứng dụng công nghệ' ),
+			'description' => __( '[Saphia]-[Thông tin khoa học] Ứng dụng công nghệ' ),
+			'render_template' => 'blocks/ttkh_apply.php',
+			'keywords' => array( 'ttkh_apply', 'quote' ),
 		) );
 	}
 }
