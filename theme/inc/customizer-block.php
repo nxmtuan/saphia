@@ -206,5 +206,26 @@ function my_acf_init_block_types() {
 			'render_template' => 'blocks/single_product-certificate.php',
 			'keywords' => array( 'single_product-certificate', 'quote' ),
 		) );
+		acf_register_block_type( array(
+			'name' => 'single_product-rate',
+			'title' => __( '[Saphia]-[Single Product] Đánh giá' ),
+			'description' => __( '[Saphia]-[Single Product] Đánh giá' ),
+			'render_template' => 'blocks/single_product-rate.php',
+			'keywords' => array( 'single_product-rate', 'quote' ),
+		) );
+		acf_register_block_type( array(
+			'name' => 'single_product-related',
+			'title' => __( '[Saphia]-[Single Product] Sản phẩm liên quan' ),
+			'description' => __( '[Saphia]-[Single Product] Sản phẩm liên quan' ),
+			'render_template' => 'blocks/single_product-related.php',
+			'keywords' => array( 'single_product-related', 'quote' ),
+		) );
+				acf_register_block_type( array(
+			'name' => 'product-category',
+			'title' => __( '[Saphia]-[Product Category] Sản phẩm' ),
+			'description' => __( '[Saphia]-[Product Category] Sản phẩm' ),
+			'render_template' => 'blocks/product-category.php',
+			'keywords' => array( 'product-category', 'quote' ),
+		) );
 	}
 }
