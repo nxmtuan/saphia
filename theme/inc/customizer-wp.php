@@ -403,7 +403,7 @@ function saphia_render_homepage_popup()
 	// In popup
 	?>
 	<div
-		class="fixed top-0 z-[51] transition-all duration-500 [&:not(.active)]:opacity-0 [&:not(.active)]:pointer-events-none [&:not(.active)]:invisible popup active">
+		class="fixed top-0 z-[51] transition-all duration-500 [&:not(.show)]:opacity-0 [&:not(.show)]:pointer-events-none [&:not(.show)]:invisible popup show">
 
 		<div
 			class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[52] flex flex-col items-center popup-content">
