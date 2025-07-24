@@ -15,7 +15,9 @@ get_header();
                     Liên hệ với Kiềm Thảo Dược Saphia <br>
                     <span>để được chuyên gia tư vấn</span>
                 </div>
-                <div class="form-lien-he-saphia"></div>
+                <div class="mt-10 form-lien-he-saphia">
+                    <?php echo do_shortcode( '[contact-form-7 id="806e4c4" title="Form liên hệ với saphia"]' ); ?>
+                </div>
             </div>
         </div>
     </section>

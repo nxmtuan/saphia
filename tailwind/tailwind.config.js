@@ -40,6 +40,7 @@ module.exports = {
 				'product': '0px 4px 4px 0px rgba(0, 0, 0, 0.25)',
 				'contentCard': '0px 0px 0px 3px rgba(32, 65, 154, 0.05)',
 				'ban-tin': '0px 4px 4px 0px rgba(0, 0, 0, 0.25)',
+				'contact-form' : '0 0 7px 0 rgba(0, 0, 0, 0.25)',
 			}
 		},
 		container: {
