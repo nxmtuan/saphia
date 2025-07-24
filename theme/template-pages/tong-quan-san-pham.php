@@ -82,7 +82,7 @@ get_header();
         <div class="container">
             <div class="flex lg:flex-row flex-col lg:items-stretch xl:gap-11 md:gap-3 md:mx-0 -mx-5">
                 <div
-                    class="p-5 lg:w-2/5 w-full md:rounded-[35px] overflow-hidden border-2 border-[#ECF4FE] shadow-product">
+                    class="p-5 lg:w-2/5 w-full md:rounded-[35px] overflow-hidden border-2 border-[#ECF4FE] shadow-product hidden">
                     <div class="text-lg">
                         Cập nhật thông tin hôm nay
                     </div>
@@ -146,8 +146,29 @@ get_header();
                         <?php _e('Cập nhật giá trị mới', 'gnws') ?>
                     </div>
                 </div>
+                
+                <!-- Form điền thông tin cho user lần đầu -->
+                <div class="md:p-10 p-5 lg:w-2/5 w-full md:rounded-[35px] overflow-hidden flex justify-center bg-[#ECF4FE]">
+                    <div class="max-w-[513px]">
+                        <div class="md:text-5xl text-2xl tracking-[-0.72px] text-content">
+                            Đăng ký theo dõi pH hàng ngày
+                        </div>
+                        <div class="mt-3 md:text-lg text-[#525256]">
+                            Ghi lại pH hàng ngày và đề xuất giải pháp cá nhân hóa cho bạn
+                        </div>
+                        <div class="mt-10 w-full space-y-5">
+                            <input type="text" placeholder="Họ và tên" class="md:p-5 px-5 py-2 w-full bg-white rounded-xl overflow-hidden md:text-lg text-[#525256] border border-transparent focus:outline-none focus:border-primary transition-colors duration-300">
+                            <input type="tel" placeholder="Số điện thoại" class="md:p-5 px-5 py-2 w-full bg-white rounded-xl overflow-hidden md:text-lg text-[#525256] border border-transparent focus:outline-none focus:border-primary transition-colors duration-300">
+                            <div class="mx-auto w-fit bg-primary hover:bg-[#224393c7] rounded-full overflow-hidden py-5 px-10 text-white text-xl text-center cursor-pointer transition-colors duration-300">
+                                Đăng ký
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-                <div class="p-5 flex-1 md:rounded-[35px] overflow-hidden border-2 border-[#ECF4FE] shadow-product">
+                <div class="relative p-5 flex-1 md:rounded-[35px] overflow-hidden border-2 border-[#ECF4FE] shadow-product">
+                    <!-- Blur kết quả cho user lần đầu -->
+                    <div class="absolute z-[1] inset-0 size-full backdrop-blur-lg"></div>
                     <div class="flex md:flex-row flex-col md:items-center md:justify-between">
                         <div class="text-lg">
                             Cập nhật thông tin hôm nay
