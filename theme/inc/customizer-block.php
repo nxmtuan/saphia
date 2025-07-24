@@ -297,5 +297,40 @@ function my_acf_init_block_types() {
 			'render_template' => 'blocks/aspiration-form.php',
 			'keywords' => array( 'aspiration-form', 'quote' ),
 		) );
+		acf_register_block_type( array(
+			'name' => 'research-banner',
+			'title' => __( '[Saphia]-[Nghiên cứu và phát triển] Banner' ),
+			'description' => __( '[Saphia]-[Nghiên cứu và phát triển] Banner' ),
+			'render_template' => 'blocks/research-banner.php',
+			'keywords' => array( 'research-banner', 'quote' ),
+		) );
+		acf_register_block_type( array(
+			'name' => 'research-faq',
+			'title' => __( '[Saphia]-[Nghiên cứu và phát triển] Kết quả nghiên cứu' ),
+			'description' => __( '[Saphia]-[Nghiên cứu và phát triển] Kết quả nghiên cứu' ),
+			'render_template' => 'blocks/research-faq.php',
+			'keywords' => array( 'research-faq', 'quote' ),
+		) );
+		acf_register_block_type( array(
+			'name' => 'research-analysis',
+			'title' => __( '[Saphia]-[Nghiên cứu và phát triển] Kết quả phân tích' ),
+			'description' => __( '[Saphia]-[Nghiên cứu và phát triển] Kết quả phân tích' ),
+			'render_template' => 'blocks/research-analysis.php',
+			'keywords' => array( 'research-analysis', 'quote' ),
+		) );
+		acf_register_block_type( array(
+			'name' => 'research-file',
+			'title' => __( '[Saphia]-[Nghiên cứu và phát triển] Hồ sơ nhà khoa học' ),
+			'description' => __( '[Saphia]-[Nghiên cứu và phát triển] Hồ sơ nhà khoa học' ),
+			'render_template' => 'blocks/research-file.php',
+			'keywords' => array( 'research-file', 'quote' ),
+		) );
+		acf_register_block_type( array(
+			'name' => 'research-invention',
+			'title' => __( '[Saphia]-[Nghiên cứu và phát triển] Độc quyền sáng chế' ),
+			'description' => __( '[Saphia]-[Nghiên cứu và phát triển] Độc quyền sáng chế' ),
+			'render_template' => 'blocks/research-invention.php',
+			'keywords' => array( 'research-invention', 'quote' ),
+		) );
 	}
 }
