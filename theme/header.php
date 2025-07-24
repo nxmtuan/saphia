@@ -92,7 +92,7 @@ if ( isset( $_COOKIE['homepage_layout'] ) ) {
 							</div>
 						</div>
 						<div id="searchBox"
-							class="absolute origin-top left-0 top-full border border-[#ffffff2b] bg-[#d3d3d359] backdrop-blur-[20px] w-full lg:p-[26px] p-5 [&:not(.active)]:opacity-0 opacity-100 [&:not(.active)]:pointer-events-none pointer-events-auto flex justify-center transition-all duration-300">
+							class="absolute origin-top left-0 top-full border border-[#ffffff2b] bg-[#5C82E080] backdrop-blur-[10px] w-full lg:p-[26px] p-5 [&:not(.active)]:opacity-0 opacity-100 [&:not(.active)]:pointer-events-none pointer-events-auto flex justify-center transition-all duration-300">
 							<div class="relative lg:w-fit w-full">
 								<input type="text" placeholder="<?php _e( 'Tìm kiếm', 'gnws' ) ?>"
 									class="pl-5 pr-11 lg:py-4 py-2.5 lg:w-[900px] w-full lg:text-lg text-sm rounded-full overflow-hidden bg-white border border-transparent focus:outline-none focus:border-primary transition-colors duration-300">
@@ -115,7 +115,7 @@ if ( isset( $_COOKIE['homepage_layout'] ) ) {
 								<?php echo svg( 'chevron-down', '', '', 'icon-svg text-white' ); ?>
 							</a>
 							<ul
-								class="other_languages text-sm text-white space-y-1 absolute border-[#ffffff2b] bg-[#d3d3d359] backdrop-blur-[20px] shadow-base p-1 whitespace-nowrap top-full left-0 font-normal opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto group-hover:z-10 transition-all duration-500 prose-a:flex prose-a:items-center prose-a:gap-1 w-max prose-a:rounded-md prose-a:px-4 prose-a:py-2">
+								class="other_languages text-sm text-[#002681] hover:text-white space-y-1 absolute border-[#ffffff2b] bg-[#5C82E080] backdrop-blur-[10px] shadow-base p-1 whitespace-nowrap top-full left-0 font-normal opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto group-hover:z-10 transition-all duration-500 prose-a:flex prose-a:items-center prose-a:gap-1 w-max prose-a:rounded-md prose-a:px-4 prose-a:py-2">
 								<?php pll_the_languages( array( 'show_flags' => 1, 'show_names' => 1 ) ); ?>
 							</ul>
 						</div>
