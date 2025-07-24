@@ -1,6 +1,6 @@
 <!-- Form pop-up nhận tư vấn -->
 <div
-    class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 1.5xl:w-[1348px] lg:w-[60%] w-[95%] rounded-[35px] overflow-hidden flex items-stretch z-[52]">
+    class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 1.5xl:w-[1348px] lg:w-[60%] w-[95%] rounded-[35px] overflow-hidden flex items-stretch z-[52]" style="display:none;">
     <div class="1.5xl:block hidden w-[630px] aspect-[717/519] relative bg-form-gradient">
         <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/bg-form.png" alt="" loading="lazy"
         class="absolute inset-0 object-cover size-full">
