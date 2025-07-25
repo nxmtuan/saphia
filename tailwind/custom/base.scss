@@ -108,7 +108,7 @@ body {
 	}
 
 	.submit {
-		@apply md:py-4 py-3 px-8 bg-[#393CA2] md:text-lg text-sm text-white !leading-[1] capitalize rounded-full overflow-hidden w-fit cursor-pointer;
+		@apply md:py-4 py-3 px-8 bg-[#393CA2] hover:bg-[#224393c7] md:text-lg text-sm text-white !leading-[1] capitalize rounded-full overflow-hidden w-fit cursor-pointer transition-colors duration-300;
 	}
 
 	.wpcf7-spinner {

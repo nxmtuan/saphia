@@ -81,7 +81,7 @@ body {
   @apply md:py-[18px] py-3 px-6 xl:w-[479px] w-full bg-white rounded-full overflow-hidden focus:outline-none md:text-lg text-sm !leading-[1] text-[#525256];
 }
 .form-nhan-tu-van-mien-phi .submit {
-  @apply md:py-4 py-3 px-8 bg-[#393CA2] md:text-lg text-sm text-white !leading-[1] capitalize rounded-full overflow-hidden w-fit cursor-pointer;
+  @apply md:py-4 py-3 px-8 bg-[#393CA2] hover:bg-[#224393c7] md:text-lg text-sm text-white !leading-[1] capitalize rounded-full overflow-hidden w-fit cursor-pointer transition-colors duration-300;
 }
 .form-nhan-tu-van-mien-phi .wpcf7-spinner {
   @apply absolute bottom-0 left-0;

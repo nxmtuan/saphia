@@ -99,7 +99,7 @@
 								$hover_img = get_sub_field( 'hover_img' ) ?: get_sub_field( 'main_img' );
 								echo wp_get_attachment_image( $hover_img, 'full', false, [ 'class' => 'absolute inset-0 size-full opacity-0 group-hover:opacity-100 transition-all duration-300' ] ) ?>
 								<p
-									class="absolute lg:top-2 top-4 lg:right-2 right-4 lg:size-16 size-8 flex justify-center items-center rounded-full overflow-hidden bg-white shrink-0">
+									class="absolute lg:top-2 top-4 lg:right-2 right-4 lg:size-16 size-8 flex justify-center items-center rounded-full overflow-hidden bg-white group-hover:bg-[#cbc9c9] shrink-0 group-hover:rotate-45 transition-all duration-300">
 									<?php echo svg( 'up-right', '27', '30', 'shrink-0 text-content' ) ?>
 								</p>
 							</a>

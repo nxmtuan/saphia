@@ -20,7 +20,7 @@
                          <?php endif; ?>
                           <?php if( get_sub_field('title_btn') ): ?>
                              <p
-                                 class="absolute bottom-4 right-4 z-[1] bg-white text-[#3A566A] text-sm px-6 py-3 rounded-full">
+                                 class="absolute bottom-4 right-4 z-[1] bg-white hover:bg-[#cbc9c9] text-[#3A566A] text-sm px-6 py-3 rounded-full transition-colors duration-300">
                                 <?php the_sub_field('title_btn'); ?>
                              </p>
                           <?php endif; ?>
