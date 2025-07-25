@@ -1,4 +1,4 @@
-<section class="lg:mt-[183px] mt-[60px] lg:pb-[183px] pb-[60px] bg-home-gradient"
+<section class="lg:mt-[183px] mt-[60px] lg:pb-20 pb-[60px] bg-home-gradient"
 	data-component="product-featured">
 	<div class="container">
 		<div class="w-full flex justify-center">
