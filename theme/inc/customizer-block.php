@@ -353,12 +353,19 @@ function my_acf_init_block_types() {
 			'render_template' => 'blocks/branch-road.php',
 			'keywords' => array( 'branch-road', 'quote' ),
 		) );
-				acf_register_block_type( array(
+		acf_register_block_type( array(
 			'name' => 'branch-office',
 			'title' => __( '[Saphia]-[Điểm bán] Văn phòng đại diện' ),
 			'description' => __( '[Saphia]-[Điểm bán] Văn phòng đại diện' ),
 			'render_template' => 'blocks/branch-office.php',
 			'keywords' => array( 'branch-office', 'quote' ),
+		) );
+		acf_register_block_type( array(
+			'name' => 'post-kiemhoa',
+			'title' => __( '[Saphia]-Bản tin kiềm hoá' ),
+			'description' => __( '[Saphia]-Bản tin kiềm hoá' ),
+			'render_template' => 'blocks/post-kiemhoa.php',
+			'keywords' => array( 'post-kiemhoa', 'quote' ),
 		) );
 
 	}
