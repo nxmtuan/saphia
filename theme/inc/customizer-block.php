@@ -402,12 +402,48 @@ function my_acf_init_block_types() {
 			'render_template' => 'blocks/people-songkiem.php',
 			'keywords' => array( 'people-songkiem', 'quote' ),
 		) );
-				acf_register_block_type( array(
+		acf_register_block_type( array(
 			'name' => 'nhipsong-songkiem',
 			'title' => __( '[Saphia]-[Sống kiềm] Nhịp sống kiềm' ),
 			'description' => __( '[Saphia]-[Sống kiềm] Nhịp sống kiềm' ),
 			'render_template' => 'blocks/nhipsong-songkiem.php',
 			'keywords' => array( 'nhipsong-songkiem', 'quote' ),
+		) );
+
+		acf_register_block_type( array(
+			'name' => 'saphia-banner',
+			'title' => __( '[Saphia]-Banner' ),
+			'description' => __( '[Saphia]-Banner' ),
+			'render_template' => 'blocks/saphia-banner.php',
+			'keywords' => array( 'saphia-banner', 'quote' ),
+		) );
+		acf_register_block_type( array(
+			'name' => 'saphia-conquer',
+			'title' => __( '[Saphia]-[Challange] Chinh phục mọi giới hạn' ),
+			'description' => __( '[Saphia]-[Challange] Chinh phục mọi giới hạn' ),
+			'render_template' => 'blocks/saphia-conquer.php',
+			'keywords' => array( 'saphia-conquer', 'quote' ),
+		) );
+		acf_register_block_type( array(
+			'name' => 'saphia-challange',
+			'title' => __( '[Saphia]-[Challange] Góp yêu thương' ),
+			'description' => __( '[Saphia]-[Challange] Góp yêu thương' ),
+			'render_template' => 'blocks/saphia-challange.php',
+			'keywords' => array( 'saphia-challange', 'quote' ),
+		) );
+		acf_register_block_type( array(
+			'name' => 'saphia-challange-tree',
+			'title' => __( '[Saphia]-[Challange] Nuôi cây' ),
+			'description' => __( '[Saphia]-[Challange] Nuôi cây' ),
+			'render_template' => 'blocks/saphia-challange-tree.php',
+			'keywords' => array( 'saphia-challange-tree', 'quote' ),
+		) );
+				acf_register_block_type( array(
+			'name' => 'saphia-challange-practice',
+			'title' => __( '[Saphia]-[Challange] Thực hành sống khoẻ' ),
+			'description' => __( '[Saphia]-[Challange] Thực hành sống khoẻ' ),
+			'render_template' => 'blocks/saphia-challange-practice.php',
+			'keywords' => array( 'saphia-challange-practice', 'quote' ),
 		) );
 	}
 }
