@@ -25,7 +25,7 @@
                     <?php if( have_rows('list_content') ): ?>
                         
                         <?php while( have_rows('list_content') ): the_row();?>
-                           <div class="py-[28px] bg-[#FFFAFA] max-w-[859px] flex flex-col items-center">
+                           <div class="scroll-scale-item py-[28px] bg-[#FFFAFA] max-w-[859px] flex flex-col items-center transform transition-transform duration-300 ease-in-out">
                              <?php if( get_sub_field('year') ): ?>
                                
                                 <div class="lg:text-[40px] text-3xl leading-[1] text-center">

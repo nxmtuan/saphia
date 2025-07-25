@@ -402,5 +402,13 @@ body {
     @apply grow-[2];
   }
 }
+.scroll-scale-item {
+  transition: transform 0.3s ease-in-out;
+  transform: scale(1);
+}
+
+.scroll-scale-item.scale-item {
+  transform: scale(1.1);
+}
 
 /*# sourceMappingURL=base.css.map */
