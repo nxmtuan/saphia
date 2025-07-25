@@ -4,13 +4,21 @@
 			<?php if ( get_field( 'bg' ) ) : ?> 	<?php the_field( 'bg' ); ?>
 				style="background-image: url('<?php echo wp_get_attachment_image_url( get_field( 'bg' ), 'full' ) ?>');"
 			<?php endif; ?>>
-			<div class="absolute inset-0 bg-[#5B79A480]"></div>
-            <?php if( get_field('title') ): ?>
-                <h2
-                    class="xl:text-[64px] lg:text-4xl md:text-2xl xl:leading-[76px] leading-[1] tracking-[-0.96px] text-white xl:max-w-[1225px] lg:max-w-[80%] max-w-[65%] z-[1]">
-                     <?php the_field('title'); ?>
-                </h2>
-            <?php endif; ?>
+			<div class="absolute inset-0 bg-[#5B79A480] pointer-events-none"></div>
+            <div class="relative z-10">
+                <?php if( get_field('title') ): ?>
+                    <h2
+                        class="xl:text-[64px] lg:text-4xl md:text-2xl xl:leading-[76px] leading-[1] tracking-[-0.96px] text-white xl:max-w-[1225px] lg:max-w-[80%] max-w-[65%] z-[1]">
+                         <?php the_field('title'); ?>
+                    </h2>
+                <?php endif; ?>
+                <?php if( get_field('desc') ): ?>
+                    <div class="lg:text-4xl text-xl  my-10 text-white">
+                        <?php the_field('desc'); ?>
+                    </div>
+                <?php endif; ?>
+
+            </div>
             <?php
             $button = get_field('button');
             $btn_title = (is_array($button) && !empty($button['title'])) ? $button['title'] : '';
