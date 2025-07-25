@@ -385,4 +385,22 @@ body {
   @apply w-full h-full block max-w-full;
 }
 
+@media (min-width: 768px) {
+  .accordion-container {
+    @apply flex;
+  }
+  .accordion-container .accordion-item {
+    @apply grow-[1];
+  }
+  .accordion-container .accordion-item:nth-child(2) {
+    @apply grow-[2];
+  }
+  .accordion-container:hover .accordion-item {
+    @apply grow-[1];
+  }
+  .accordion-container .accordion-item:hover {
+    @apply grow-[2];
+  }
+}
+
 /*# sourceMappingURL=base.css.map */
