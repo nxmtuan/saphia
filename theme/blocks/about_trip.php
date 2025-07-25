@@ -6,9 +6,9 @@
             <?php the_field( 'main_title' ); ?>
         </h2>
         <?php endif; ?>
-        <div class="pb-[100px] relative flex flex-col items-center">
+        <div class="md:pt-[100px] pt-10 pb-[70px] relative flex flex-col items-center">
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[1px] h-full border border-dashed border-[#124B96]"></div>
             <?php if ( have_rows( 'list_content' ) ) : ?>
-            <?php echo svg( 'dash', '3', '81', 'shrink-0' ) ?>
             <div class="swiper nav-slider lg:max-w-[760px] max-w-full bg-white z-[1]">
                 <div class="swiper-wrapper">
                     <?php while ( have_rows( 'list_content' ) ) :
@@ -52,7 +52,6 @@
                     <?php endwhile; ?>
                 </div>
             </div>
-            <?php echo svg( 'divider', '3', '', 'lg:h-[700px] h-[400px] absolute bottom-0 left-1/2 -translate-x-1/2 shrink-0' ) ?>
             <?php endif; ?>
 
         </div>
