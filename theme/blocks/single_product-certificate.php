@@ -13,9 +13,9 @@
 						the_row(); ?>
 						<div class="block_slider-item md:w-full w-[83%] ">
 							<a href="<?php echo wp_get_attachment_image_url( get_sub_field( 'img' ), 'full' ) ?>"
-								class="flex flex-col gap-[13px]" data-fancybox="certification">
+								class="size-full flex flex-col gap-[13px]" data-fancybox="certification">
 
-								<?php echo wp_get_attachment_image( get_sub_field( 'img' ), 'medium', false, [ 'class' => 'w-full object-cover' ] ) ?>
+								<?php echo wp_get_attachment_image( get_sub_field( 'img' ), 'medium', false, [ 'class' => 'size-full object-cover' ] ) ?>
 								<?php if ( get_sub_field( 'desc' ) ) : ?>
 									<div class="flex-1 flex justify-end flex-col xl:gap-[13px]">
 										<div class="lg:text-2xl text-lg">

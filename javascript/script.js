@@ -20,6 +20,7 @@ import ApexCharts from 'apexcharts';
 			activeItemOnClick();
 			switchTab();
 			toggleContentBlock();
+			scaleOnScroll();
 		});
 
 		let swiperInstances = [];
@@ -209,6 +210,7 @@ import ApexCharts from 'apexcharts';
 			var swiper = new Swiper('.main-slider', {
 				effect: 'cards',
 				grabCursor: true,
+				initialSlide: 1,
 				cardsEffect: {
 					perSlideOffset: 30, // Tăng giá trị này để các thẻ xòe ra xa hơn (mặc định là 8)
 					perSlideRotate: 15, // Tăng giá trị này để các thẻ quay nhiều hơn (mặc định là 2)
@@ -490,13 +492,17 @@ import ApexCharts from 'apexcharts';
 
 			// Handle populating add-cart-popup form
 			$('[data-popup="add-cart-popup"]').on('click', function () {
-			    var productName = $('.product-name').text().trim();
-			    var productPrice = $('.product-price').text().trim();
-			    var productPriceMonthly = $('.product-price-monthly').text().trim();
-			    var form = $('#add-cart-popup');
-			    form.find('input[name="product-name"]').val(productName);
-			    form.find('input[name="product-price"]').val(productPrice);
-			    form.find('input[name="product-monthly"]').val(productPriceMonthly);
+				var productName = $('.product-name').text().trim();
+				var productPrice = $('.product-price').text().trim();
+				var productPriceMonthly = $('.product-price-monthly')
+					.text()
+					.trim();
+				var form = $('#add-cart-popup');
+				form.find('input[name="product-name"]').val(productName);
+				form.find('input[name="product-price"]').val(productPrice);
+				form.find('input[name="product-monthly"]').val(
+					productPriceMonthly
+				);
 			});
 		}
 
@@ -620,6 +626,34 @@ import ApexCharts from 'apexcharts';
 					}
 				});
 			});
+		}
+
+		function scaleOnScroll() {
+			var $items = $('.scroll-scale-item');
+
+			function scaleOnScroll() {
+				var winTop = $(window).scrollTop(),
+					winHeight = $(window).height(),
+					viewportCenter = winTop + winHeight / 2;
+
+				$items.each(function () {
+					var $el = $(this),
+						elTop = $el.offset().top,
+						elBottom = elTop + $el.outerHeight();
+
+					// nếu đường center của viewport nằm giữa top & bottom của element
+					if (elTop < viewportCenter && elBottom > viewportCenter) {
+						$el.addClass('scale-item');
+					} else {
+						$el.removeClass('scale-item');
+					}
+				});
+			}
+
+			// binding scroll & resize
+			$(window).on('scroll resize', scaleOnScroll);
+			// chạy lần đầu
+			scaleOnScroll();
 		}
 	})(jQuery);
 })();

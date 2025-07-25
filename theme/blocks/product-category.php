@@ -41,7 +41,7 @@
 								?>
 								<div
 									class="block_slider-item ml-4 p-6 md:w-[47%] w-[80%] h-full rounded-[35px] overflow-hidden bg-[#FFF3E7] flex flex-col gap-6">
-									<div class="text-2xl"><?php the_title(); ?></div>
+									<a href="<?php the_permalink(); ?>" class="text-2xl"><?php the_title(); ?></a>
 									<div class="flex-1 flex items-center justify-center">
 										<img src="<?php gnws_post_thumbnail_full() ?>" alt="<?php the_title() ?>"
 											class="object-contain max-xl:max-w-[60%] max-md:max-w-[50%]">
@@ -52,10 +52,9 @@
 											class="flex justify-center items-center w-1/2 p-[14px] rounded-full overflow-hidden bg-white hover:bg-[#f5f1f1] text-content leading-[1] transition-colors duration-300">
 											<?php _e( 'Xem chi tiết', 'gnws' ) ?>
 										</a>
-										<a href="<?php the_permalink(); ?>"
-											class="flex justify-center items-center w-1/2 p-[14px] rounded-full overflow-hidden bg-primary hover:bg-[#224393c7] text-white leading-[1] transition-colors duration-300">
+										<button type="button" data-popup="add-cart-popup" class="flex justify-center items-center w-1/2 p-[14px] rounded-full overflow-hidden bg-primary hover:bg-[#224393c7] text-white leading-[1] transition-colors duration-300">
 											<?php _e( 'Mua ngay', 'gnws' ) ?>
-										</a>
+										</button>
 									</div>
 								</div>
 								<?php
