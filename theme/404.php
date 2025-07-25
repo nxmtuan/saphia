@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The template for displaying 404 pages (not found)
  *
@@ -10,224 +11,441 @@
 get_header();
 ?>
 
-<section class="gnws-404 bg-black w-full">
-	<div class="container mx-auto">
-		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
-			
-			<g id="Layer_12 yellow-back-fig" data-name="Layer 12">
-				<path class="gnws_404-1"
-					d="M600.87,872H156a4,4,0,0,0-3.78,4.19h0a4,4,0,0,0,3.78,4.19H600.87a4,4,0,0,0,3.78-4.19h0A4,4,0,0,0,600.87,872Z" />
-				<rect class="gnws_404-1" x="680.91" y="871.98" width="513.38" height="8.39" rx="4.19"
-					ry="4.19" />
-				<path class="gnws_404-1"
-					d="M1480,876.17h0c0,2.32,2.37,4.19,5.3,4.19h350.61c2.93,0,5.3-1.88,5.3-4.19h0c0-2.32-2.37-4.19-5.3-4.19H1485.26C1482.33,872,1480,873.86,1480,876.17Z" />
-				<rect class="gnws_404-1" x="492.21" y="920.64" width="249.8" height="8.39" rx="4.19"
-					ry="4.19" />
-				<path class="gnws_404-1"
-					d="M1549.14,924.84h0a4.19,4.19,0,0,0-4.19-4.19H1067.46a14.66,14.66,0,0,1,.35,3.21v1A4.19,4.19,0,0,0,1072,929h472.94A4.19,4.19,0,0,0,1549.14,924.84Z" />
-				<path class="gnws_404-1"
-					d="M865.5,924.84h0a4.19,4.19,0,0,0,4.19,4.19h82.37a12.28,12.28,0,0,1-.19-2v-2.17a4.19,4.19,0,0,0-4.19-4.19h-78A4.19,4.19,0,0,0,865.5,924.84Z" />
-				<rect class="gnws_404-1" x="915.6" y="981.47" width="54.72" height="8.39" rx="4.19"
-					ry="4.19" />
-				<path class="gnws_404-1"
-					d="M730.33,985.67h0c0,2.32,4.23,4.19,9.44,4.19h104.3c5.22,0,9.44-1.88,9.44-4.19h0c0-2.32-4.23-4.19-9.44-4.19H739.78C734.56,981.47,730.33,983.35,730.33,985.67Z" />
-				<rect class="gnws_404-1" x="997.06" y="981.47" width="78.11" height="8.39" rx="4.19"
-					ry="4.19" />
-
-				<g id="round-conf">
-					<path class="gnws_404-1 circle c1"
-						d="M536.41,155.14a17.77,17.77,0,1,0,17.77,17.77A17.77,17.77,0,0,0,536.41,155.14Zm0,28.68a10.9,10.9,0,1,1,10.9-10.9A10.9,10.9,0,0,1,536.41,183.81Z" />
-					<path class="gnws_404-1 circle c2"
-						d="M1345.09,82.44a17.77,17.77,0,1,0,17.77,17.77A17.77,17.77,0,0,0,1345.09,82.44Zm0,28.68a10.9,10.9,0,1,1,10.9-10.9A10.9,10.9,0,0,1,1345.09,111.12Z" />
-					<path class="gnws_404-1 circle c3"
-						d="M70.12,363A17.77,17.77,0,1,0,87.89,380.8,17.77,17.77,0,0,0,70.12,363Zm0,28.68A10.9,10.9,0,1,1,81,380.8,10.9,10.9,0,0,1,70.12,391.7Z" />
-					<path class="gnws_404-1 circle c4"
-						d="M170.47,751.82a17.77,17.77,0,1,0,17.77,17.77A17.77,17.77,0,0,0,170.47,751.82Zm0,28.68a10.9,10.9,0,1,1,10.9-10.9A10.9,10.9,0,0,1,170.47,780.5Z" />
-					<path class="gnws_404-1 circle c5"
-						d="M1457.34,762.73a17.77,17.77,0,1,0,17.77,17.77A17.77,17.77,0,0,0,1457.34,762.73Zm0,28.68a10.9,10.9,0,1,1,10.9-10.9A10.9,10.9,0,0,1,1457.34,791.4Z" />
-					<path class="gnws_404-1 circle c6"
-						d="M1829.15,407.49a17.77,17.77,0,1,0,17.77,17.77A17.77,17.77,0,0,0,1829.15,407.49Zm0,28.68a10.9,10.9,0,1,1,10.9-10.9A10.9,10.9,0,0,1,1829.15,436.17Z" />
-				</g>
+<div class="gnws-404">
+	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 355">
+		<g id="ocean">
+			<path id="sky" class="gnws_404-st0" d="M0 0h1000v203.1H0z" />
+			<linearGradient id="water_1_" gradientUnits="userSpaceOnUse" x1="500" y1="354" x2="500" y2="200.667">
+				<stop offset="0" stop-color="#fff" />
+				<stop offset="1" stop-color="#b3dcdf" />
+			</linearGradient>
+			<path id="water" fill="url(#water_1_)" d="M0 200.7h1000V354H0z" />
+			<path id="land" class="gnws_404-st0" d="M0 273.4h1000V354H0z" />
+			<g id="gnws_404-bumps">
+				<path class="gnws_404-st0" d="M0 275.2s83.8-28 180-28 197 28 197 28H0z" />
+				<path class="gnws_404-st0" d="M377 275.2s54.7-28 117.5-28 128.6 28 128.6 28H377z" />
+				<path class="gnws_404-st0" d="M623.2 275.2s83.7-28 179.9-28 196.9 28 196.9 28H623.2z" />
+				<path class="gnws_404-st0" d="M-998 275.2s83.8-28 180-28 197 28 197 28h-377z" />
+				<path class="gnws_404-st0" d="M-621 275.2s54.7-28 117.5-28 128.6 28 128.6 28H-621z" />
+				<path class="gnws_404-st0" d="M-374.8 275.2s83.7-28 179.9-28S2 275.2 2 275.2h-376.8z" />
 			</g>
-			<g id="fortyfour" data-name="Layer 2">
-				<g class="four a">
-
-					<rect class="gnws_404-2" x="233.74" y="391.14" width="120.71" height="466.29"
-						rx="57.1" ry="57.1" transform="translate(918.39 330.19) rotate(90)" />
-
-					<rect class="gnws_404-3" x="333.83" y="475.1" width="120.71" height="396.88"
-						rx="60.36" ry="60.36" />
-
-					<rect class="gnws_404-3" x="197.13" y="122.89" width="120.71" height="604.75"
-						rx="60.36" ry="60.36" transform="translate(290.49 -70.78) rotate(35)" />
-
-				</g>
-				<g class="four b">
-
-					<rect class="gnws_404-2" x="1558.84" y="391.91" width="120.71" height="466.29"
-						rx="57.1" ry="57.1" transform="translate(2244.26 -994.14) rotate(90)" />
-
-
-					<rect class="gnws_404-3" x="1658.92" y="475.87" width="120.71" height="396.88"
-						rx="60.36" ry="60.36" />
-
-					<rect class="gnws_404-3" x="1522.22" y="123.66" width="120.71" height="604.75"
-						rx="60.36" ry="60.36" transform="translate(530.57 -830.68) rotate(35)" />
-
-				</g>
-				<path class="gnws_404-3" id="ou"
-					d="M956.54,168.2c-194.34,0-351.89,157.55-351.89,351.89S762.19,872,956.54,872s351.89-157.55,351.89-351.89S1150.88,168.2,956.54,168.2Zm0,584.49c-128.46,0-232.6-104.14-232.6-232.6s104.14-232.6,232.6-232.6,232.6,104.14,232.6,232.6S1085,752.69,956.54,752.69Z" />
+		</g>
+		<g id="gnws_404-tracks">
+			<path class="gnws_404-st2" d="M9.8 282.4h-3L0 307.6h3z" />
+			<path class="gnws_404-st2" d="M19.8 282.4h-3L10 307.6h3z" />
+			<path class="gnws_404-st2" d="M29.8 282.4h-3L20 307.6h3z" />
+			<path class="gnws_404-st2" d="M39.8 282.4h-3L30 307.6h3z" />
+			<path class="gnws_404-st2" d="M49.8 282.4h-3L40 307.6h3z" />
+			<path class="gnws_404-st2" d="M59.8 282.4h-3L50 307.6h3z" />
+			<path class="gnws_404-st2" d="M69.8 282.4h-3L60 307.6h3z" />
+			<path class="gnws_404-st2" d="M79.8 282.4h-3L70 307.6h3z" />
+			<path class="gnws_404-st2" d="M89.8 282.4h-3L80 307.6h3z" />
+			<path class="gnws_404-st2" d="M99.8 282.4h-3L90 307.6h3z" />
+			<path class="gnws_404-st2" d="M109.8 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M119.8 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M129.8 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M139.8 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M149.8 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M159.8 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M169.8 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M179.8 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M189.8 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M199.8 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M209.8 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M219.8 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M229.8 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M239.8 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M249.8 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M259.8 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M269.8 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M279.8 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M289.8 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M299.8 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M309.8 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M319.8 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M329.8 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M339.8 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M349.8 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M359.8 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M369.8 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M379.8 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M389.8 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M399.8 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M409.8 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M419.8 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M429.8 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M439.8 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M449.8 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M459.8 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M469.8 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M479.8 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M489.8 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M499.8 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M1000 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M990 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M980 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M970 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M960 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M950 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M940 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M930 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M920 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M910 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M900 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M890 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M880 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M870 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M860 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M850 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M840 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M830 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M820 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M810 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M800 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M790 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M780 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M770 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M760 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M750 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M740 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M730 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M720 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M710 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M700 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M690 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M680 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M670 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M660 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M650 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M640 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M630 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M620 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M610 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M600 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M590 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M580 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M570 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M560 282.4h-3l-6.8 25.2h3z" />
+			<g>
+				<path class="gnws_404-st2" d="M-490.2 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M-480.2 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M-470.2 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M-460.2 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M-450.2 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M-440.2 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M-430.2 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M-420.2 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M-410.2 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M-400.2 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M-390.2 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M-380.2 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M-370.2 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M-360.2 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M-350.2 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M-340.2 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M-330.2 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M-320.2 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M-310.2 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M-300.2 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M-290.2 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M-280.2 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M-270.2 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M-260.2 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M-250.2 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M-240.2 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M-230.2 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M-220.2 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M-210.2 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M-200.2 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M-190.2 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M-180.2 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M-170.2 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M-160.2 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M-150.2 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M-140.2 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M-130.2 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M-120.2 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M-110.2 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M-100.2 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M-90.2 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M-80.2 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M-70.2 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M-60.2 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M-50.2 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M-40.2 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M-30.2 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M-20.2 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M-10.2 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M-.2 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M500 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M490 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M480 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M470 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M460 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M450 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M440 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M430 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M420 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M410 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M400 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M390 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M380 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M370 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M360 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M350 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M340 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M330 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M320 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M310 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M300 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M290 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M280 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M270 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M260 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M250 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M240 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M230 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M220 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M210 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M200 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M190 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M180 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M170 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M160 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M150 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M140 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M130 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M120 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M110 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M100 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M90 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M80 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M70 282.4h-3l-6.8 25.2h3z" />
+				<path class="gnws_404-st2" d="M60 282.4h-3l-6.8 25.2h3z" />
 			</g>
-			<g id="umbrella" data-name="Layer 3">
-				<g>
-					<circle class="gnws_404-4" cx="1187.53" cy="240.3" r="7.66"
-						transform="translate(236.36 990.8) rotate(-49.71)" />
-					<g>
-						<path class="gnws_404-5"
-							d="M1219.56,359.67l55,100.52c32.7-48.48-6.87-142.43-91.75-214.38-84.41-71.55-183-95.33-225.81-56l114.21,44.14Z" />
-						<path class="gnws_404-6"
-							d="M1182.79,245.81c-84.41-71.55-183-95.33-225.81-56l114.21,44.14Z" />
-						<polygon class="gnws_404-7"
-							points="1182.79 245.81 1071.19 233.91 1219.56 359.67 1182.79 245.81" />
+			<path class="gnws_404-st2" d="M550 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M540 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M530 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M520 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M510 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M550 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M540 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M530 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M520 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st2" d="M510 282.4h-3l-6.8 25.2h3z" />
+			<path class="gnws_404-st3" d="M-499.5 300.2H1000v5.1H-499.5z" />
+			<path class="gnws_404-st3" d="M-499.5 283.8H1000v2.8H-499.5z" />
+		</g>
+		<g id="gnws_404-cloudsAll">
+			<path id="gnws_404-cloud1" class="gnws_404-st4" d="M19.5 69.7s-21.3.5-25-12.2c0 0-4.3-21.3 16-21.8 0 0-2.1-12.2 12.2-14.9 0 0 15-3.2 21.3 6.9 0 0 3.6-20.7 17.8-22.3 0 0 24-3 26.6 13.1 0 0 .1 9.5-2.8 13.5 0 0 9.5-15 26.5-4.8 0 0 12.1 7.9 7 20.2 0 0 16 4.8 10.1 18.1 0 0-10.2 8.5-17.1-1.1 0 0-5.5 16-32.5 16 0 0-19.1 2.1-27-13.3 0 0 .5 10.1-13.3 10.6-.1 0-20.3 3.2-19.8-8z" />
+			<path id="gnws_404-cloud3" class="gnws_404-st4" d="M836 132s-18.3 2.1-22.2-4.9c0 0-4.9-11.8 12.5-13.8 0 0-2.5-6.8 9.7-9.6 0 0 12.7-3.1 18.7 2.1 0 0 2-12.2 14-14.3 0 0 16.6-3.3 23.7 2.1 0 0 4.8 3.9 2.4 6.5 0 0 3.1-4.8 18.4-.4 0 0 10.9 3.5 7.2 11 0 0 13.8-1.5 9.7 9.5 0 0-4.1 10.8-15.5 4.8 0 0-3.1 5.6-26.4 7.9 0 0-16.3 2.8-24-5.3 0 0 1 5.7-10.8 7.2-.1.1-17.2 3.6-17.4-2.8z" />
+			<path id="gnws_404-cloud2" class="gnws_404-st4" d="M19.3 159.5s-15.9.6-18.8-5.1c0 0-3.4-9.5 11.7-10.1 0 0-1.7-5.5 9-6.9 0 0 11.2-1.7 16 2.8 0 0 2.5-9.4 13.1-10.3 0 0 17.9-1.8 20 5.4 0 0 .2 4.3-2 6.1 0 0 6.9-6.9 19.8-2.6 0 0 9.1 3.4 5.5 9 0 0 6.5 0 4.5 6.7 0 0-2.6 5.6-9.6 1 0 0-4 7.3-24.2 7.7 0 0-14.2 1.3-20.4-5.5 0 0 .5 4.5-9.8 5 0 .1-15 1.8-14.8-3.2z" />
+			<path id="gnws_404-cloud4" class="gnws_404-st4" d="M370.3 109.5s15.9.6 18.8-5.1c0 0 3.4-9.5-11.7-10.1 0 0 1.7-5.5-9-6.9 0 0-11.2-1.7-16 2.8 0 0-2.5-9.4-13.1-10.3 0 0-17.9-1.8-20 5.4 0 0-.2 4.3 2 6.1 0 0-6.9-6.9-19.8-2.6 0 0-9.1 3.4-5.5 9 0 0-12 1.9-7.7 8 0 0 7.5 4 12.8-.2 0 0 4 7.3 24.2 7.7 0 0 14.2 1.3 20.4-5.5 0 0-.5 4.5 9.8 5 0 0 15.1 1.7 14.8-3.3z" />
+			<path id="gnws_404-cloud5" class="gnws_404-st4" d="M511.7 12.4s-21.3-.3-25 7c0 0-4.3 12.2 16 12.5 0 0-2.1 7 12.2 8.6 0 0 15 1.8 21.3-4 0 0 3.6 11.9 17.8 12.8 0 0 19.5 1.6 27-4.4 0 0 5-4.4 2.1-6.7 0 0 4.1 4.4 21.2-1.5 0 0 12.1-4.6 7-11.6 0 0 16-2.8 10.1-10.4 0 0-10.2-4.9-17.1.6 0 0-5.5-9.2-32.5-9.2 0 0-19.1-1.2-27 7.6 0 0 .5-5.8-13.3-6.1-.1.2-20.3-1.6-19.8 4.8z" />
+		</g>
+		<g id="train">
+			<path fill="#b3dcdf" d="M344.5 248.5h507.2v37.8H344.5z" />
+			<g id="wheels">
+				<circle class="gnws_404-st6" cx="384.1" cy="285.6" r="15.1" />
+				<path class="gnws_404-st2" d="M384.1 295.7c-5.6 0-10.1-4.5-10.1-10.1s4.5-10.1 10.1-10.1 10.1 4.5 10.1 10.1c0 5.5-4.6 10.1-10.1 10.1z" />
+				<circle class="gnws_404-st6" cx="416.1" cy="285.6" r="15.1" />
+				<path class="gnws_404-st2" d="M416.1 295.7c-5.6 0-10.1-4.5-10.1-10.1s4.5-10.1 10.1-10.1 10.1 4.5 10.1 10.1c0 5.5-4.6 10.1-10.1 10.1z" />
+				<circle class="gnws_404-st6" cx="469.1" cy="285.6" r="15.1" />
+				<path class="gnws_404-st2" d="M469.1 295.7c-5.6 0-10.1-4.5-10.1-10.1s4.5-10.1 10.1-10.1 10.1 4.5 10.1 10.1c0 5.5-4.6 10.1-10.1 10.1z" />
+				<circle class="gnws_404-st6" cx="734.1" cy="285.6" r="15.1" />
+				<path class="gnws_404-st2" d="M734.1 295.7c-5.6 0-10.1-4.5-10.1-10.1s4.5-10.1 10.1-10.1 10.1 4.5 10.1 10.1c0 5.5-4.6 10.1-10.1 10.1z" />
+				<circle class="gnws_404-st6" cx="766.1" cy="285.6" r="15.1" />
+				<path class="gnws_404-st2" d="M766.1 295.7c-5.6 0-10.1-4.5-10.1-10.1s4.5-10.1 10.1-10.1 10.1 4.5 10.1 10.1c0 5.5-4.6 10.1-10.1 10.1z" />
+				<circle class="gnws_404-st6" cx="821.1" cy="285.6" r="15.1" />
+				<path class="gnws_404-st2" d="M821.1 295.7c-5.6 0-10.1-4.5-10.1-10.1s4.5-10.1 10.1-10.1 10.1 4.5 10.1 10.1c0 5.5-4.6 10.1-10.1 10.1z" />
+			</g>
+			<path id="gnws_404-bracefront" class="gnws_404-st7" d="M383.2 285.6h88.1" />
+			<path id="gnws_404-braceback" class="gnws_404-st7" d="M733.2 285.6h88.1" />
+			<g id="car-layers">
+				<path id="car" class="gnws_404-st8" d="M321.8 300.7v-32.4s1.2.7-1.5-2.4v-29.1s3.1-11.6 10.7-21.1c0 0 7.6-12 15.5-17.5h1.3s10.2-4.9 30.9-28h.6s-.9-1.4 0-2.7c0 0 10.1-10.5 21-12.3 0 0 9.4-1.8 20.2-1.8h47.7V151H492v-1.1h10.1v1.1h19v2.2s8.2.9 19.2-4.2c0 0 1.4-1.1 28.8-1.1h291.5v6.8h7.5v2.2s12.2-.6 12.2 9.8V177l-10-.1v57.9s14.9-.5 14.9 10.2c0 0 1 9-14.9 8.9v3.8H719.5s-2.4.1-4.3 3l-15 29s-2.9 5.1-10.8 5.1H504.3s-2.9.1-6.1-5l-13.1-25s-4.5-7.1-11.8-7.1H369v2.4s-3.2 1.3-7.1 8.7L351.4 289s-2.9 6.3-6.9 6.4h-17.8l-4.9 5.3z" />
+				<path id="streamline-outine" class="gnws_404-st8" d="M320.3 236.6s1.4-6.8 4.4-11.3c0 0 .1-2.3 23.2-6.3l78-16.6s103.3-21.1 134.9-26.1c0 0 93.3-16 120.5-17.9 0 0 57.6-4.3 100-4.1h88.9v63.4s-10.3 5.4-17.1 5.3c0 0-305.6 4.9-366.3 8.1 0 0-100.3 4.8-119.1 6.8 0-.1-46.6 1.2-47.4-1.3z" />
+				<g id="window-grate">
+					<path class="gnws_404-st9" d="M739.5 182.6H854" />
+					<path class="gnws_404-st9" d="M739.5 177.6H854" />
+					<path class="gnws_404-st9" d="M739.5 172.6H854" />
+					<path class="gnws_404-st9" d="M739.5 167.6H854" />
+					<path class="gnws_404-st9" d="M739.5 161.4H854v26.1H739.5z" />
+				</g>
+				<path class="gnws_404-st9" d="M320.3 257.8h549.9" />
+				<g id="Text">
+					<text transform="translate(377.037 230.025)" class="gnws_404-st8 st10" font-size="21">
+						<?php _e('404', 'gnws') ?>
+					</text>
+					<text transform="translate(659.5 213.994)" class="gnws_404-st8 st10" font-size="24.025">
+						<?php _e('Trang không tồn tại.', 'gnws') ?>
+					</text>
+				</g>
+				<g id="ladders">
+					<g id="ladder-f">
+						<path id="front-ladder" class="gnws_404-st8" d="M433.8 258.4h17.8v34.8h-17.8z" />
+						<path id="fb-rung" class="gnws_404-st9" d="M433.8 281.1h17.7" />
+						<path id="ft-rung" class="gnws_404-st9" d="M433.8 268.6h17.7" />
 					</g>
-					<polygon class="gnws_404-8"
-						points="1180.91 409.02 1274.54 460.19 1219.56 359.67 1071.19 233.91 956.98 189.76 1021.95 274.29 1180.91 409.02" />
-					<g>
-						<rect class="gnws_404-4" x="997.45" y="358.35" width="175.58" height="5.1"
-							transform="translate(108.21 955.38) rotate(-49.71)" />
-						<rect class="gnws_404-4" x="1028.09" y="399.36" width="21.46" height="32.27"
-							rx="10.73" ry="10.73"
-							transform="translate(515.04 -573.16) rotate(40.29)" />
+					<g id="ladder-b">
+						<path id="ladder-back" class="gnws_404-st8" d="M851.8 257.8h17.8v34.8h-17.8z" />
+						<path id="bt-rung" class="gnws_404-st9" d="M851.8 268.6h17.7" />
+						<path id="bb-rung" class="gnws_404-st9" d="M851.8 281.1h17.7" />
 					</g>
 				</g>
+				<path id="window-front" class="gnws_404-st8" d="M350.5 196.4s-.4 3.9 15.2 4.3l32.3-30.3s-18.2 1.1-19-.8l-28.5 26.8z" />
 			</g>
-			<g id="pillow" data-name="Layer 4">
-				<path class="gnws_404-1"
-					d="M754,627.07c7,.54,12.92-2.82,13.35-7.59s-4.95-9.24-12-9.87a18.55,18.55,0,0,0-2.17,0l-74.9-81.64c0-.1,0-.19,0-.29,0-7.09-4-12.83-8.8-12.81s-8.75,5.77-8.73,12.87c0,0,0,.09,0,.13l-50.21,46.07h-.09c-7.06-.63-13.14,2.77-13.57,7.59s4.87,9.16,11.85,9.84l76.08,82.92s0,0,0,.06c0,7.09,4,12.83,8.8,12.81s8.65-5.66,8.71-12.65Z" />
-				<path class="gnws_404-9"
-					d="M669.46,514.82c-4.77-.83-8.75,5.77-8.73,12.87,0,0,0,.09,0,.13l-50.21,46.07h-.09c-7.06-.63-13.14,2.77-13.57,7.59s4.87,9.16,11.85,9.84l76.08,82.92s0,0,0,.06c0,7.09,4,12.83,8.8,12.81s8.65-5.66,8.71-12.65C570.55,573,702.07,520.47,669.46,514.82Z" />
-			</g>
-			<g id="cup" data-name="Layer 7">
-				<polygon class="gnws_404-1"
-					points="1173.69 748.21 1140.52 715.42 1195.79 647.35 1241.13 692.16 1173.69 748.21" />
-				<polygon class="gnws_404-8"
-					points="1173.69 748.21 1140.52 715.42 1143.93 711.27 1177.81 744.75 1173.69 748.21" />
-				<polygon class="gnws_404-5"
-					points="1194.68 731.46 1157.04 694.24 1183.8 661.7 1226.91 704.32 1194.68 731.46" />
-				<g class="gnws_404-10">
-					<path class="gnws_404-8"
-						d="M1176.32,667.78h0a4.19,4.19,0,0,1,4.19,4.19v33.54a0,0,0,0,1,0,0h-8.38a0,0,0,0,1,0,0V672a4.19,4.19,0,0,1,4.19-4.19Z"
-						transform="translate(822.53 -628.67) rotate(44.67)" />
-					<path class="gnws_404-8"
-						d="M1172.73,709.7l23.58-23.85a4.19,4.19,0,0,1,5.92,0h0a4.19,4.19,0,0,1,0,5.92l-23.58,23.85Z" />
-					<path class="gnws_404-8"
-						d="M1185.11,722.09l23.58-23.85a4.19,4.19,0,0,1,5.92,0h0a4.19,4.19,0,0,1,0,5.92L1191.06,728Z" />
-				</g>
-				<path class="gnws_404-5"
-					d="M1197.85,660.5h45.69a5.7,5.7,0,0,1,5.7,5.7v8.32a0,0,0,0,1,0,0h-57.09a0,0,0,0,1,0,0v-8.32A5.7,5.7,0,0,1,1197.85,660.5Z"
-					transform="translate(829.53 -667.66) rotate(45)" />
-				<path class="gnws_404-8"
-					d="M1191.49,664.74h53.94a5.25,5.25,0,0,1,5.25,5.25v4.79a0,0,0,0,1,0,0h-64.44a0,0,0,0,1,0,0V670a5.25,5.25,0,0,1,5.25-5.25Z"
-					transform="translate(822.83 -663.17) rotate(44.67)" />
-			</g>
-			<g id="clock" data-name="Layer 8">
+		</g>
+	</svg>
+</div>
+<style>
+	.gnws_404-st0 {
+  fill: #fff;
+}
+.gnws_404-st2 {
+  fill: #5d89af;
+}
+.gnws_404-st3 {
+  fill: #709abf;
+}
+.gnws_404-st4,
+.gnws_404-st6 {
+  fill: #fff;
+  stroke: #b3dcdf;
+  stroke-miterlimit: 10;
+}
+.gnws_404-st6 {
+  stroke: #5d89af;
+  stroke-width: 2;
+}
+.gnws_404-st7,
+.gnws_404-st8,
+.gnws_404-st9 {
+  stroke: #709abf;
+  stroke-miterlimit: 10;
+}
+.gnws_404-st7 {
+  stroke-width: 5;
+  stroke-linecap: round;
+  fill: none;
+}
+.gnws_404-st8,
+.gnws_404-st9 {
+  fill: #fff;
+}
+.gnws_404-st9 {
+  fill: none;
+}
+#gnws_404-cloud1 {
+  animation: hazh_404-cloud003 15s linear infinite;
+}
+#gnws_404-cloud2 {
+  animation: hazh_404-cloud002 25s linear infinite;
+}
+#gnws_404-cloud3 {
+  animation: hazh_404-cloud003 20s linear infinite;
+}
+#gnws_404-cloud4 {
+  animation: hazh_404-float 4s linear infinite;
+}
+#gnws_404-cloud5 {
+  animation: hazh_404-float 8s linear infinite;
+}
+#gnws_404-cloud7 {
+  animation: hazh_404-float 5s linear infinite;
+}
+#gnws_404-tracks {
+  animation: hazh_404-slide 650ms linear infinite;
+}
+#gnws_404-bumps {
+  animation: hazh_404-land 10s linear infinite;
+}
+@keyframes hazh_404-jig {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(1px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+#car-layers {
+  animation: hazh_404-jig 0.35s linear infinite;
+}
+@keyframes hazh_404-land {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(1000px);
+  }
+}
+@keyframes hazh_404-slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100px);
+  }
+}
+@keyframes hazh_404-cloud001 {
+  0% {
+    transform: translateX(-1000px) translateY(3px);
+  }
+  100% {
+    transform: translateX(1000px) translateY(0);
+  }
+}
+@keyframes hazh_404-cloud002 {
+  0% {
+    transform: translateX(-1000px) translateY(3px);
+  }
+  100% {
+    transform: translateX(1000px) translateY(0);
+  }
+}
+@keyframes hazh_404-cloud003 {
+  0% {
+    transform: translateX(-1000px) translateY(3px);
+  }
+  100% {
+    transform: translateX(1000px) translateY(0);
+  }
+}
+@keyframes hazh_404-float {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+  50% {
+    transform: translateY(8px) translateX(5px);
+  }
+  100% {
+    transform: translateY(0) translateX(0);
+  }
+}
+#gnws_404-braceback,
+#gnws_404-bracefront {
+  animation: hazh_404-braces 1s linear infinite;
+}
+@keyframes hazh_404-braces {
+  0% {
+    transform: translateX(-2px);
+  }
+  25% {
+    transform: translateX(3px);
+  }
+  50% {
+    transform: translateX(-2px);
+  }
+  75% {
+    transform: translateX(3px);
+  }
+  100% {
+    transform: translateX(-2px);
+  }
+}
 
-				<circle class="gnws_404-5" cx="847.7" cy="247.59" r="74.66"
-					transform="translate(-32.91 314.05) rotate(-20.6)" />
-				<circle class="gnws_404-1" cx="847.7" cy="247.59" r="63.44"
-					transform="translate(-32.91 314.05) rotate(-20.6)" />
-				<rect class="gnws_404-3 clock-hand-1" x="845" y="189.5" width="6.04" height="58"
-					rx="3.02" ry="3.02" />
-				<rect class="gnws_404-3 clock-hand-2" x="845" y="209.5" width="6.04" height="38"
-					rx="3.02" ry="3.02" transform="translate(1611.22 -230.4) rotate(130.4)" />
-				<circle class="gnws_404-3" cx="847.7" cy="247.59"
-					transform="translate(-32.91 314.05) rotate(-20.6)" r="3" />
-			</g>
-			<g id="box" data-name="Layer 9">
-				<g id="box-top">
-					<polygon class="gnws_404-8"
-						points="569.71 382.28 653.74 329.39 747.13 320.1 679.2 369.85 569.71 382.28">
-					</polygon>
-					<polygon class="gnws_404-5"
-						points="691.95 367.2 570.87 392.34 565.32 383.35 687.8 357.45 691.95 367.2">
-					</polygon>
-
-
-					<polygon class="gnws_404-5"
-						points="661.54 337.48 570.87 392.34 562.42 378.92 652.25 322.38 658.12 321.34 661.54 337.48">
-					</polygon>
-					<polygon class="gnws_404-7"
-						points="661.54 337.48 570.87 392.34 562.42 378.92 652.25 322.38 658.12 321.34 661.54 337.48">
-					</polygon>
-					<polygon class="gnws_404-5"
-						points="747.13 320.1 661.54 337.48 652.25 322.38 738.4 307.1 747.13 320.1">
-					</polygon>
-				</g>
-				<path class="gnws_404-5"
-					d="M588.28,420.26s3.44,5.2,5.19,8l43.1,68.48,158.81-100-43.1-68.48q-2.63-4.17-5.47-8Z">
-				</path>
-				<path class="gnws_404-7"
-					d="M588.28,420.26s3.44,5.2,5.19,8l43.1,68.48,158.81-100-43.1-68.48q-2.63-4.17-5.47-8Z">
-				</path>
-				<rect class="gnws_404-5" x="693.73" y="335.51" width="83.99" height="90.58"
-					transform="translate(-89.78 450.43) rotate(-32.19)"></rect>
-
-
-
-			</g>
-
-			<g id="rucksack" data-name="Layer 6">
-				<g id="stripe">
-					<path class="gnws_404-12"
-						d="M1200.32,473.91h0a13.74,13.74,0,0,0-18.41,7.44l-55,129.86a14.82,14.82,0,0,0,7.13,19.21h0a13.74,13.74,0,0,0,18.41-7.44l55-129.86A14.82,14.82,0,0,0,1200.32,473.91Z" />
-					<path class="gnws_404-13"
-						d="M1202.18,606.34h0a14,14,0,0,0-16.18-11.8l-48.83,9c-7.59,1.4-12.66,9-11.31,16.89h0a14,14,0,0,0,16.18,11.8l48.83-9C1198.46,621.82,1203.53,614.26,1202.18,606.34Z" />
-				</g>
-				<path class="gnws_404-8"
-					d="M1300.86,603l-122.93,22.74-15.44-90.91c-5.75-33.86,15.89-66.17,48.34-72.18l11.58-2.08c32.45-6,57.26,17.66,63,51.51Z" />
-				<path class="gnws_404-1"
-					d="M1307,601.91l-112.32,20.78-15.9-93.61c-5.5-32.36,15.19-63.25,46.2-69h0c31-5.74,60.62,15.85,66.12,48.21Z" />
-				<path class="gnws_404-8"
-					d="M1296.76,603.8,1215,618.92l-4.89-28.77c-2.11-12.42,5.83-24.27,17.73-26.47l38.67-7.15c11.9-2.2,23.26,6.08,25.37,18.5Z" />
-				<path class="gnws_404-5"
-					d="M1296.76,603.8l-73.41,13.58-4.92-29c-2-11.62,5.45-22.72,16.6-24.78l33.07-6.12c11.14-2.06,21.77,5.69,23.75,17.32Z" />
-				<path class="gnws_404-4"
-					d="M1231.77,469.69l-13.42,2.48a10.25,10.25,0,0,0-8,11.92l2.38,14a9.9,9.9,0,0,0,11.42,8.33l13.42-2.48a10.25,10.25,0,0,0,8-11.92l-2.38-14A9.9,9.9,0,0,0,1231.77,469.69Zm7.17,20.84a6.39,6.39,0,0,1-5,7.43l-8.36,1.55a6.17,6.17,0,0,1-7.12-5.19l-1.48-8.73a6.39,6.39,0,0,1,5-7.43l8.36-1.55a6.17,6.17,0,0,1,7.12,5.19Z" />
-				<path class="gnws_404-14"
-					d="M1233.74,471.13l-13.42,2.48a10.25,10.25,0,0,0-8,11.92l2.38,14a9.9,9.9,0,0,0,11.42,8.33l13.42-2.48a10.25,10.25,0,0,0,8-11.92l-2.38-14A9.9,9.9,0,0,0,1233.74,471.13Zm7.17,20.84a6.39,6.39,0,0,1-5,7.43l-8.36,1.55a6.17,6.17,0,0,1-7.12-5.19L1219,487a6.39,6.39,0,0,1,5-7.43l8.36-1.55a6.17,6.17,0,0,1,7.12,5.19Z" />
-			</g>
-			<g id="bike" data-name="Layer 5">
-				<path class="gnws_404-8 wheel"
-					d="M1139.82,780.44a76.59,76.59,0,1,0-57.9,91.53A76.59,76.59,0,0,0,1139.82,780.44Zm-28.12,6.33a47.59,47.59,0,0,1,.83,15.8c-30.14-6.28-47.68-21.65-54.39-52.52A47.73,47.73,0,0,1,1111.69,786.77Zm-70.46-30.9c10.35,26.88,10.14,50.4-13.73,70.77a47.67,47.67,0,0,1,13.73-70.77Zm34.35,88a47.55,47.55,0,0,1-34.94-5.62c16.8-20.36,41.71-25.94,67.09-19.46A47.66,47.66,0,0,1,1075.58,843.85Z" />
-				<path class="gnws_404-8 wheel"
-					d="M864.89,789.69a76.59,76.59,0,1,0-66.13,85.78A76.59,76.59,0,0,0,864.89,789.69Zm-28.59,3.7a47.59,47.59,0,0,1-.64,15.81c-29.43-9-45.47-26-49.3-57.33A47.73,47.73,0,0,1,836.3,793.39ZM769,756.1c7.82,27.72,5.43,51.12-20.22,69.2A47.67,47.67,0,0,1,769,756.1Zm26.06,90.78a47.55,47.55,0,0,1-34.27-8.83c18.61-18.72,43.93-22,68.6-13.16A47.66,47.66,0,0,1,795.06,846.88Z" />
-				<g>
-					<rect class="gnws_404-1" x="871.39" y="693.37" width="12.87" height="53.21"
-						transform="translate(-165.97 273.38) rotate(-16.19)" />
-					<path class="gnws_404-5"
-						d="M813.93,679.35c-3.72-5.2,2.24-18.5,9.16-16.13,33.43,11.46,73.85,10.45,73.85,10.45,8.84.15,14.44,10.34,7.27,15.48-14.36,8.79-33.13,17-56.35,9.76C830.17,693.41,819.83,687.6,813.93,679.35Z" />
-					<path class="gnws_404-7"
-						d="M813.93,679.35c-3.72-5.2,2.24-18.5,9.16-16.13,33.43,11.46,73.85,10.45,73.85,10.45,8.84.15,14.44,10.34,7.27,15.48-14.36,8.79-33.13,17-56.35,9.76C830.17,693.41,819.83,687.6,813.93,679.35Z" />
-					<path class="gnws_404-5"
-						d="M817.15,680.06c-3.59-5,1.69-16.51,8.37-14.22,32.3,11.09,71.41,7.83,71.41,7.83,8.54.14,17.45,9.94,7.43,15.88-13.87,8.51-32,16.44-54.44,9.44C832.84,693.67,822.85,688,817.15,680.06Z" />
-				</g>
-				<g>
-					<circle class="gnws_404-9" cx="1022.66" cy="599.55" r="11.57"
-						transform="translate(-4.86 8.38) rotate(-0.47)" />
-					<path class="gnws_404-1"
-						d="M1069.76,792.37l-34.89-96.74,1.93-.8-1.71-4.15-1.74.72-13.26-36.76,1.27-.42-2.25-6.76,5.94-2-2.57-7.72-9.7,3.22c-11.55-22.55,2-36.33,15-41.86l-5.57-8.81c-23,10.29-29.61,28.75-19.53,54l-9.38,3.12,2.56,7.72,5.47-1.82,2.25,6.76,2.36-.78,13.62,37.76-2.35,1,1.71,4.15,2.16-.89,34.65,96.09a7.47,7.47,0,0,0,9.56,4.49h0A7.47,7.47,0,0,0,1069.76,792.37Z" />
-					<circle class="gnws_404-11" cx="1027.9" cy="587.94" r="12.99"
-						transform="translate(-4.77 8.42) rotate(-0.47)" />
-				</g>
-				<path class="gnws_404-5"
-					d="M1021.29,654l-17.73,6.15,1.72,5.59-31.41,82.36c-19.35,32.53-66.3,36.72-75.56,16.68l-7.09-21.5L879,747.1l3.28,10.09-94.65,33.95c-11.49,2.29-11.85,15.79-2.61,17.84,0,0,39.11,3.66,103,9.5a92.75,92.75,0,0,0,40.89-5.29c44.32-16.56,57.73-50.67,57.73-50.67l26.82-67.26a1.37,1.37,0,0,1,2.53,0l1.42,3.33,17.75-7.62Z" />
-				<path class="gnws_404-7"
-					d="M1021.29,654l-17.73,6.15,1.72,5.59-31.41,82.36c-19.35,32.53-66.3,36.72-75.56,16.68l-7.09-21.5L879,747.1l3.28,10.09-94.65,33.95c-11.49,2.29-11.85,15.79-2.61,17.84,0,0,39.11,3.66,103,9.5a92.75,92.75,0,0,0,40.89-5.29c44.32-16.56,57.73-50.67,57.73-50.67l26.82-67.26a1.37,1.37,0,0,1,2.53,0l1.42,3.33,17.75-7.62Z" />
-			</g>
-		</svg>
-	
-	</div>
-</section>
-
+</style>
 <?php
 get_footer();

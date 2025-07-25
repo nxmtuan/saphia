@@ -480,5 +480,12 @@ function my_acf_init_block_types() {
 			'render_template' => 'blocks/contact.php',
 			'keywords' => array( 'contact', 'quote' ),
 		) );
+				acf_register_block_type( array(
+			'name' => 'editor',
+			'title' => __( 'Nội dung editor' ),
+			'description' => __( 'Nội dung editor' ),
+			'render_template' => 'blocks/editor.php',
+			'keywords' => array( 'editor', 'quote' ),
+		) );
 	}
 }
