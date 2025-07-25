@@ -75,8 +75,8 @@ function my_acf_init_block_types() {
 		) );
 		acf_register_block_type( array(
 			'name' => 'about_brand-intro',
-			'title' => __( '[Saphia]-[About] Khối banner' ),
-			'description' => __( '[Saphia]-[About] Khối banner' ),
+			'title' => __( '[Saphia]-[Page] Khối banner' ),
+			'description' => __( '[Saphia]-[Page] Khối banner' ),
 			'render_template' => 'blocks/about_brand-intro.php',
 			'keywords' => array( 'about_brand-intro', 'quote' ),
 		) );
@@ -178,5 +178,188 @@ function my_acf_init_block_types() {
 			'render_template' => 'blocks/block_product-sustainable.php',
 			'keywords' => array( 'block_product-sustainable', 'quote' ),
 		) );
+		acf_register_block_type( array(
+			'name' => 'single_product-banner',
+			'title' => __( '[Saphia]-[Single Product] Banner sản phẩm' ),
+			'description' => __( '[Saphia]-[Single Product] Banner sản phẩm' ),
+			'render_template' => 'blocks/single_product-banner.php',
+			'keywords' => array( 'single_product-banner', 'quote' ),
+		) );
+		acf_register_block_type( array(
+			'name' => 'single_product-cart',
+			'title' => __( '[Saphia]-[Single Product] Thêm vào giỏ hàng' ),
+			'description' => __( '[Saphia]-[Single Product] Thêm vào giỏ hàng' ),
+			'render_template' => 'blocks/single_product-cart.php',
+			'keywords' => array( 'single_product-cart', 'quote' ),
+		) );
+		acf_register_block_type( array(
+			'name' => 'single_product-usage',
+			'title' => __( '[Saphia]-[Single Product] Hướng dẫn sử dụng' ),
+			'description' => __( '[Saphia]-[Single Product] Hướng dẫn sử dụng' ),
+			'render_template' => 'blocks/single_product-usage.php',
+			'keywords' => array( 'single_product-usage', 'quote' ),
+		) );
+		acf_register_block_type( array(
+			'name' => 'single_product-certificate',
+			'title' => __( '[Saphia]-[Single Product] Chứng nhận' ),
+			'description' => __( '[Saphia]-[Single Product] Chứng nhận' ),
+			'render_template' => 'blocks/single_product-certificate.php',
+			'keywords' => array( 'single_product-certificate', 'quote' ),
+		) );
+		acf_register_block_type( array(
+			'name' => 'single_product-rate',
+			'title' => __( '[Saphia]-[Single Product] Đánh giá' ),
+			'description' => __( '[Saphia]-[Single Product] Đánh giá' ),
+			'render_template' => 'blocks/single_product-rate.php',
+			'keywords' => array( 'single_product-rate', 'quote' ),
+		) );
+		acf_register_block_type( array(
+			'name' => 'single_product-related',
+			'title' => __( '[Saphia]-[Single Product] Sản phẩm liên quan' ),
+			'description' => __( '[Saphia]-[Single Product] Sản phẩm liên quan' ),
+			'render_template' => 'blocks/single_product-related.php',
+			'keywords' => array( 'single_product-related', 'quote' ),
+		) );
+		acf_register_block_type( array(
+			'name' => 'product-category',
+			'title' => __( '[Saphia]-[Product Category] Sản phẩm' ),
+			'description' => __( '[Saphia]-[Product Category] Sản phẩm' ),
+			'render_template' => 'blocks/product-category.php',
+			'keywords' => array( 'product-category', 'quote' ),
+		) );
+		acf_register_block_type( array(
+			'name' => 'ttkh_banner',
+			'title' => __( '[Saphia]-[Thông tin khoa học] Banner' ),
+			'description' => __( '[Saphia]-[Thông tin khoa học] Banner' ),
+			'render_template' => 'blocks/ttkh_banner.php',
+			'keywords' => array( 'ttkh_banner', 'quote' ),
+		) );
+		acf_register_block_type( array(
+			'name' => 'ttkh_tech',
+			'title' => __( '[Saphia]-[Thông tin khoa học] Công nghệ' ),
+			'description' => __( '[Saphia]-[Thông tin khoa học] Công nghệ' ),
+			'render_template' => 'blocks/ttkh_tech.php',
+			'keywords' => array( 'ttkh_tech', 'quote' ),
+		) );
+		acf_register_block_type( array(
+			'name' => 'ttkh_resoure',
+			'title' => __( '[Saphia]-[Thông tin khoa học] Nguồn gốc & sức mạnh' ),
+			'description' => __( '[Saphia]-[Thông tin khoa học] Nguồn gốc & sức mạnh' ),
+			'render_template' => 'blocks/ttkh_resoure.php',
+			'keywords' => array( 'ttkh_resoure', 'quote' ),
+		) );
+		acf_register_block_type( array(
+			'name' => 'ttkh_principle',
+			'title' => __( '[Saphia]-[Thông tin khoa học] Nguyên lý' ),
+			'description' => __( '[Saphia]-[Thông tin khoa học] Nguyên lý' ),
+			'render_template' => 'blocks/ttkh_principle.php',
+			'keywords' => array( 'ttkh_principle', 'quote' ),
+		) );
+		acf_register_block_type( array(
+			'name' => 'ttkh_apply',
+			'title' => __( '[Saphia]-[Thông tin khoa học] Ứng dụng công nghệ' ),
+			'description' => __( '[Saphia]-[Thông tin khoa học] Ứng dụng công nghệ' ),
+			'render_template' => 'blocks/ttkh_apply.php',
+			'keywords' => array( 'ttkh_apply', 'quote' ),
+		) );
+		acf_register_block_type( array(
+			'name' => 'sapphire_trip',
+			'title' => __( '[Saphia]-[Ngọc xanh] Hành trình' ),
+			'description' => __( '[Saphia]-[Ngọc xanh ] Hành trình' ),
+			'render_template' => 'blocks/sapphire_trip.php',
+			'keywords' => array( 'sapphire_trip', 'quote' ),
+		) );
+		acf_register_block_type( array(
+			'name' => 'block_campaign',
+			'title' => __( '[Saphia]-[Ngọc xanh] Khối nội dung' ),
+			'description' => __( '[Saphia]-[Ngọc xanh ] Khối nội dung' ),
+			'render_template' => 'blocks/block_campaign.php',
+			'keywords' => array( 'block_campaign', 'quote' ),
+		) );
+		acf_register_block_type( array(
+			'name' => 'aspiration',
+			'title' => __( '[Saphia]-[Vì cộng đồng] Khát vọng' ),
+			'description' => __( '[Saphia]-[Vì cộng đồng] Khát vọng' ),
+			'render_template' => 'blocks/aspiration.php',
+			'keywords' => array( 'aspiration', 'quote' ),
+		) );
+		acf_register_block_type( array(
+			'name' => 'aspiration-video',
+			'title' => __( '[Saphia]-[Vì cộng đồng] Video' ),
+			'description' => __( '[Saphia]-[Vì cộng đồng] Video' ),
+			'render_template' => 'blocks/aspiration-video.php',
+			'keywords' => array( 'aspiration-video', 'quote' ),
+		) );
+		acf_register_block_type( array(
+			'name' => 'aspiration-form',
+			'title' => __( '[Saphia]-[Vì cộng đồng] Form đăng ký' ),
+			'description' => __( '[Saphia]-[Vì cộng đồng] Form đăng ký' ),
+			'render_template' => 'blocks/aspiration-form.php',
+			'keywords' => array( 'aspiration-form', 'quote' ),
+		) );
+		acf_register_block_type( array(
+			'name' => 'research-banner',
+			'title' => __( '[Saphia]-[Nghiên cứu và phát triển] Banner' ),
+			'description' => __( '[Saphia]-[Nghiên cứu và phát triển] Banner' ),
+			'render_template' => 'blocks/research-banner.php',
+			'keywords' => array( 'research-banner', 'quote' ),
+		) );
+		acf_register_block_type( array(
+			'name' => 'research-faq',
+			'title' => __( '[Saphia]-[Nghiên cứu và phát triển] Kết quả nghiên cứu' ),
+			'description' => __( '[Saphia]-[Nghiên cứu và phát triển] Kết quả nghiên cứu' ),
+			'render_template' => 'blocks/research-faq.php',
+			'keywords' => array( 'research-faq', 'quote' ),
+		) );
+		acf_register_block_type( array(
+			'name' => 'research-analysis',
+			'title' => __( '[Saphia]-[Nghiên cứu và phát triển] Kết quả phân tích' ),
+			'description' => __( '[Saphia]-[Nghiên cứu và phát triển] Kết quả phân tích' ),
+			'render_template' => 'blocks/research-analysis.php',
+			'keywords' => array( 'research-analysis', 'quote' ),
+		) );
+		acf_register_block_type( array(
+			'name' => 'research-file',
+			'title' => __( '[Saphia]-[Nghiên cứu và phát triển] Hồ sơ nhà khoa học' ),
+			'description' => __( '[Saphia]-[Nghiên cứu và phát triển] Hồ sơ nhà khoa học' ),
+			'render_template' => 'blocks/research-file.php',
+			'keywords' => array( 'research-file', 'quote' ),
+		) );
+		acf_register_block_type( array(
+			'name' => 'research-invention',
+			'title' => __( '[Saphia]-[Nghiên cứu và phát triển] Độc quyền sáng chế' ),
+			'description' => __( '[Saphia]-[Nghiên cứu và phát triển] Độc quyền sáng chế' ),
+			'render_template' => 'blocks/research-invention.php',
+			'keywords' => array( 'research-invention', 'quote' ),
+		) );
+		acf_register_block_type( array(
+			'name' => 'support-customer',
+			'title' => __( '[Saphia]- Hỗ trợ khách hàng' ),
+			'description' => __( '[Saphia]- Hỗ trợ khách hàng' ),
+			'render_template' => 'blocks/support-customer.php',
+			'keywords' => array( 'support-customer', 'quote' ),
+		) );
+		acf_register_block_type( array(
+			'name' => 'branch-system',
+			'title' => __( '[Saphia]- Hệ thống chi nhánh' ),
+			'description' => __( '[Saphia]- Hệ thống chi nhánh' ),
+			'render_template' => 'blocks/branch-system.php',
+			'keywords' => array( 'branch-system', 'quote' ),
+		) );
+		acf_register_block_type( array(
+			'name' => 'branch-road',
+			'title' => __( '[Saphia]-[Điểm bán] Đại lộ danh vọng' ),
+			'description' => __( '[Saphia]-[Điểm bán] Đại lộ danh vọng' ),
+			'render_template' => 'blocks/branch-road.php',
+			'keywords' => array( 'branch-road', 'quote' ),
+		) );
+				acf_register_block_type( array(
+			'name' => 'branch-office',
+			'title' => __( '[Saphia]-[Điểm bán] Văn phòng đại diện' ),
+			'description' => __( '[Saphia]-[Điểm bán] Văn phòng đại diện' ),
+			'render_template' => 'blocks/branch-office.php',
+			'keywords' => array( 'branch-office', 'quote' ),
+		) );
+
 	}
 }

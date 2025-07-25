@@ -1,11 +1,11 @@
 {
-    "key": "group_688054e686282",
-    "title": "[Block]-[Product] Danh mục sản phẩm",
+    "key": "group_688195d87205b",
+    "title": "[Single Product] Đánh giá",
     "fields": [
         {
-            "key": "field_688054e6d4e49",
-            "label": "Danh sách danh mục",
-            "name": "list_cat",
+            "key": "field_688195d832fe0",
+            "label": "Danh sách đánh giá",
+            "name": "list_content",
             "aria-label": "",
             "type": "repeater",
             "instructions": "",
@@ -21,40 +21,35 @@
             "min": 0,
             "max": 0,
             "collapsed": "",
-            "button_label": "Thêm",
+            "button_label": "Thêm đánh giá",
             "rows_per_page": 20,
             "sub_fields": [
                 {
-                    "key": "field_6880550cd4e4a",
-                    "label": "Hình ảnh",
-                    "name": "img",
+                    "key": "field_6881964932fe1",
+                    "label": "Nội dung đánh giá",
+                    "name": "content",
                     "aria-label": "",
-                    "type": "image",
+                    "type": "wysiwyg",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
-                        "width": "",
+                        "width": "60",
                         "class": "",
                         "id": ""
                     },
-                    "return_format": "id",
-                    "library": "all",
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": "",
+                    "default_value": "",
                     "allow_in_bindings": 0,
-                    "preview_size": "thumbnail",
-                    "parent_repeater": "field_688054e6d4e49"
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0,
+                    "parent_repeater": "field_688195d832fe0"
                 },
                 {
-                    "key": "field_68805522d4e4b",
-                    "label": "Tiêu đề",
-                    "name": "title",
+                    "key": "field_6881966532fe2",
+                    "label": "Tên khách hàng",
+                    "name": "name",
                     "aria-label": "",
                     "type": "text",
                     "instructions": "",
@@ -71,12 +66,12 @@
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
-                    "parent_repeater": "field_688054e6d4e49"
+                    "parent_repeater": "field_688195d832fe0"
                 },
                 {
-                    "key": "field_68805529d4e4c",
-                    "label": "Đường dẫn",
-                    "name": "link",
+                    "key": "field_6881967532fe3",
+                    "label": "Đối tượng sử dụng",
+                    "name": "pos",
                     "aria-label": "",
                     "type": "text",
                     "instructions": "",
@@ -93,7 +88,7 @@
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
-                    "parent_repeater": "field_688054e6d4e49"
+                    "parent_repeater": "field_688195d832fe0"
                 }
             ]
         }
@@ -103,7 +98,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/block-category"
+                "value": "acf\/single-product-rate"
             }
         ]
     ],
@@ -116,5 +111,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1753326670
+    "modified": 1753324523
 }

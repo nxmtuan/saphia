@@ -7,7 +7,8 @@
  * @package gnws
  */
 $random_ver = rand( 1, 1000000000 );
-if ( ! defined( 'GNWS_VERSION' ) ) {
+if ( ! defined( 'GNWS_VERSION' ) )
+{
 	/*
 	 * Set the theme’s version number.
 	 *
@@ -18,7 +19,8 @@ if ( ! defined( 'GNWS_VERSION' ) ) {
 	define( 'GNWS_VERSION', $random_ver );
 }
 
-if ( ! defined( 'GNWS_TYPOGRAPHY_CLASSES' ) ) {
+if ( ! defined( 'GNWS_TYPOGRAPHY_CLASSES' ) )
+{
 	/*
 	 * Set Tailwind Typography classes for the front end, block editor and
 	 * classic editor using the constant below.
@@ -158,7 +160,8 @@ add_action( 'widgets_init', 'gnws_widgets_init' );
  * Enqueue scripts and styles.
  */
 function gnws_scripts() {
-	if ( class_exists( 'WPCF7' ) ) {
+	if ( class_exists( 'WPCF7' ) )
+	{
 		wp_enqueue_style( 'gnws-alert', get_template_directory_uri() . '/assets/alert/css/cf7simplepopup-core.css', array(), GNWS_VERSION );
 		wp_enqueue_script( 'gnws-jquery_alert', get_template_directory_uri() . '/assets/alert/js/cf7simplepopup-core.js', array(), GNWS_VERSION, true );
 		wp_enqueue_script( 'gnws-jquery_alert_main', get_template_directory_uri() . '/assets/alert/js/sweetalert.js', array(), GNWS_VERSION, true );
@@ -169,14 +172,18 @@ function gnws_scripts() {
 	wp_enqueue_style( 'gnws-style', get_stylesheet_uri(), array(), GNWS_VERSION );
 
 	// //JS
-	 wp_enqueue_script('jquery' );
+	wp_enqueue_script( 'jquery' );
 	wp_enqueue_script( 'gnws-js-swiper', get_template_directory_uri() . '/assets/libs/swiper-bundle.js', array(), GNWS_VERSION, true );
 	wp_enqueue_script( 'gnws-js-fancybox', get_template_directory_uri() . '/assets/libs/jquery.fancybox.js', array(), GNWS_VERSION, true );
 	wp_enqueue_script( 'gnws-script', get_template_directory_uri() . '/js/script.min.js', array(), GNWS_VERSION, true );
 
-	wp_localize_script( 'gnws-script', 'ajaxurl', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
+	wp_localize_script( 'gnws-script', 'ajaxurl', array(
+		'ajaxurl' => admin_url( 'admin-ajax.php' ),
+		'security' => wp_create_nonce( 'common_nonce' ),
+	) );
 
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) )
+	{
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
@@ -205,7 +212,8 @@ add_action( 'enqueue_block_editor_assets', 'gnws_enqueue_block_editor_script' );
  * Tailwind Typography classes from GNWS_TYPOGRAPHY_CLASSES.
  */
 function gnws_enqueue_typography_script() {
-	if ( is_admin() ) {
+	if ( is_admin() )
+	{
 		wp_enqueue_script(
 			'gnws-typography',
 			get_template_directory_uri() . '/js/tailwind-typography-classes.min.js',
@@ -252,3 +260,8 @@ require get_template_directory() . '/inc/customizer-widget.php';
  * Customizer Block.
  */
 require get_template_directory() . '/inc/customizer-block.php';
+
+/**
+ * Customizer ajax.
+ */
+require get_template_directory() . '/inc/customizer-ajax.php';

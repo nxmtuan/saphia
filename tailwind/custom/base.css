@@ -381,5 +381,8 @@ body {
     right: 100%;
   }
 }
+.block_iframe iframe {
+  @apply w-full h-full block max-w-full;
+}
 
 /*# sourceMappingURL=base.css.map */
