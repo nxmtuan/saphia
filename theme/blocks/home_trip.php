@@ -50,7 +50,7 @@
 										the_row(); ?>
                                          <?php if( get_sub_field('title') ): ?>
                                             <div
-                                                class="text-[#D9EAFD] lg:text-[30px] text-xl lg:leading-[37px] tracking-[-0.96px] max-w-[370px]">
+                                                class="max-md:mt-4 text-[#D9EAFD] lg:text-[30px] text-xl lg:leading-[37px] tracking-[-0.96px] max-w-[370px]">
                                                <?php the_sub_field('title'); ?>
                                             </div>
                                          <?php endif; ?>

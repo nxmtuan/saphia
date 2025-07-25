@@ -7,6 +7,7 @@ import ApexCharts from 'apexcharts';
 		$(function () {
 			backToTop();
 			handleSwiper();
+			setSameHeight();
 			marqueeSlider();
 			cardSlider();
 			toggleContent();
@@ -22,6 +23,26 @@ import ApexCharts from 'apexcharts';
 		});
 
 		let swiperInstances = [];
+
+		function setSameHeight() {
+			if (window.innerWidth >= 768) return;
+
+			$('.block_sameheight').each(function () {
+				var h = 0;
+
+				$(this)
+					.find('.sameheight-item')
+					.each(function () {
+						if ($(this).outerHeight() > h) {
+							h = $(this).outerHeight();
+						}
+					});
+
+				$(this).find('.sameheight-item').css({
+					height: h,
+				});
+			});
+		}
 
 		function handleSwiper() {
 			const isMobile = window.matchMedia('(max-width: 767px)').matches;
