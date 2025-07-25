@@ -480,12 +480,19 @@ function my_acf_init_block_types() {
 			'render_template' => 'blocks/contact.php',
 			'keywords' => array( 'contact', 'quote' ),
 		) );
-				acf_register_block_type( array(
+		acf_register_block_type( array(
 			'name' => 'editor',
 			'title' => __( 'Nội dung editor' ),
 			'description' => __( 'Nội dung editor' ),
 			'render_template' => 'blocks/editor.php',
 			'keywords' => array( 'editor', 'quote' ),
+		) );
+			acf_register_block_type( array(
+			'name' => 'analysis-ph',
+			'title' => __( 'Phân tích độ PH' ),
+			'description' => __( 'Phân tích độ PH' ),
+			'render_template' => 'blocks/analysis-ph.php',
+			'keywords' => array( 'analysis-ph', 'quote' ),
 		) );
 	}
 }
