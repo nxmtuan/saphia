@@ -209,6 +209,7 @@ import ApexCharts from 'apexcharts';
 			var swiper = new Swiper('.main-slider', {
 				effect: 'cards',
 				grabCursor: true,
+				initialSlide: 1,
 				cardsEffect: {
 					perSlideOffset: 30, // Tăng giá trị này để các thẻ xòe ra xa hơn (mặc định là 8)
 					perSlideRotate: 15, // Tăng giá trị này để các thẻ quay nhiều hơn (mặc định là 2)
