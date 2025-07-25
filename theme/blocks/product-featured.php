@@ -63,7 +63,7 @@
                                  if ($btn_title) : ?>
                                  
                                      <a href="<?php echo check_link($btn_link) ?>" target="_blank"
-                                         class="mt-[22px] block lg:py-[15px] py-2 lg:px-[49px] px-7 rounded-full overflow-hidden bg-primary text-white font-content lg:text-[15px] text-xs leading-[1] tracking-[-0.151px] w-fit">
+                                         class="mt-[22px] block lg:py-[15px] py-2 lg:px-[49px] px-7 rounded-full overflow-hidden bg-primary hover:bg-[#224393c7] text-white font-content lg:text-[15px] text-xs leading-[1] tracking-[-0.151px] w-fit transition-colors duration-300">
                                           <?php echo esc_html($btn_title); ?>
                                      </a>
                                  <?php endif; ?>

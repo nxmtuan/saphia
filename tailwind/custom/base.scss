@@ -108,7 +108,7 @@ body {
 	}
 
 	.submit {
-		@apply md:py-4 py-3 px-8 bg-[#393CA2] md:text-lg text-sm text-white !leading-[1] capitalize rounded-full overflow-hidden w-fit cursor-pointer;
+		@apply md:py-4 py-3 px-8 bg-[#393CA2] hover:bg-[#224393c7] md:text-lg text-sm text-white !leading-[1] capitalize rounded-full overflow-hidden w-fit cursor-pointer transition-colors duration-300;
 	}
 
 	.wpcf7-spinner {
@@ -450,5 +450,25 @@ body {
 .block_iframe {
 	iframe {
 		@apply w-full h-full block max-w-full;
+	}
+}
+
+@media (min-width: 768px) {
+	.accordion-container {
+		@apply flex;
+
+		.accordion-item {
+			@apply grow-[1];
+		}
+		.accordion-item:nth-child(2) {
+			@apply grow-[2];
+		}
+
+		&:hover .accordion-item {
+			@apply grow-[1];
+		}
+		.accordion-item:hover {
+			@apply grow-[2];
+		}
 	}
 }
