@@ -12,10 +12,10 @@
                     class="block_slider-item md:w-1/3 w-full flex md:flex-row flex-col items-center md:justify-evenly md:gap-3 gap-8">
                     
                         <div class="xl:space-y-[47px] space-y-3 md:w-[395px] w-fit">
-                            <div class="aspect-[395/473] w-full relative">
+                            <a href="<?php echo wp_get_attachment_image_url(get_sub_field('img'), 'full') ?>" class="block aspect-[395/473] w-full relative" data-fancybox>
                                 <?php echo wp_get_attachment_image(get_sub_field('img'), 'full',false,['class'=>'absolute inset-0 size-full object-contain']) ?>
                                 
-                            </div>
+                            </a>
                              <?php if( get_sub_field('desc') ): ?>
                                 <div class="text-center lg:text-2xl">
                                     <?php the_sub_field('desc'); ?>
