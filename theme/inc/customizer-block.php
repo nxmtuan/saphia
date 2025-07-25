@@ -367,6 +367,47 @@ function my_acf_init_block_types() {
 			'render_template' => 'blocks/post-kiemhoa.php',
 			'keywords' => array( 'post-kiemhoa', 'quote' ),
 		) );
-
+		acf_register_block_type( array(
+			'name' => 'slogan-songkiem',
+			'title' => __( '[Saphia]-[Sống kiềm] Slogan' ),
+			'description' => __( '[Saphia]-[Sống kiềm] Slogan' ),
+			'render_template' => 'blocks/slogan-songkiem.php',
+			'keywords' => array( 'slogan-songkiem', 'quote' ),
+		) );
+		acf_register_block_type( array(
+			'name' => 'trending-songkiem',
+			'title' => __( '[Saphia]-[Sống kiềm] Xu hướng sống' ),
+			'description' => __( '[Saphia]-[Sống kiềm] Xu hướng sống' ),
+			'render_template' => 'blocks/trending-songkiem.php',
+			'keywords' => array( 'trending-songkiem', 'quote' ),
+		) );
+		acf_register_block_type( array(
+			'name' => 'discover-songkiem',
+			'title' => __( '[Saphia]-[Sống kiềm] Khám phá bí mật' ),
+			'description' => __( '[Saphia]-[Sống kiềm] Khám phá bí mật' ),
+			'render_template' => 'blocks/discover-songkiem.php',
+			'keywords' => array( 'discover-songkiem', 'quote' ),
+		) );
+		acf_register_block_type( array(
+			'name' => 'bieuhien-songkiem',
+			'title' => __( '[Saphia]-[Sống kiềm] Biểu hiện sống kiềm' ),
+			'description' => __( '[Saphia]-[Sống kiềm] Biểu hiện sống kiềm' ),
+			'render_template' => 'blocks/bieuhien-songkiem.php',
+			'keywords' => array( 'bieuhien-songkiem', 'quote' ),
+		) );
+		acf_register_block_type( array(
+			'name' => 'people-songkiem',
+			'title' => __( '[Saphia]-[Sống kiềm] Người truyền kiềm' ),
+			'description' => __( '[Saphia]-[Sống kiềm] Người truyền kiềm' ),
+			'render_template' => 'blocks/people-songkiem.php',
+			'keywords' => array( 'people-songkiem', 'quote' ),
+		) );
+				acf_register_block_type( array(
+			'name' => 'nhipsong-songkiem',
+			'title' => __( '[Saphia]-[Sống kiềm] Nhịp sống kiềm' ),
+			'description' => __( '[Saphia]-[Sống kiềm] Nhịp sống kiềm' ),
+			'render_template' => 'blocks/nhipsong-songkiem.php',
+			'keywords' => array( 'nhipsong-songkiem', 'quote' ),
+		) );
 	}
 }
