@@ -438,12 +438,47 @@ function my_acf_init_block_types() {
 			'render_template' => 'blocks/saphia-challange-tree.php',
 			'keywords' => array( 'saphia-challange-tree', 'quote' ),
 		) );
-				acf_register_block_type( array(
+		acf_register_block_type( array(
 			'name' => 'saphia-challange-practice',
 			'title' => __( '[Saphia]-[Challange] Thực hành sống khoẻ' ),
 			'description' => __( '[Saphia]-[Challange] Thực hành sống khoẻ' ),
 			'render_template' => 'blocks/saphia-challange-practice.php',
 			'keywords' => array( 'saphia-challange-practice', 'quote' ),
+		) );
+		acf_register_block_type( array(
+			'name' => 'go-global-whyus',
+			'title' => __( '[Saphia]-[Go-global] Tại sao' ),
+			'description' => __( '[Saphia]-[Go-global] Tại sao' ),
+			'render_template' => 'blocks/go-global-whyus.php',
+			'keywords' => array( 'go-global-whyus', 'quote' ),
+		) );
+		acf_register_block_type( array(
+			'name' => 'go-global-branch',
+			'title' => __( '[Saphia]-[Go-global] Chi nhánh' ),
+			'description' => __( '[Saphia]-[Go-global] Chi nhánh' ),
+			'render_template' => 'blocks/go-global-branch.php',
+			'keywords' => array( 'go-global-branch', 'quote' ),
+		) );
+		acf_register_block_type( array(
+			'name' => 'go-global-spread',
+			'title' => __( '[Saphia]-[Go-global] Lan toả lối sống' ),
+			'description' => __( '[Saphia]-[Go-global] Lan toả lối sống' ),
+			'render_template' => 'blocks/go-global-spread.php',
+			'keywords' => array( 'go-global-spread', 'quote' ),
+		) );
+		acf_register_block_type( array(
+			'name' => 'go-global-experient',
+			'title' => __( '[Saphia]-[Go-global] Trải nghiệm' ),
+			'description' => __( '[Saphia]-[Go-global] Trải nghiệm' ),
+			'render_template' => 'blocks/go-global-experient.php',
+			'keywords' => array( 'go-global-experient', 'quote' ),
+		) );
+		acf_register_block_type( array(
+			'name' => 'contact',
+			'title' => __( '[Saphia] Liên hệ' ),
+			'description' => __( '[Saphia] Liên hệ' ),
+			'render_template' => 'blocks/contact.php',
+			'keywords' => array( 'contact', 'quote' ),
 		) );
 	}
 }
