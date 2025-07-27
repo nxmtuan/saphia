@@ -378,7 +378,11 @@ import ApexCharts from 'apexcharts';
 		}
 
 		function pHChart() {
-			var options = {
+			const el = document.querySelector('#pHChart');
+			if (!el) {
+				return;
+			}
+			const options = {
 				chart: {
 					type: 'area',
 					height: 250,
@@ -449,10 +453,7 @@ import ApexCharts from 'apexcharts';
 				},
 			};
 
-			var chart = new ApexCharts(
-				document.querySelector('#pHChart'),
-				options
-			);
+			const chart = new ApexCharts(el, options);
 			chart.render();
 		}
 
