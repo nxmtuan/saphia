@@ -59,14 +59,16 @@
 
 					<?php while ( have_rows( 'img_intro' ) ) :
 						the_row(); ?>
-						<a href="<?php echo check_link( get_sub_field( 'link' ) ) ?>"
+						<div
 							class="relative lg:rounded-[35px] rounded-[20px] lg:w-fit md:w-3/5 w-fit overflow-hidden">
-							<?php echo wp_get_attachment_image( get_sub_field( 'img' ), 'full', false, [ 'class' => 'aspect-[762/391] lg:w-[762px] w-full md:h-full object-cover' ] ) ?>
-							<p
-								class="block absolute top-[11px] right-[11px]">
-								<?php echo svg( 'btnLink', '47', '47', 'shrink-0' ) ?>
-							</p>
-						</a>
+							<video autoplay="" muted="" playsinline=""
+								class="aspect-[762/391] lg:w-[762px] w-full md:h-full object-cover"
+								preload="metadata" src="<?php the_sub_field( 'video_link' ) ?>"
+								class="w-full aspect-[0.72] object-cover video-slide"
+								poster="<?php echo wp_get_attachment_image_url( get_sub_field( 'img' ) ) ?>">
+							</video>
+						</div>
+
 					<?php endwhile; ?>
 
 				<?php endif; ?>

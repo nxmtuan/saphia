@@ -155,7 +155,8 @@
 		});
 
 		// Xử lý khi click .selected-item, lấy data-map và gán vào .block_iframe
-		$('.selected-item').on('click', function () {
+
+		$(document).on("click", ".selected-item", function () {
 			const mapValue = $(this).data('map');
 			if (mapValue) {
 				$('.block_iframe').html(mapValue);
