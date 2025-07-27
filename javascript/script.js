@@ -368,7 +368,11 @@ import ApexCharts from 'apexcharts';
 			// Khởi tạo dữ liệu mặc định hoặc giữ giá trị cũ
 			// Nếu bạn muốn lấy dữ liệu ban đầu từ server, có thể gán phData = initialDataFromServer;
 			// Khởi tạo biểu đồ với phData
-			var options = {
+			const el = document.querySelector('#pHChart');
+			if (!el) {
+				return;
+			}
+			const options = {
 				chart: {
 					type: 'area',
 					height: 250,
@@ -421,11 +425,9 @@ import ApexCharts from 'apexcharts';
 				legend: { enabled: true, position: 'bottom' },
 				tooltip: { enabled: true },
 			};
-			phChart = new ApexCharts(
-				document.querySelector('#pHChart'),
-				options
-			);
-			phChart.render();
+
+			const chart = new ApexCharts(el, options);
+			chart.render();
 		}
 
 		function highlightText() {
@@ -482,15 +484,18 @@ import ApexCharts from 'apexcharts';
 			$(document)
 				.off('click.selectItem', '.selected-item')
 				.on('click.selectItem', '.selected-item', function (e) {
-					// Nếu đã active rồi thì thôi, không làm gì cả
 					if ($(this).hasClass('active')) {
 						return;
 					}
-					// Xoá active ở phần tử trước đó
 					$('.selected-item.active').removeClass('active');
-					// Thêm active cho phần tử đang click
 					$(this).addClass('active');
 				});
+
+			// Kích hoạt item đầu tiên nếu chưa có cái nào active
+			const $firstItem = $('.selected-item').first();
+			if ($firstItem.length && !$('.selected-item.active').length) {
+				$firstItem.addClass('active');
+			}
 		}
 
 		function switchTab(selector = '.tab-wrapper', opts = {}) {

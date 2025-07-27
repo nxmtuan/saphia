@@ -1,7 +1,7 @@
 <section class="lg:my-[164px] my-[60px]" data-component="post-kiemhoa">
 	<div class="container">
 		<?php if ( have_rows( 'main_title' ) ) : ?>
-			<div class="xl:text-[64px] text-4xl xl:leading-[77px] tracking-[-0.96px] highlight mb-8">
+			<div class="xl:text-[64px] text-2xl xl:leading-[77px] tracking-[-0.96px] highlight mb-8">
 				<?php while ( have_rows( 'main_title' ) ) :
 					the_row(); ?>
 					<?php if ( get_sub_field( 'highlight' ) ) : ?>
