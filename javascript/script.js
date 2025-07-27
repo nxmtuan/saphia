@@ -21,6 +21,7 @@ import ApexCharts from 'apexcharts';
 			switchTab();
 			toggleContentBlock();
 			scaleOnScroll();
+			trackingPh();
 		});
 
 		let swiperInstances = [];
@@ -658,6 +659,87 @@ import ApexCharts from 'apexcharts';
 			$(window).on('scroll resize', scaleOnScroll);
 			// chạy lần đầu
 			scaleOnScroll();
+		}
+
+		function trackingPh() {
+			$('#btn_sign_ph').on('click', function (e) {
+				e.preventDefault();
+
+				var name = $('#name_cus').val().trim();
+				var phone = $('#phone_cus').val().trim();
+
+				if (!name || !phone) {
+					Swal.fire({
+						icon: 'warning',
+						title: 'Thiếu thông tin',
+						text: 'Nhập đầy đủ thông tin',
+					});
+					return;
+				}
+
+				$.ajax({
+					url: ajaxurl.ajaxurl,
+					method: 'POST',
+					dataType: 'json',
+					data: {
+						action: 'ph_tracking_create',
+						security: ajaxurl.security,
+						name_customer: name,
+						name_phone: phone,
+					},
+					beforeSend: function () {
+						Swal.fire({
+							title: 'Vui lòng chờ...',
+							allowOutsideClick: false,
+							didOpen: () => {
+								Swal.showLoading();
+							},
+						});
+					},
+					success: function (res) {
+						Swal.close();
+						if (res.success) {
+							Swal.fire({
+								icon: 'success',
+								title: 'Thành công',
+								text: 'Đã lưu thông tin theo dõi!',
+							}).then((result) => {
+								if (result.isConfirmed) {
+									// Lưu phone vào cookie 1 tháng
+									document.cookie =
+										'ph_phone=' +
+										encodeURIComponent(phone) +
+										'; max-age=' +
+										30 * 24 * 60 * 60 +
+										'; path=/';
+									// Ẩn và hiển khối tương ứng
+									$('.box_tracking').hide();
+									$('.tracking_ph_update').removeClass(
+										'hidden'
+									);
+								}
+							});
+							$('#name_cus, #phone_cus').val('');
+						} else {
+							Swal.fire({
+								icon: 'error',
+								title: 'Lỗi',
+								text:
+									res.data ||
+									'Có lỗi khi lưu, vui lòng thử lại.',
+							});
+						}
+					},
+					error: function (xhr, status) {
+						Swal.close();
+						Swal.fire({
+							icon: 'error',
+							title: 'Lỗi',
+							text: 'Không thể kết nối đến server.',
+						});
+					},
+				});
+			});
 		}
 	})(jQuery);
 })();

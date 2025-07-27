@@ -199,6 +199,114 @@ function gnws_pagination() {
 	echo '</ul></div>' . "\n";
 }
 
+function gnws_pagination_template($input = null)
+{
+	// Nếu truyền vào là mảng chứa total và current
+	if (is_array($input)) {
+		$total_pages = isset($input['total']) ? (int) $input['total'] : 1;
+		$current_page = isset($input['current']) ? (int) $input['current'] : 1;
+	} else {
+		// Trường hợp truyền vào là WP_Query hoặc null
+		if ($input === null) {
+			global $wp_query;
+			$input = $wp_query;
+		}
+
+		$total_pages = $input->max_num_pages;
+
+		$current_page = max(1, get_query_var('paged'));
+		if (isset($_GET['paged'])) {
+			$current_page = absint($_GET['paged']);
+		}
+	}
+
+	if ($total_pages <= 1)
+		return;
+
+	$pagination_links = paginate_links([
+		'base' => str_replace(999999999, '%#%', get_pagenum_link(999999999)),
+		'format' => '',
+		'current' => $current_page,
+		'total' => $total_pages,
+		'type' => 'array',
+		'show_all' => false,
+		'mid_size' => 1,
+		'prev_text' => '',
+		'next_text' => '',
+		'add_args' => [],
+	]);
+
+
+	if (empty($pagination_links))
+		return;
+
+	// --- PHẦN HTML BÊN DƯỚI GIỮ NGUYÊN ---
+
+	echo '<div class="w-full flex justify-center items-center md:gap-10 gap-6">' . "\n";
+
+	// Previous
+	if ($current_page > 1) {
+		printf(
+			'<a href="%s" class="button--previous size-10 shadow-btn border border-[#CDD4E7] bg-white hover:text-white hover:bg-primary hover:border-transparent text-black flex justify-center items-center gap-2 rounded-full overflow-hidden font-medium transition-all duration-500"><i>%s</i></a>',
+			esc_url(get_pagenum_link($current_page - 1)),
+			'<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M15.8337 10.0003H4.16699M4.16699 10.0003L10.0003 15.8337M4.16699 10.0003L10.0003 4.16699" stroke="currentColor" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+		);
+	} else {
+		echo '<span class="button--previous shrink-0 size-10 shadow-btn border border-[#CDD4E7] bg-gray-200 text-gray-400 flex justify-center items-center gap-2 rounded-full overflow-hidden font-medium transition-all duration-500 cursor-not-allowed"><i><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M15.8337 10.0003H4.16699M4.16699 10.0003L10.0003 15.8337M4.16699 10.0003L10.0003 4.16699" stroke="currentColor" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/></svg></i></span>';
+	}
+
+	echo '<ul class="flex items-center md:gap-2 text-sm font-medium">' . "\n";
+
+	foreach ($pagination_links as $link) {
+		$is_current = strpos($link, 'current') !== false;
+		$is_dots = strpos($link, 'dots') !== false;
+		$is_prev = strpos($link, 'prev') !== false;
+		$is_next = strpos($link, 'next') !== false;
+
+		echo '<li>';
+		if ($is_current) {
+			$page_number = strip_tags($link);
+			printf(
+				'<a href="javascript:void(0);" class="size-8 flex justify-center items-center [&:not(.active)]:bg-transparent bg-primary text-white rounded-full overflow-hidden cursor-default active">%s</a>',
+				esc_html($page_number)
+			);
+		} elseif ($is_dots) {
+			echo '<span class="size-8 flex justify-center items-center text-body rounded-full overflow-hidden cursor-default">…</span>';
+		} elseif ($is_prev || $is_next) {
+			// Ẩn link prev/next mặc định
+			preg_match('/<a[^>]+href=["\'](.*?)["\']/i', $link, $href_match);
+			$href = isset($href_match[1]) ? $href_match[1] : '#';
+			$class = $is_prev ? 'default-prev' : 'default-next';
+			printf('<a href="%s" class="%s hidden"></a>', esc_url($href), $class);
+		} else {
+			preg_match('/<a[^>]+href=["\'](.*?)["\']/i', $link, $href_match);
+			preg_match('/<a[^>]*>(.*?)<\/a>/i', $link, $number_match);
+			$href = $href_match[1] ?? '#';
+			$page_number = $number_match[1] ?? '';
+			printf(
+				'<a href="%s" class="size-8 flex justify-center items-center [&:not(.active)]:bg-transparent hover:[&:not(.active)]:bg-primary [&:not(.active)]:text-black text-white hover:[&:not(.active)]:text-white rounded-full overflow-hidden cursor-pointer transition-all duration-500">%s</a>',
+				esc_url($href),
+				esc_html($page_number)
+			);
+		}
+		echo '</li>';
+	}
+
+	echo '</ul>' . "\n";
+
+	// Next
+	if ($current_page < $total_pages) {
+		printf(
+			'<a href="%s" class="button--next shrink-0 size-10 shadow-btn border border-[#CDD4E7] bg-white hover:bg-primary hover:border-transparent text-black flex hover:text-white justify-center items-center gap-2 rounded-full overflow-hidden font-medium transition-all duration-500"><i>%s</i></a>',
+			esc_url(get_pagenum_link($current_page + 1)),
+			'<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4.16699 10.0003H15.8337M15.8337 10.0003L10.0003 4.16699M15.8337 10.0003L10.0003 15.8337" stroke="currentColor" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+		);
+	} else {
+		echo '<span class="button--next size-10 shadow-btn border border-[#CDD4E7] bg-gray-200 text-gray-400 flex justify-center items-center gap-2 rounded-full overflow-hidden font-medium transition-all duration-500 cursor-not-allowed"><i><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4.16699 10.0003H15.8337M15.8337 10.0003L10.0003 4.16699M15.8337 10.0003L10.0003 15.8337" stroke="currentColor" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/></svg></i></span>';
+	}
+
+	echo '</div>' . "\n";
+}
 
 /**
  * Displays exceprt by number string
