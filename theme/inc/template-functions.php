@@ -146,6 +146,7 @@ function gnws_pagination() {
 	$max = intval( $wp_query->max_num_pages );
 
 	/** Add current page to the array */
+	$links = array();
 	if ( $paged >= 1 )
 		$links[] = $paged;
 
@@ -160,43 +161,91 @@ function gnws_pagination() {
 		$links[] = $paged + 1;
 	}
 
-	echo '<div class="gnws-pagination"><ul>' . "\n";
+	// Container start
+	echo '<div class="w-full flex justify-center items-center md:gap-10 gap-6">' . "\n";
 
-	/** Previous Post Link */
-	if ( get_previous_posts_link() )
-		printf( '<li>%s</li>' . "\n", get_previous_posts_link( svg( 'angle-left' ) ) );
-
-	/** Link to first page, plus ellipses if necessary */
-	if ( ! in_array( 1, $links ) ) {
-		$class = 1 == $paged ? ' class="active"' : '';
-
-		printf( '<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( 1 ) ), '1' );
-
-		if ( ! in_array( 2, $links ) )
-			echo '<li>…</li>';
+	// Previous button
+	if ( $paged > 1 ) {
+		printf(
+			'<a href="%s" class="button--previous size-10 shadow-btn border border-[#CDD4E7] bg-white hover:text-white hover:bg-primary hover:border-transparent text-black flex justify-center items-center gap-2 rounded-full overflow-hidden font-medium transition-all duration-500"><i>%s</i></a>' . "\n",
+			esc_url( get_pagenum_link( $paged - 1 ) ),
+			svg( 'angle-left' )
+		);
+	} else {
+		printf(
+			'<span class="button--previous shrink-0 size-10 shadow-btn border border-[#CDD4E7] bg-gray-200 text-gray-400 flex justify-center items-center gap-2 rounded-full overflow-hidden font-medium transition-all duration-500 cursor-not-allowed"><i>%s</i></span>' . "\n",
+			svg( 'angle-left' )
+		);
 	}
 
-	/** Link to current page, plus 2 pages in either direction if necessary */
+	// Page links list start
+	echo '<ul class="flex items-center md:gap-2 text-sm font-medium">' . "\n";
+
+	// First page + ellipsis (if needed)
+	if ( ! in_array( 1, $links, true ) ) {
+		$active = ( 1 === $paged ) ? ' active' : '';
+		printf(
+			'<li><a href="%s" class="size-8 flex justify-center items-center%s [&:not(.active)]:bg-transparent hover([&:not(.active)]):bg-primary [&:not(.active)]:text-black text-white hover:[&:not(.active)]:text-white rounded-full overflow-hidden cursor-pointer transition-all duration-500">%d</a></li>' . "\n",
+			esc_url( get_pagenum_link( 1 ) ),
+			$active,
+			1
+		);
+		if ( ! in_array( 2, $links, true ) ) {
+			echo '<li><span class="size-8 flex justify-center items-center text-body">…</span></li>' . "\n";
+		}
+	}
+
+	// Main page numbers
 	sort( $links );
 	foreach ( (array) $links as $link ) {
-		$class = $paged == $link ? ' class="active"' : '';
-		printf( '<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( $link ) ), $link );
+		$is_current = ( $link === $paged );
+		if ( $is_current ) {
+			printf(
+				'<li><a href="javascript:void(0);" class="size-8 flex justify-center items-center bg-primary text-white rounded-full overflow-hidden cursor-default active">%d</a></li>' . "\n",
+				$link
+			);
+		} else {
+			printf(
+				'<li><a href="%s" class="size-8 flex justify-center items-center [&:not(.active)]:bg-transparent hover:[&:not(.active)]:bg-primary [&:not(.active)]:text-black text-white hover:[&:not(.active)]:text-white rounded-full overflow-hidden cursor-pointer transition-all duration-500">%d</a></li>' . "\n",
+				esc_url( get_pagenum_link( $link ) ),
+				$link
+			);
+		}
 	}
 
-	/** Link to last page, plus ellipses if necessary */
-	if ( ! in_array( $max, $links ) ) {
-		if ( ! in_array( $max - 1, $links ) )
-			echo '<li>…</li>' . "\n";
-
-		$class = $paged == $max ? ' class="active"' : '';
-		printf( '<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( $max ) ), $max );
+	// Last page + ellipsis (if needed)
+	if ( ! in_array( $max, $links, true ) ) {
+		if ( ! in_array( $max - 1, $links, true ) ) {
+			echo '<li><span class="size-8 flex justify-center items-center text-body">…</span></li>' . "\n";
+		}
+		$active = ( $max === $paged ) ? ' active' : '';
+		printf(
+			'<li><a href="%s" class="size-8 flex justify-center items-center%s [&:not(.active)]:bg-transparent hover:[&:not(.active)]:bg-primary [&:not(.active)]:text-black text-white hover:[&:not(.active)]:text-white rounded-full overflow-hidden cursor-pointer transition-all duration-500">%d</a></li>' . "\n",
+			esc_url( get_pagenum_link( $max ) ),
+			$active,
+			$max
+		);
 	}
 
-	/** Next Post Link */
-	if ( get_next_posts_link() )
-		printf( '<li>%s</li>' . "\n", get_next_posts_link( svg( 'angle-right' ) ) );
+	// Close list
+	echo '</ul>' . "\n";
 
-	echo '</ul></div>' . "\n";
+	// Next button
+	if ( $paged < $max ) {
+		printf(
+			'<a href="%s" class="button--next shrink-0 size-10 shadow-btn border border-[#CDD4E7] bg-white hover:bg-primary hover:border-transparent text-black flex hover:text-white justify-center items-center gap-2 rounded-full overflow-hidden font-medium transition-all duration-500"><i>%s</i></a>' . "\n",
+			esc_url( get_pagenum_link( $paged + 1 ) ),
+			svg( 'angle-right' )
+		);
+	} else {
+		printf(
+			'<span class="button--next size-10 shadow-btn border border-[#CDD4E7] bg-gray-200 text-gray-400 flex justify-center items-center gap-2 rounded-full overflow-hidden font-medium transition-all duration-500 cursor-not-allowed"><i>%s</i></span>' . "\n",
+			svg( 'angle-right' )
+		);
+	}
+
+	// Container end
+	echo '</div>' . "\n";
 }
 
 function gnws_pagination_template($input = null)

@@ -182,13 +182,17 @@ if ( isset( $_COOKIE['homepage_layout'] ) ) {
 				<?php endif; ?>
 			</div>
 
-			<div class="flex items-center gap-5">
-				<?php for ( $i = 0; $i < 4; $i++ ) : ?>
-					<a href=""
+			<?php if( have_rows('opt_header_list_social','option') ): ?>
+				<div class="flex items-center gap-5">
+				<?php while( have_rows('opt_header_list_social','option') ): the_row();?>
+					<a href="<?php echo check_link(get_sub_field('link')) ?>" target="_blank"
 						class="size-14 rounded-full border border-[#ffffff2b] bg-[#ffffff12] backdrop-blur-[10px] flex items-center justify-center cursor-pointer">
-						<?php echo svg( 'search', '18', '18', 'text-white shrink-0' ) ?>
+						<?php echo wp_get_attachment_image(get_sub_field('icon'), 'full',false,['class'=>'w-[18px] h-[18px] object-contain shrink-0']) ?>
+						
 					</a>
-				<?php endfor ?>
-			</div>
+				<?php endwhile; ?>
+				</div>
+			<?php endif; ?>
+			
 		</div>
 	</div>

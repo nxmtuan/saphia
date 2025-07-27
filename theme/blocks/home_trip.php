@@ -153,17 +153,22 @@
                                     <?php while( have_rows('founder_block') ): the_row();?>
                                         <div
                                             class="relative py-[50px] aspect-[1632/1020] w-full flex items-end justify-center">
-                                           <?php echo wp_get_attachment_image(get_sub_field('bg'), 'full',false,['class'=>'absolute inset-0 size-full object-cover']) ?>
+                                            <picture>
+                                                 <?php if( get_sub_field('bg_mb') ): ?>
+                                                    <source media="(max-width:767px)" srcset="<?php the_sub_field('bg_mb'); ?>">
+                                                 <?php endif; ?>
+                                              <?php echo wp_get_attachment_image(get_sub_field('bg'), 'full',false,['class'=>'absolute inset-0 size-full object-cover']) ?>
+                                            </picture>
                                            
                                             <div>
                                                 <?php if( have_rows('list_img') ): ?>
                                                    <div
                                                     class="max-lg:mt-[400px] max-md:mt-[377px] relative md:flex items-stretch gap-2.5 max-w-[1093px] z-[1] block_slider watch_css center_items">
                                                     <?php while( have_rows('list_img') ): the_row();?>
-                                                       <div
-                                                            class="block_slider-item aspect-[358/262] md:w-1/3 w-[83%] rounded-[24px] overflow-hidden backdrop-blur-[10px]">
+                                                       <a href="<?php echo check_link(get_sub_field('link')) ?>" target="_blank"
+                                                            class="block_slider-item block aspect-[358/262] md:w-1/3 w-[83%] rounded-[24px] overflow-hidden backdrop-blur-[10px]">
                                                             <?php echo wp_get_attachment_image(get_sub_field('img'), 'full',false,['class'=>'size-full object-cover']) ?>
-                                                        </div>
+                                                        </a>
                                                     <?php endwhile; ?>
                                                     </div>
                                                 <?php endif; ?>
