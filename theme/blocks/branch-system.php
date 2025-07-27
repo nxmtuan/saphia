@@ -9,7 +9,8 @@
 		<div class="md:mt-20 mt-5 list_transaction">
 			<div class="flex items-end gap-5">
 				<div class="min-w-[150px]">
-					<span class="font-medium text-content"><?php _e( 'Tỉnh/thành', 'acbs' ) ?></span>
+					<span
+						class="font-medium text-content"><?php _e( 'Tỉnh/thành', 'acbs' ) ?></span>
 					<div class="relative">
 						<select
 							class="appearance-none bg-white lg:w-36 w-full py-2 pl-5 pr-7 rounded-full border border-[#EAEEF4] text-sm text-[#151515] focus:outline-none focus:border-primary cursor-pointer transition-colors duration-300"
@@ -80,8 +81,9 @@
 							while ( $query->have_posts() ) :
 								$query->the_post();
 
-								if ( $query->current_post === 0 ) {
-									$first_iframe = get_field('branch_iframe',get_the_ID());
+								if ( $query->current_post === 0 )
+								{
+									$first_iframe = get_field( 'branch_iframe', get_the_ID() );
 								}
 
 								get_template_part( 'template-parts/content', get_post_type() );
@@ -118,7 +120,7 @@
 				data: {
 					action: 'load_wards_and_posts',
 					province_id: provinceId,
-                    security : ajaxurl.security
+					security: ajaxurl.security
 				},
 				success: function (response) {
 					// Load danh sách quận/huyện (wards)
@@ -146,7 +148,7 @@
 				data: {
 					action: 'load_posts_by_ward',
 					ward_id: wardId,
-                    security : ajaxurl.security
+					security: ajaxurl.security
 				},
 				success: function (html) {
 					$listContainer.html(html);
@@ -155,7 +157,8 @@
 		});
 
 		// Xử lý khi click .selected-item, lấy data-map và gán vào .block_iframe
-		$('.selected-item').on('click', function () {
+
+		$(document).on("click", ".selected-item", function () {
 			const mapValue = $(this).data('map');
 			if (mapValue) {
 				$('.block_iframe').html(mapValue);
