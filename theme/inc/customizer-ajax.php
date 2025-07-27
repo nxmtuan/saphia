@@ -150,3 +150,43 @@ function ajax_load_wards_and_posts() {
         'html'  => $html,
     ]);
 }
+
+add_action( 'wp_ajax_ph_tracking_create', 'ph_tracking_create_callback' );
+add_action( 'wp_ajax_nopriv_ph_tracking_create', 'ph_tracking_create_callback' );
+
+function ph_tracking_create_callback() {
+    // 2.1 kiểm tra nonce
+     if ( ! isset( $_POST['security'] ) || ! wp_verify_nonce( $_POST['security'], 'common_nonce' ) )
+	{
+		wp_send_json_error( array( 'message' => 'Nonce verification failed' ) );
+		wp_die();
+	}
+
+    // 2.2 lấy dữ liệu
+    $name  = isset($_POST['name_customer']) ? sanitize_text_field($_POST['name_customer']) : '';
+    $phone = isset($_POST['name_phone'])    ? sanitize_text_field($_POST['name_phone'])    : '';
+
+    if ( ! $name || ! $phone ) {
+        wp_send_json_error( 'Nhập đầy đủ thông tin' );
+    }
+
+    // 2.3 tạo post mới
+    $post_id = wp_insert_post([
+      'post_type'   => 'ph_tracking',
+      'post_title'  => $name . ' - ' . $phone,
+      'post_status' => 'publish',
+    ]);
+
+    if ( is_wp_error( $post_id ) || ! $post_id ) {
+        wp_send_json_error( 'Không thể tạo bản ghi' );
+    }
+
+    // 2.4 cập nhật custom fields (ACF hoặc postmeta)
+  
+      update_field( 'name_customer', $name,  $post_id );
+      update_field( 'name_phone',    $phone, $post_id );
+    
+
+    // 2.5 trả về success
+    wp_send_json_success();
+}

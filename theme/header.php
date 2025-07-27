@@ -91,14 +91,14 @@ if ( isset( $_COOKIE['homepage_layout'] ) ) {
 								<?php echo svg( 'mobile-menu', '20', '20', 'shrink-0 text-white' ) ?>
 							</div>
 						</div>
-						<div id="searchBox"
+						<form action="<?php echo get_home_url()?>" id="searchBox"
 							class="absolute origin-top left-0 top-full border border-[#ffffff2b] bg-[#5C82E080] backdrop-blur-[10px] w-full lg:p-[26px] p-5 [&:not(.active)]:opacity-0 opacity-100 [&:not(.active)]:pointer-events-none pointer-events-auto flex justify-center transition-all duration-300">
 							<div class="relative lg:w-fit w-full">
-								<input type="text" placeholder="<?php _e( 'Tìm kiếm', 'gnws' ) ?>"
+								<input type="text" name="s" placeholder="<?php _e( 'Tìm kiếm', 'gnws' ) ?>"
 									class="pl-5 pr-11 lg:py-4 py-2.5 lg:w-[900px] w-full lg:text-lg text-sm rounded-full overflow-hidden bg-white border border-transparent focus:outline-none focus:border-primary transition-colors duration-300">
 								<?php echo svg( 'search', '18', '18', 'shrink-0 absolute right-5 top-1/2 -translate-y-1/2' ) ?>
 							</div>
-						</div>
+						</form>
 					</div>
 
 					<?php if ( function_exists( 'pll_current_language' ) ) : ?>

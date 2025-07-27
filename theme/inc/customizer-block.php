@@ -353,13 +353,146 @@ function my_acf_init_block_types() {
 			'render_template' => 'blocks/branch-road.php',
 			'keywords' => array( 'branch-road', 'quote' ),
 		) );
-				acf_register_block_type( array(
+		acf_register_block_type( array(
 			'name' => 'branch-office',
 			'title' => __( '[Saphia]-[Điểm bán] Văn phòng đại diện' ),
 			'description' => __( '[Saphia]-[Điểm bán] Văn phòng đại diện' ),
 			'render_template' => 'blocks/branch-office.php',
 			'keywords' => array( 'branch-office', 'quote' ),
 		) );
+		acf_register_block_type( array(
+			'name' => 'post-kiemhoa',
+			'title' => __( '[Saphia]-Bản tin kiềm hoá' ),
+			'description' => __( '[Saphia]-Bản tin kiềm hoá' ),
+			'render_template' => 'blocks/post-kiemhoa.php',
+			'keywords' => array( 'post-kiemhoa', 'quote' ),
+		) );
+		acf_register_block_type( array(
+			'name' => 'slogan-songkiem',
+			'title' => __( '[Saphia]-[Sống kiềm] Slogan' ),
+			'description' => __( '[Saphia]-[Sống kiềm] Slogan' ),
+			'render_template' => 'blocks/slogan-songkiem.php',
+			'keywords' => array( 'slogan-songkiem', 'quote' ),
+		) );
+		acf_register_block_type( array(
+			'name' => 'trending-songkiem',
+			'title' => __( '[Saphia]-[Sống kiềm] Xu hướng sống' ),
+			'description' => __( '[Saphia]-[Sống kiềm] Xu hướng sống' ),
+			'render_template' => 'blocks/trending-songkiem.php',
+			'keywords' => array( 'trending-songkiem', 'quote' ),
+		) );
+		acf_register_block_type( array(
+			'name' => 'discover-songkiem',
+			'title' => __( '[Saphia]-[Sống kiềm] Khám phá bí mật' ),
+			'description' => __( '[Saphia]-[Sống kiềm] Khám phá bí mật' ),
+			'render_template' => 'blocks/discover-songkiem.php',
+			'keywords' => array( 'discover-songkiem', 'quote' ),
+		) );
+		acf_register_block_type( array(
+			'name' => 'bieuhien-songkiem',
+			'title' => __( '[Saphia]-[Sống kiềm] Biểu hiện sống kiềm' ),
+			'description' => __( '[Saphia]-[Sống kiềm] Biểu hiện sống kiềm' ),
+			'render_template' => 'blocks/bieuhien-songkiem.php',
+			'keywords' => array( 'bieuhien-songkiem', 'quote' ),
+		) );
+		acf_register_block_type( array(
+			'name' => 'people-songkiem',
+			'title' => __( '[Saphia]-[Sống kiềm] Người truyền kiềm' ),
+			'description' => __( '[Saphia]-[Sống kiềm] Người truyền kiềm' ),
+			'render_template' => 'blocks/people-songkiem.php',
+			'keywords' => array( 'people-songkiem', 'quote' ),
+		) );
+		acf_register_block_type( array(
+			'name' => 'nhipsong-songkiem',
+			'title' => __( '[Saphia]-[Sống kiềm] Nhịp sống kiềm' ),
+			'description' => __( '[Saphia]-[Sống kiềm] Nhịp sống kiềm' ),
+			'render_template' => 'blocks/nhipsong-songkiem.php',
+			'keywords' => array( 'nhipsong-songkiem', 'quote' ),
+		) );
 
+		acf_register_block_type( array(
+			'name' => 'saphia-banner',
+			'title' => __( '[Saphia]-Banner' ),
+			'description' => __( '[Saphia]-Banner' ),
+			'render_template' => 'blocks/saphia-banner.php',
+			'keywords' => array( 'saphia-banner', 'quote' ),
+		) );
+		acf_register_block_type( array(
+			'name' => 'saphia-conquer',
+			'title' => __( '[Saphia]-[Challange] Chinh phục mọi giới hạn' ),
+			'description' => __( '[Saphia]-[Challange] Chinh phục mọi giới hạn' ),
+			'render_template' => 'blocks/saphia-conquer.php',
+			'keywords' => array( 'saphia-conquer', 'quote' ),
+		) );
+		acf_register_block_type( array(
+			'name' => 'saphia-challange',
+			'title' => __( '[Saphia]-[Challange] Góp yêu thương' ),
+			'description' => __( '[Saphia]-[Challange] Góp yêu thương' ),
+			'render_template' => 'blocks/saphia-challange.php',
+			'keywords' => array( 'saphia-challange', 'quote' ),
+		) );
+		acf_register_block_type( array(
+			'name' => 'saphia-challange-tree',
+			'title' => __( '[Saphia]-[Challange] Nuôi cây' ),
+			'description' => __( '[Saphia]-[Challange] Nuôi cây' ),
+			'render_template' => 'blocks/saphia-challange-tree.php',
+			'keywords' => array( 'saphia-challange-tree', 'quote' ),
+		) );
+		acf_register_block_type( array(
+			'name' => 'saphia-challange-practice',
+			'title' => __( '[Saphia]-[Challange] Thực hành sống khoẻ' ),
+			'description' => __( '[Saphia]-[Challange] Thực hành sống khoẻ' ),
+			'render_template' => 'blocks/saphia-challange-practice.php',
+			'keywords' => array( 'saphia-challange-practice', 'quote' ),
+		) );
+		acf_register_block_type( array(
+			'name' => 'go-global-whyus',
+			'title' => __( '[Saphia]-[Go-global] Tại sao' ),
+			'description' => __( '[Saphia]-[Go-global] Tại sao' ),
+			'render_template' => 'blocks/go-global-whyus.php',
+			'keywords' => array( 'go-global-whyus', 'quote' ),
+		) );
+		acf_register_block_type( array(
+			'name' => 'go-global-branch',
+			'title' => __( '[Saphia]-[Go-global] Chi nhánh' ),
+			'description' => __( '[Saphia]-[Go-global] Chi nhánh' ),
+			'render_template' => 'blocks/go-global-branch.php',
+			'keywords' => array( 'go-global-branch', 'quote' ),
+		) );
+		acf_register_block_type( array(
+			'name' => 'go-global-spread',
+			'title' => __( '[Saphia]-[Go-global] Lan toả lối sống' ),
+			'description' => __( '[Saphia]-[Go-global] Lan toả lối sống' ),
+			'render_template' => 'blocks/go-global-spread.php',
+			'keywords' => array( 'go-global-spread', 'quote' ),
+		) );
+		acf_register_block_type( array(
+			'name' => 'go-global-experient',
+			'title' => __( '[Saphia]-[Go-global] Trải nghiệm' ),
+			'description' => __( '[Saphia]-[Go-global] Trải nghiệm' ),
+			'render_template' => 'blocks/go-global-experient.php',
+			'keywords' => array( 'go-global-experient', 'quote' ),
+		) );
+		acf_register_block_type( array(
+			'name' => 'contact',
+			'title' => __( '[Saphia] Liên hệ' ),
+			'description' => __( '[Saphia] Liên hệ' ),
+			'render_template' => 'blocks/contact.php',
+			'keywords' => array( 'contact', 'quote' ),
+		) );
+		acf_register_block_type( array(
+			'name' => 'editor',
+			'title' => __( 'Nội dung editor' ),
+			'description' => __( 'Nội dung editor' ),
+			'render_template' => 'blocks/editor.php',
+			'keywords' => array( 'editor', 'quote' ),
+		) );
+			acf_register_block_type( array(
+			'name' => 'analysis-ph',
+			'title' => __( 'Phân tích độ PH' ),
+			'description' => __( 'Phân tích độ PH' ),
+			'render_template' => 'blocks/analysis-ph.php',
+			'keywords' => array( 'analysis-ph', 'quote' ),
+		) );
 	}
 }
