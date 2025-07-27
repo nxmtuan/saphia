@@ -25,7 +25,7 @@
 					$i++;
 					?>
 					<div
-						class="block_slider-item <?= $i === 1 ? 'md:mt-[68px]' : '' ?> <?= $i === 3 ? 'md:-mt-[68px]' : '' ?> md:w-[calc(50%-3px)] w-[83%] h-fit">
+						class="block_slider-item <?= $i === 1 ? 'md:mt-[68px]' : '' ?> <?= $i === 4 ? 'md:-mt-[68px]' : '' ?> md:w-[calc(50%-3px)] w-[83%] h-fit">
 						<a href="<?php echo check_link( get_sub_field( 'link' ) ) ?>"
 							class="group block relative xl:pt-12 lg:pt-8 pt-6 px-6 lg:rounded-[35px] rounded-[20px] overflow-hidden aspect-[591/396]">
 							<?php echo wp_get_attachment_image( get_sub_field( 'img' ), 'full', false, [ 'class' => 'absolute inset-0 size-full group-hover:scale-105 transition-transform duration-300' ] ) ?>
