@@ -161,6 +161,20 @@
 				$('.block_iframe').html(mapValue);
 			}
 		});
+
+
+		$('#search-transaction').on('input', function () {
+			var term = $(this).val().toLowerCase();
+
+			$('.list_location .selected-item').each(function () {
+				var name = $(this).find('.name_transaction').text().toLowerCase();
+				if (name.indexOf(term) !== -1) {
+					$(this).show();
+				} else {
+					$(this).hide();
+				}
+			});
+		});
 	});
 
 
