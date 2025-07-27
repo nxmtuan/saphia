@@ -510,15 +510,18 @@ import ApexCharts from 'apexcharts';
 			$(document)
 				.off('click.selectItem', '.selected-item')
 				.on('click.selectItem', '.selected-item', function (e) {
-					// Nếu đã active rồi thì thôi, không làm gì cả
 					if ($(this).hasClass('active')) {
 						return;
 					}
-					// Xoá active ở phần tử trước đó
 					$('.selected-item.active').removeClass('active');
-					// Thêm active cho phần tử đang click
 					$(this).addClass('active');
 				});
+
+			// Kích hoạt item đầu tiên nếu chưa có cái nào active
+			const $firstItem = $('.selected-item').first();
+			if ($firstItem.length && !$('.selected-item.active').length) {
+				$firstItem.addClass('active');
+			}
 		}
 
 		function switchTab(selector = '.tab-wrapper', opts = {}) {
