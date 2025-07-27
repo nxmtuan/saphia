@@ -3,6 +3,9 @@ import ApexCharts from 'apexcharts';
 
 (() => {
 	// javascript/script.js
+	// Biến toàn cục cho biểu đồ pH
+	let phChart,
+		phData = [0, 0, 0, 0, 0, 0, 0];
 	(function ($) {
 		$(function () {
 			backToTop();
@@ -342,23 +345,6 @@ import ApexCharts from 'apexcharts';
 					$this.addClass('active');
 				}
 			});
-
-			// Xử lý nút submit
-			$submitBtn.on('click', function () {
-				const phValue = parseFloat($slider.val()).toFixed(1);
-				const $selected = $emojiItems.filter('.active');
-
-				if (!$selected.length) {
-					alert('Vui lòng chọn tâm trạng của bạn.');
-					return;
-				}
-
-				const moodText = $selected.find('span').text().trim();
-
-				alert(
-					`Giá trị pH bạn chọn là: ${phValue}\nTâm trạng hiện tại: ${moodText}`
-				);
-			});
 		}
 
 		function backToTop() {
@@ -379,6 +365,9 @@ import ApexCharts from 'apexcharts';
 		}
 
 		function pHChart() {
+			// Khởi tạo dữ liệu mặc định hoặc giữ giá trị cũ
+			// Nếu bạn muốn lấy dữ liệu ban đầu từ server, có thể gán phData = initialDataFromServer;
+			// Khởi tạo biểu đồ với phData
 			var options = {
 				chart: {
 					type: 'area',
@@ -388,7 +377,7 @@ import ApexCharts from 'apexcharts';
 				series: [
 					{
 						name: 'Giá trị pH',
-						data: [7, 1.8, 7.5, 3.6, 2.1, 7.3, 7.2],
+						data: phData,
 					},
 				],
 				xaxis: {
@@ -411,7 +400,7 @@ import ApexCharts from 'apexcharts';
 					colors: ['#00B0F0'],
 					strokeColors: '#fff',
 					strokeWidth: 2,
-					shape: 'circle', // đảm bảo là hình tròn
+					shape: 'circle',
 				},
 				fill: {
 					type: 'gradient',
@@ -421,40 +410,22 @@ import ApexCharts from 'apexcharts';
 						opacityTo: 0.05,
 						stops: [0, 100],
 						colorStops: [
-							{
-								offset: 0,
-								color: '#00B0F0',
-								opacity: 0.4,
-							},
-							{
-								offset: 100,
-								color: '#00B0F0',
-								opacity: 0.05,
-							},
+							{ offset: 0, color: '#00B0F0', opacity: 0.4 },
+							{ offset: 100, color: '#00B0F0', opacity: 0.05 },
 						],
 					},
 				},
 				colors: ['#00B0F0'],
-				dataLabels: {
-					enabled: false,
-				},
-				grid: {
-					borderColor: '#e0e0e0',
-				},
-				legend: {
-					enabled: true,
-					position: 'bottom',
-				},
-				tooltip: {
-					enabled: true,
-				},
+				dataLabels: { enabled: false },
+				grid: { borderColor: '#e0e0e0' },
+				legend: { enabled: true, position: 'bottom' },
+				tooltip: { enabled: true },
 			};
-
-			var chart = new ApexCharts(
+			phChart = new ApexCharts(
 				document.querySelector('#pHChart'),
 				options
 			);
-			chart.render();
+			phChart.render();
 		}
 
 		function highlightText() {
@@ -656,8 +627,29 @@ import ApexCharts from 'apexcharts';
 			// chạy lần đầu
 			scaleOnScroll();
 		}
+		function updateDataPH() {
+			$.ajax({
+				url: ajaxurl.ajaxurl,
+				method: 'POST',
+				dataType: 'json',
+				data: {
+					action: 'ph_tracking_get_data',
+					security: ajaxurl.security,
+				},
+				success: function (res) {
+					if (res.success && Array.isArray(res.data)) {
+						phData = res.data;
+						if (phChart) {
+							phChart.updateSeries([{ data: phData }]);
+						}
+					}
+				},
+			});
+		}
 
 		function trackingPh() {
+			// Load persisted pH data from session on page load
+			updateDataPH();
 			$('#btn_sign_ph').on('click', function (e) {
 				e.preventDefault();
 
@@ -698,22 +690,16 @@ import ApexCharts from 'apexcharts';
 							Swal.fire({
 								icon: 'success',
 								title: 'Thành công',
-								text: 'Đã lưu thông tin theo dõi!',
+								text: res.data.message,
 							}).then((result) => {
 								if (result.isConfirmed) {
-									// Lưu phone vào cookie 1 tháng
-									document.cookie =
-										'ph_phone=' +
-										encodeURIComponent(phone) +
-										'; max-age=' +
-										30 * 24 * 60 * 60 +
-										'; path=/';
-									// Ẩn và hiển khối tương ứng
 									$('.box_tracking').hide();
 									$('.tracking_ph_update').removeClass(
 										'hidden'
 									);
+									$('.tracking-blur').addClass('hidden');
 								}
+								updateDataPH();
 							});
 							$('#name_cus, #phone_cus').val('');
 						} else {
@@ -721,12 +707,88 @@ import ApexCharts from 'apexcharts';
 								icon: 'error',
 								title: 'Lỗi',
 								text:
-									res.data ||
+									res.data.message ||
 									'Có lỗi khi lưu, vui lòng thử lại.',
 							});
 						}
 					},
 					error: function (xhr, status) {
+						Swal.close();
+						Swal.fire({
+							icon: 'error',
+							title: 'Lỗi',
+							text: 'Không thể kết nối đến server.',
+						});
+					},
+				});
+			});
+
+			$('.tracking-update').on('click', function (e) {
+				e.preventDefault();
+
+				// 1. Lấy dữ liệu
+				var phValue = $('#phSlider').val();
+				var statusLabel = $('.emoji.active .tracking-status-label')
+					.text()
+					.trim();
+
+				// 2. Kiểm tra
+				if (!phValue || !statusLabel) {
+					Swal.fire({
+						icon: 'warning',
+						title: 'Thiếu thông tin',
+						text: 'Vui lòng nhập giá trị pH và chọn trạng thái',
+					});
+					return;
+				}
+
+				// 3. Gửi AJAX
+				$.ajax({
+					url: ajaxurl.ajaxurl,
+					method: 'POST',
+					dataType: 'json',
+					data: {
+						action: 'ph_tracking_update',
+						security: ajaxurl.security,
+						ph: phValue,
+						status: statusLabel,
+					},
+					beforeSend: function () {
+						Swal.fire({
+							title: 'Vui lòng chờ...',
+							allowOutsideClick: false,
+							didOpen: () => Swal.showLoading(),
+						});
+					},
+					success: function (res) {
+						Swal.close();
+						if (res.success) {
+							Swal.fire({
+								icon: 'success',
+								title: 'Cập nhật thành công',
+								text: 'Bạn đã cập nhật độ pH và trạng thái khách hàng.',
+							}).then(function () {
+								// sau khi cập nhật thành công, cập nhật dữ liệu biểu đồ
+								var date = new Date();
+								var jsDay = date.getDay(); // 0=Chủ nhật,1=Thứ 2,...6=Thứ 7
+								var index = (jsDay + 6) % 7; // chuyển Sunday(0)->6, Monday(1)->0,...
+								phData[index] = parseFloat(phValue);
+								if (phChart) {
+									phChart.updateSeries([{ data: phData }]);
+								}
+							});
+						} else {
+							// res.data.message do server gửi: có thể là “Bạn đã cập nhật trạng thái hôm nay!”
+							Swal.fire({
+								icon: 'error',
+								title: 'Lỗi',
+								text:
+									res.data.message ||
+									'Có lỗi khi cập nhật trạng thái.',
+							});
+						}
+					},
+					error: function () {
 						Swal.close();
 						Swal.fire({
 							icon: 'error',
