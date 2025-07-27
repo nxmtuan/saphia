@@ -7,6 +7,7 @@
       <?php echo wp_get_attachment_image(get_field('bg_pc'), 'full',false,['class'=>'absolute inset-0 size-full object-cover']) ?>
       
     </picture>
+    <div class="absolute inset-0 size-full bg-[#ffffff73]"></div>
 
 	
 	<div class="container">
