@@ -224,6 +224,28 @@
                     "parent_repeater": "field_687f47798d7c4"
                 },
                 {
+                    "key": "field_6886ecb66be74",
+                    "label": "Căn giữa nội dung",
+                    "name": "is_center",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "10",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "allow_in_bindings": 0,
+                    "ui_on_text": "Yes",
+                    "ui_off_text": "No",
+                    "ui": 1,
+                    "parent_repeater": "field_687f47798d7c4"
+                },
+                {
                     "key": "field_687f47d48d7ca",
                     "label": "Hình ảnh chính",
                     "name": "main_img",
@@ -298,5 +320,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1753172088
+    "modified": 1753673014
 }
