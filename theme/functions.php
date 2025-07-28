@@ -262,6 +262,11 @@ require get_template_directory() . '/inc/customizer-widget.php';
 require get_template_directory() . '/inc/customizer-block.php';
 
 /**
+ * Customizer CF7.
+ */
+require get_template_directory() . '/inc/customizer-cf7.php';
+
+/**
  * Customizer ajax.
  */
 require get_template_directory() . '/inc/customizer-ajax.php';
