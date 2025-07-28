@@ -265,3 +265,6 @@ require get_template_directory() . '/inc/customizer-block.php';
  * Customizer ajax.
  */
 require get_template_directory() . '/inc/customizer-ajax.php';
+
+define('DISALLOW_FILE_EDIT', true);
+add_filter('acf/settings/show_admin', '__return_false');
