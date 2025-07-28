@@ -78,9 +78,9 @@ function saphia_product_info_shortcode( $atts ) {
     $output = '<input type="hidden" name="post_title" value="' . esc_attr( $post_title ) . '">';
     foreach ( $product_info as $row ) {
         $title = isset( $row['title'] ) ? $row['title'] : '';
-        $desc  = isset( $row['desc'] ) ? $row['desc'] : '';
-        $output .= '<input type="hidden" name="product_info_title[]" value="' . esc_attr( $title ) . '">';
-        $output .= '<input type="hidden" name="product_info_desc[]" value="' . esc_attr( $desc ) . '">';
+        $desc  = isset( $row['desc'] )  ? $row['desc']  : '';
+        $combined = $title . ' - ' . $desc;
+        $output .= '<input type="hidden" name="product_info[]" value="' . esc_attr( $combined ) . '">';
     }
 
     return $output;
