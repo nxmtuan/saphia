@@ -273,3 +273,11 @@ require get_template_directory() . '/inc/customizer-ajax.php';
 
 define('DISALLOW_FILE_EDIT', true);
 add_filter('acf/settings/show_admin', '__return_false');
+
+
+/**
+ * Customizer ACF OPtion Polylang
+ */
+require get_template_directory() . '/inc/acf-options-for-polylang/define-acf.php';
+require get_template_directory() . '/inc/acf-options-for-polylang/autoload.php';
+require get_template_directory() . '/inc/acf-options-for-polylang/bea-acf-options-for-polylang.php';
