@@ -132,7 +132,7 @@
 			<div class="lg:text-5xl text-2xl text-content">
 				<?php _e('Để lại thông tin để nhận tư vấn!', 'gnws') ?>
 			</div>
-			<div class="mt-8 form-de-lai-thong-tin-tu-van">
+			<div class="mt-8 form-de-lai-thong-tin-tu-van" id="form_addcart">
 				<?php echo do_shortcode('[contact-form-7 id="2b83a3a" title="Form để lại thông tin tư vấn"]'); ?>
 			</div>
 		</div>

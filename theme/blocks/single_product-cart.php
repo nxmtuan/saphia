@@ -71,7 +71,7 @@
 				<?php endif; ?>
 
 
-				<button type="button" data-popup="add-cart-popup" product-id = "<?php the_ID() ?>"
+				<button type="button" data-popup="add-cart-popup" product-id = "<?php the_ID() ?>" data-title = "<?php the_title() ?>"
 					class="md:p-[14px] p-2 rounded-full overflow-hidden w-full flex items-center justify-center md:text-lg text-sm text-white bg-primary hover:bg-[#224393c7] transition-colors duration-300">
 					<?php _e( 'Thêm vào giỏ hàng', 'gnws' ) ?>
 				</button>

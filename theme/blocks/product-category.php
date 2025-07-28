@@ -52,7 +52,7 @@
 											class="flex justify-center items-center w-1/2 p-[14px] rounded-full overflow-hidden bg-white hover:bg-[#f5f1f1] text-content leading-[1] transition-colors duration-300">
 											<?php _e( 'Xem chi tiết', 'gnws' ) ?>
 										</a>
-										<button type="button" data-popup="add-cart-popup" class="flex justify-center items-center w-1/2 p-[14px] rounded-full overflow-hidden bg-primary hover:bg-[#224393c7] text-white leading-[1] transition-colors duration-300">
+										<button type="button" data-popup="add-cart-popup" product-id = "<?php the_ID() ?>" data-title = "<?php the_title() ?>" class="flex justify-center items-center w-1/2 p-[14px] rounded-full overflow-hidden bg-primary hover:bg-[#224393c7] text-white leading-[1] transition-colors duration-300">
 											<?php _e( 'Mua ngay', 'gnws' ) ?>
 										</button>
 									</div>
