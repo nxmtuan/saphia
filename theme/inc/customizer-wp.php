@@ -384,15 +384,10 @@ add_filter('wp_get_attachment_image_attributes', 'add_lazy_loading_to_images');
  */
 function saphia_render_homepage_popup()
 {
-	// Đảm bảo session đã được khởi
-	if (session_status() !== PHP_SESSION_ACTIVE) {
-		session_start();
-	}
-
-	// Chỉ show popup trên front page khi user chưa chọn layout
-	if (!empty($_SESSION['homepage_layout']) || !is_front_page()) {
-		return;
-	}
+    // Only skip popup if the user already chose a layout (via cookie)
+    if (isset($_COOKIE['homepage_layout'])) {
+        return;
+    }
 
 	// Lấy repeater rows từ ACF Options
 	$rows = get_field('homepage_layout_list', 'option');
@@ -434,10 +429,12 @@ function saphia_render_homepage_popup()
 							?>
 							<li class="popup-item md:w-[calc(50%-8px)] w-full">
 								<a href="#"
-									class="block py-5 px-8 w-full rounded-full overflow-hidden bg-white hover:bg-[#e3e3e3] text-center text-black transition-colors duration-300 whitespace-nowrap"
+									class="block py-5 px-8 w-full rounded-full overflow-hidden bg-white hover:bg-[#e3e3e3] text-center text-black transition-colors duration-300 whitespace-nowrap<?php if ( ! is_front_page() ): ?> close-popup<?php endif; ?>"
 									onclick="
-									   document.cookie = 'homepage_layout=<?php echo esc_js($pid); ?>; path=/';
-									   window.location.href = '<?php echo esc_url(home_url()); ?>';
+									   document.cookie = 'homepage_layout=<?php echo esc_js($pid); ?>; max-age=10800; path=/';
+									   <?php if ( is_front_page() ): ?>
+									     window.location.href = '<?php echo esc_url( home_url() ); ?>';
+									   <?php endif; ?>
 									   return false;
 								   ">
 									<?php echo esc_html($label); ?>
@@ -446,12 +443,14 @@ function saphia_render_homepage_popup()
 						<?php endforeach; ?>
 					</ul>
 					<p class="mt-[30px] close-popup cursor-pointer w-full">
-						<a href="#" class="block py-5 px-8 w-full rounded-full overflow-hidden bg-transparent hover:bg-[#00000030] text-center text-lg border border-white transition-colors duration-300" onclick="
-						  document.cookie = 'homepage_layout=default; path=/';
-						  window.location.href = '<?php echo esc_url(home_url()); ?>';
+						<a href="#" class="block py-5 px-8 w-full rounded-full overflow-hidden bg-transparent hover:bg-[#00000030] text-center text-lg border border-white transition-colors duration-300 close-popup" onclick="
+						  document.cookie = 'homepage_layout=default; max-age=10800; path=/';
+						  <?php if ( is_front_page() ): ?>
+						    window.location.href = '<?php echo esc_url( home_url() ); ?>';
+						  <?php endif; ?>
 						  return false;
 					  ">
-							Bỏ qua
+							<?php _e('Bỏ qua', 'gnws') ?>
 						</a>
 					</p>
 				</div>

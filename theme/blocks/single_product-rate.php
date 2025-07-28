@@ -4,20 +4,18 @@
 			<?php the_title() ?>
 		</div>
 		<div class="star-rating-customer flex flex-col items-center gap-[21px] mb-5">
-			<div class="rate">
-				<input type="radio" id="star5-5" name="rate2" checked value="5" />
-				<label for="star5-5" title="text">5 stars</label>
-				<input type="radio" id="star4-4" name="rate2" value="4" />
-				<label for="star4-4" title="text">4 stars</label>
-				<input type="radio" id="star3-3" name="rate2" value="3" />
-				<label for="star3-3" title="text">3 stars</label>
-				<input type="radio" id="star2-2" name="rate2" value="2" />
-				<label for="star2-2" title="text">2 stars</label>
-				<input type="radio" id="star1-1" name="rate2" value="1" />
-				<label for="star1-1" title="text">1 star</label>
+			<div class="rate flex items-center justify-center gap-2 mt-3">
+				<?php 
+				 for ($i = 0; $i < 5; $i++) {
+				 ?>
+				  <?php echo svg('star') ?>
+				  <?php 
+				 } 
+				?>
+				
 			</div>
 			<div class="lg:text-2xl text-xl text-[#000000E0]">
-				<?php _e( '4.9 trên 5.0', 'gnws' ) ?>
+				<?php _e( '5.0 trên 5.0', 'gnws' ) ?>
 			</div>
 			<div class="text-xs underline text-[#00000070]">
 				<?php

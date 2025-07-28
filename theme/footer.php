@@ -116,7 +116,7 @@
 
 <?php wp_footer(); ?>
 <div
-	class="modal-backdrop fixed inset-0 top-0 transition-all duration-500 left-0 bg-[#000000d4] w-[100dvw] h-[100dvh] [&:not(.show)]:opacity-0 [&:not(.show)]:pointer-events-none [&:not(.show)]:invisible z-[2] <?= empty($_SESSION['homepage_layout']) && (is_front_page() || is_home()) ? 'show' : '' ?>">
+	class="modal-backdrop fixed inset-0 top-0 transition-all duration-500 left-0 bg-[#000000d4] w-[100dvw] h-[100dvh] [&:not(.show)]:opacity-0 [&:not(.show)]:pointer-events-none [&:not(.show)]:invisible z-[2] <?= !isset($_COOKIE['homepage_layout']) ? 'show' : '' ?>">
 </div>
 
 <div id="add-cart-popup"

@@ -68,8 +68,30 @@
             "sub_fields": [
                 {
                     "key": "field_6883a479955e0",
-                    "label": "PH",
+                    "label": "Độ PH",
                     "name": "ph",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_6883a3ca955df"
+                },
+                {
+                    "key": "field_68863d87dcba2",
+                    "label": "Tâm trạng",
+                    "name": "status",
                     "aria-label": "",
                     "type": "text",
                     "instructions": "",
@@ -111,5 +133,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1753457886
+    "modified": 1753628050
 }

@@ -188,7 +188,7 @@
         },
         {
             "key": "field_687f17dd6baf0",
-            "label": "Hình ảnh",
+            "label": "Video",
             "name": "img_intro",
             "aria-label": "",
             "type": "group",
@@ -204,7 +204,7 @@
             "sub_fields": [
                 {
                     "key": "field_687f18e772795",
-                    "label": "Hình ảnh",
+                    "label": "Hình ảnh poster video",
                     "name": "img",
                     "aria-label": "",
                     "type": "image",
@@ -230,10 +230,10 @@
                 },
                 {
                     "key": "field_687f18f672796",
-                    "label": "Đường dẫn",
-                    "name": "link",
+                    "label": "Video",
+                    "name": "video_link",
                     "aria-label": "",
-                    "type": "text",
+                    "type": "file",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -242,12 +242,12 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "",
-                    "maxlength": "",
-                    "allow_in_bindings": 0,
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": ""
+                    "return_format": "url",
+                    "library": "all",
+                    "min_size": "",
+                    "max_size": "",
+                    "mime_types": ".mp4",
+                    "allow_in_bindings": 0
                 }
             ]
         },
@@ -453,5 +453,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1753169535
+    "modified": 1753637638
 }
