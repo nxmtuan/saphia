@@ -47,4 +47,43 @@ function saphia_call_button_shortcode( $atts ) {
         esc_html( $btn_title )
     );
 }
+
 add_shortcode( 'call_button', 'saphia_call_button_shortcode' );
+
+/**
+ * Shortcode to output hidden inputs for ACF repeater 'product_info' sub fields 'title' and 'desc'.
+ *
+ * Usage: [product_info_fields]
+ */
+function saphia_product_info_shortcode( $atts ) {
+    // Parse attributes, allow overriding post ID
+    $atts = shortcode_atts(
+        array(
+            'id' => '',
+        ),
+        $atts,
+        'product_info_fields'
+    );
+    // Determine which post to use
+    $post_id = $atts['id'] ? $atts['id'] : get_queried_object_id();
+    $post_title = get_the_title( $post_id );
+
+    // Get repeater field 'product_info'
+    $product_info = get_field( 'product_info', $post_id );
+    if ( empty( $product_info ) || ! is_array( $product_info ) ) {
+        return '';
+    }
+
+    // Build hidden input elements for each repeater row
+    $output = '<input type="hidden" name="post_title" value="' . esc_attr( $post_title ) . '">';
+    foreach ( $product_info as $row ) {
+        $title = isset( $row['title'] ) ? $row['title'] : '';
+        $desc  = isset( $row['desc'] ) ? $row['desc'] : '';
+        $output .= '<input type="hidden" name="product_info_title[]" value="' . esc_attr( $title ) . '">';
+        $output .= '<input type="hidden" name="product_info_desc[]" value="' . esc_attr( $desc ) . '">';
+    }
+
+    return $output;
+}
+add_shortcode( 'product_info_fields', 'saphia_product_info_shortcode' );
+

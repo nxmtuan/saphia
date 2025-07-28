@@ -3,8 +3,8 @@
     "title": "[Single-Product] Thêm vào giỏ hàng",
     "fields": [
         {
-            "key": "field_688102dedc30e",
-            "label": "Điền thông tin tại sidebar",
+            "key": "field_68872e7302e2b",
+            "label": "Thêm nội dung ở sidebar",
             "name": "",
             "aria-label": "",
             "type": "message",
@@ -39,5 +39,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1753285390
+    "modified": 1753689747
 }
