@@ -65,3 +65,10 @@ li#toplevel_page_acf-options-cau-hinh img {
     margin-bottom: 50px;
     border-top: 10px solid #000;
 }
+.interface-complementary-area__fill:has(.acf-block-component) {
+ max-width: 1000px!important;
+    width: 50vw!important;
+}
+.interface-complementary-area:has(.acf-block-component){
+width: 100%!important;
+}

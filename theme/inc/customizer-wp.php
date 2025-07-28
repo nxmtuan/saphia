@@ -141,7 +141,12 @@ if (!function_exists('gnws_css_admin')):
 	add_action('admin_enqueue_scripts', 'gnws_css_admin');
 	function gnws_css_admin()
 	{
-		wp_enqueue_style('admin_css', get_template_directory_uri() . '/admin/admin.css');
+		wp_enqueue_style(
+			'admin_css',
+			get_template_directory_uri() . '/admin/admin.css',
+			array(),
+			'1.0.0'
+		);
 	}
 endif;
 //CSS Login
