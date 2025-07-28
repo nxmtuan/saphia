@@ -1,7 +1,7 @@
 <?php
 
 /**
-Template Name: Full Content
+Template Name: Page Container
  */
 
 get_header();

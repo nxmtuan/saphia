@@ -61,7 +61,7 @@ li#toplevel_page_acf-options-cau-hinh img {
 	max-width: 100% !important;
 }
 
-.block-editor-block-list__layout.is-root-container > .block-editor-block-list__block {
-	margin-bottom: 50px;
-	border-top: 10px solid #000;
+.block-editor-block-list__layout.is-root-container > .block-editor-block-list__block[class*="wp-block-acf-"] {
+    margin-bottom: 50px;
+    border-top: 10px solid #000;
 }
