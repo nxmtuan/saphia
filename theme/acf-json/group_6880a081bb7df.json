@@ -544,7 +544,7 @@
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "35",
+                                "width": "25",
                                 "class": "",
                                 "id": ""
                             },
@@ -570,7 +570,7 @@
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "30",
+                                "width": "25",
                                 "class": "",
                                 "id": ""
                             },
@@ -596,7 +596,7 @@
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "30",
+                                "width": "25",
                                 "class": "",
                                 "id": ""
                             },
@@ -622,7 +622,7 @@
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "15",
+                                "width": "25",
                                 "class": "",
                                 "id": ""
                             },
@@ -888,5 +888,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1753640131
+    "modified": 1753673272
 }

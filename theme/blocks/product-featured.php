@@ -32,6 +32,7 @@
                     while ( have_rows( 'list_product' ) ) :
 						the_row(); 
                         $img_hover = get_sub_field('hover_img')?:get_sub_field('main_img');
+						$is_center= get_sub_field('is_center');
                         $i++;
                         ?>
 						 <div class="block_slider-item group relative xl:pt-9 lg:pt-8 pt-6 xl:pl-16 lg:pl-8 pl-6 lg:rounded-[35px] rounded-[20px] overflow-hidden aspect-[814/640] md:w-full w-[83%] bg-no-repeat bg-cover bg-center <?= $i==2 ?'md:mt-[151px]':'' ?> <?= $i==3 ?'md:-mt-[151px]':'' ?>"
@@ -40,7 +41,7 @@
                             <?php echo wp_get_attachment_image($img_hover, 'full',false,['class'=>'absolute inset-0 size-full lg:opacity-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300']) ?>
                            
 
-                            <div class="relative z-[1]">
+                            <div class="relative z-[1] <?= $is_center ?'flex flex-col items-center':'' ?>">
                                 <?php if( get_sub_field('title') ): ?>
                                     
                                     <div
