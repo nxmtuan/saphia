@@ -14,7 +14,7 @@
 						<?php echo wp_get_attachment_image(get_sub_field('img'), 'full',false,['class'=>'w-full h-full object-cover']) ?>	
                          <?php if( get_sub_field('title') ): ?>
 							<div
-								class="absolute lg:top-10 top-2.5 lg:left-10 left-2.5 z-[1] text-sm md:text-xl xl:text-[42.5px] leading-snug tracking-wide text-white">
+								class="absolute lg:top-10 top-2.5 lg:left-10 left-2.5 z-[1] text-sm md:text-xl xl:text-[42.5px] leading-[1.1] tracking-wide text-white">
 							<?php the_sub_field('title'); ?>
 							</div>
                          <?php endif; ?>
